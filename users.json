@@ -1,0 +1,28 @@
+[
+  {
+    "name": "Gaurav",
+    "username": "Gaurav12",
+    "email": "gauravkumarjha2107@gmail.com",
+    "password": "32123213",
+    "phone": "9354551718",
+    "Tasks": [
+      {
+        "ID": "Hell8010",
+        "Task": "Hello This Is Me And I am Adding A  Task to My TO-DO App"
+      }
+    ]
+  },
+  {
+    "name": "Vishal",
+    "username": "Vishal8882",
+    "email": "sunharilalrajpu8882@gmail.com",
+    "password": "ALPHA_BETA",
+    "phone": "8510098551",
+    "Tasks": [
+      {
+        "ID": "NEW 9305",
+        "Task": "NEW 8746"
+      }
+    ]
+  }
+]

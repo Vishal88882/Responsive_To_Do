@@ -1,0 +1,15 @@
+[
+  {
+    "name": "Bhawna",
+    "username": "Bhawna1234",
+    "email": "sunharilalrajpu8882@gmail.com",
+    "password": "113",
+    "phone": "8510098551",
+    "Task": [
+      {
+        "task1": "homework",
+        "task2": "homework1"
+      }
+    ]
+  }
+]
