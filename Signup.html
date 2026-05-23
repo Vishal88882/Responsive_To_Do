@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        margin: 0px;
+        padding: 0px;
+        font-family: monospace;
+    }
+
+    .signup_login_header {
+        flex-direction: row;
+        display: flex;
+        gap: 1%;
+        padding: 12px;
+        background-color: rgba(11, 33, 70, 0.75);
+        justify-content: end;
+    }
+
+    .signup_login_header>a {
+        text-decoration: none;
+        color: #e5e7eb;
+        font-size: 16px;
+        text-decoration: underline;
+    }
+
+    .signup {
+        display: flex;
+        height: 88vh;
+        flex-direction: column;
+        padding-top: 3%;
+        align-items: center;
+        background-image: url(./background.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+
+    .background {
+        background-color: rgba(44, 44, 44, 0.8);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 40px;
+        height: 60%;
+        width: 60%;
+        border-radius: 10px;
+        gap: 20px;
+
+    }
+
+    .signup_form {
+        background-color: rgba(100, 91, 91, 0.8);
+        border-radius: 10px;
+        width: 500px;
+        height: 400px;
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 0 10px;
+        border: 1px solid black;
+    }
+
+    .signup_form>input {
+        padding: 12px;
+        width: 80%;
+        border-radius: 5px;
+        border: 2px solid rgb(43, 43, 43);
+        color: rgb(0, 0, 0);
+        text-align: center;
+        background-color: rgb(179, 179, 179);
+    }
+
+    .signup_form>input:hover {
+        width: 82%;
+        box-shadow: 0 0 10px;
+        transition: all 0.3s ease;
+    }
+
+    input::placeholder {
+        color: rgb(14, 25, 48);
+        font-size: 16px;
+        font-family: monospace;
+    }
+
+    .signup_form>a {
+        text-decoration: none;
+        font-size: 18px;
+        color: white;
+        text-decoration: underline;
+    }
+
+    .submit_btn {
+        background-color: rgb(0, 0, 0);
+        color: white;
+        padding: 10px;
+        font-size: 16px;
+        width: 85%;
+        border-radius: 10px;
+    }
+
+    .submit_btn:hover {
+        box-shadow: 0 0 5px;
+        width: 87%;
+        transition: all 0.3s ease;
+    }
+</style>
+
+<body>
+    <header class="signup_login_header">
+        <a href="">Help</a>
+        <a href="">Terms</a>
+        <a href="">Privacy</a>
+    </header>
+
+    <div class="signup">
+        <h1>Organise Your Daily Tasks</h1>
+        <div class=" background">
+            <form action="post" class="signup_form">
+                <input type="text" placeholder="Enter your name">
+                <input type="text" placeholder="Enter your username">
+                <input type="text" placeholder="Enter your email">
+                <input type="text" placeholder="Create new password">
+                <input type="text" placeholder="Enter your phone no.">
+                <button type="submit" class="submit_btn">Submit</button>
+                <a href="./Index.html">Already have an Account/Login?</a>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
