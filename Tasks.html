@@ -1,12 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
     <style>
         body {
             padding: 0px;
@@ -92,89 +90,25 @@
             font-size: 22px;
             margin-right: 8px;
         }
-
-        .home_container {
-            display: flex;
-            flex-direction: row;
-            gap: 60px;
-            justify-content: center;
-            background-image: url(./Home_background.jpg);
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: cover;
-            height: 89vh;
-        }
-
-        .Quote {
-            padding-top: 5%;
-            width: 33%;
-        }
-
-        .Quote>h1 {
-            color: #2e2e2e;
-            font-size: 35px;
-
-        }
-
-        .Quote>h2 {
-            color: rgb(48, 48, 112);
-        }
-
-        .clock-box {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            margin-top: 30px;
-            font-size: 25px;
-            color: #3f195f;
-            font-weight: 600;
-        }
-
-        .clock-box i {
-            color: #342264;
-            font-size: 22px;
-        }
-
-        #Start_btn {
-            background-color: rgb(168, 153, 128);
-            padding: 15px;
-            width: 200px;
-            align-items: center;
-            display: flex;
-            justify-content: center;
-            border-radius: 7px;
-            font-size: 20px;
-            text-decoration: none;
-            color:black;
-            
-        }
-
-        #Start_btn:hover {
-            box-shadow: 0 0 8px;
-            background-color: rgb(153, 138, 115);
-            transition: all 0.3s ease;
-            cursor: pointer;
-        }
-
         .fa-arrow-right-long {
             color: rgb(51, 51, 51);
             font-size: 22px;
             margin-left: 8px;
         }
 
-        .home_img {
-            padding-top: 120px;
-        }
 
-        .home_img>img {
-            box-shadow: 0 0 5px;
-            border-radius: 10px;
-            padding-bottom: 20px;
-            background-color: rgb(100, 133, 133, 0.5);
+
+        .Task_Container{
+            display: flex;
+            background-image: url(./Home_background.jpg);
+            justify-content: center;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            height: 89vh;
         }
     </style>
 </head>
-
 <body>
     <nav class="Navigation">
         <div class="Navigation_logo">
@@ -193,33 +127,8 @@
         <a href=""><i class="fa-solid fa-user"></i></i>Account</a>
         <a href="Index.html" id="Login_btn">Login<i class="fa-solid fa-arrow-right-long"></i></a>
     </nav>
-
-    <div class="home_container">
-        <div class="Quote">
-            <h1>Capture, organize, and tackle your to-dos from anywhere.</h1>
-            <h2>Escape the clutter and chaos—unleash your productivity.</h2>
-            <a id="Start_btn" href="Signup.html">Start now <i class="fa-solid fa-arrow-right-long"></i></a>
-            <div class="clock-box">
-                <i class="fa-regular fa-clock"></i>
-                <span id="clock"></span>
-            </div>
-        </div>
+    <div class="Task_Container">
         
-        <div class="home_img">
-            <img src="./Home_img.avif" alt="Img Didn't load!">
-        </div>
     </div>
-
-
-    <script>
-        function updateClock() {
-            const now = new Date();
-            const time = now.toLocaleTimeString();
-            document.getElementById("clock").innerHTML = time;
-        }
-        setInterval(updateClock, 1000);
-        updateClock();
-    </script>
 </body>
-
 </html>
