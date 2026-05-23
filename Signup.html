@@ -45,13 +45,18 @@
         background-color: rgba(44, 44, 44, 0.8);
         display: flex;
         align-items: center;
+        flex-direction: column;
         justify-content: center;
         padding: 40px;
-        height: 60%;
+        height: 70%;
         width: 60%;
         border-radius: 10px;
         gap: 20px;
 
+    }
+    .background>h1{
+        font-style: italic;
+        font-size: 30px;
     }
 
     .signup_form {
@@ -121,8 +126,9 @@
     </header>
 
     <div class="signup">
-        <h1>Organise Your Daily Tasks</h1>
+        
         <div class=" background">
+            <h1>Create New Account!</h1>
             <form action="post" class="signup_form">
                 <input type="text" placeholder="Enter your name">
                 <input type="text" placeholder="Enter your username">
