@@ -5,158 +5,267 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style>
+        * {
+            font-family: monospace;
+        }
+
+        body {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .Navigation {
+            background-color: rgba(0, 0, 0, 0.8);
+            display: flex;
+            gap: 70px;
+            align-items: center;
+            justify-content: center;
+            flex-direction: row;
+            padding: 15px;
+
+        }
+
+        .Navigation_logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #ff841f;
+            font-size: 28px;
+            font-weight: 700;
+        }
+
+        .Navigation>a {
+            text-decoration: none;
+            font-size: 22px;
+            border-radius: 5px;
+            padding: 10px;
+            color: whitesmoke;
+        }
+
+        .Navigation>a:hover {
+            box-shadow: 0 0 5px rgb(139, 138, 136);
+            transition: all 0.2s ease;
+        }
+
+        #Login_btn {
+            display: flex;
+            align-items: center;
+            margin-left: auto;
+            width: 180px;
+            font-size: 20px;
+            align-self: center;
+            justify-content: center;
+            padding: 13px;
+            border-radius: 7px;
+            background-color: rgb(197, 177, 148);
+            text-decoration: none;
+            color: black;
+        }
+
+        .Login_btn:hover {
+            box-shadow: 0 0 10px;
+            background-color: rgb(167, 150, 125);
+            transition: all 0.3s ease;
+
+        }
+
+        .fa-house-chimney {
+            color: #1366b9;
+            font-size: 22px;
+            margin-right: 8px;
+        }
+
+        .fa-list-check {
+            color: rgb(95, 84, 255);
+            font-size: 22px;
+            margin-right: 8px;
+        }
+
+        .fa-envelope {
+            color: rgb(103, 117, 78);
+            font-size: 22px;
+            margin-right: 8px;
+        }
+
+        .fa-user {
+            color: rgb(235, 197, 154);
+            font-size: 22px;
+            margin-right: 8px;
+        }
+        .signup_login_footer {
+            flex-direction: row;
+            display: flex;
+            gap: 1%;
+            padding: 12px;
+            background-color: rgba(11, 33, 70, 0.75);
+            justify-content: end;
+            position: fixed;
+            bottom: 0;
+            width:100%;
+            
+        }
+
+        .signup_login_footer>a {
+            text-decoration: none;
+            color: #e5e7eb;
+            font-size: 16px;
+            text-decoration: underline;
+            padding-right: 30px;
+        }
+
+        .login {
+            display: flex;
+            height: 83vh;
+            flex-direction: column;
+            padding-top: 3%;
+            align-items: center;
+            background-image: url(./Home_background.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+
+        .login>h1 {
+            font-style: italic;
+            font-size: 30px;
+        }
+
+        .background {
+            background-color: rgba(44, 44, 44, 0.8);
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+            padding: 40px;
+            height: 55%;
+            width: 50%;
+            border-radius: 10px;
+            gap: 20px;
+
+        }
+
+        .login_form {
+            background-color: rgba(100, 91, 91, 0.8);
+            border-radius: 10px;
+            width: 500px;
+            height: 305px;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 0 10px;
+            border: 1px solid black;
+        }
+
+        .login_form>h1 {
+            text-decoration: underline;
+        }
+
+        .login_form>input {
+            padding: 12px;
+            width: 80%;
+            border-radius: 5px;
+            border: 2px solid rgb(43, 43, 43);
+            color: rgb(0, 0, 0);
+            text-align: center;
+            background-color: rgb(179, 179, 179);
+        }
+
+        .login_form>input:hover {
+            width: 82%;
+            box-shadow: 0 0 10px;
+            transition: all 0.3s ease;
+        }
+
+        input::placeholder {
+            color: rgb(14, 25, 48);
+            font-size: 16px;
+            font-family: monospace;
+        }
+
+        .login_form>a {
+            text-decoration: none;
+            font-size: 18px;
+            color: white;
+            text-decoration: underline;
+        }
+
+        .password_issue {
+            flex-direction: row;
+            display: flex;
+            gap: 100px;
+        }
+
+        .password_issue>label {
+            font-size: 16px;
+            color: white
+        }
+
+        .password_issue>a {
+            text-decoration: none;
+            text-decoration: underline;
+            color: whitesmoke;
+            font-size: 16px;
+        }
+
+        .submit_btn {
+            background-color: rgb(0, 0, 0);
+            color: white;
+            padding: 10px;
+            font-size: 16px;
+            width: 85%;
+            border-radius: 10px;
+        }
+
+        .submit_btn:hover {
+            box-shadow: 0 0 5px;
+            width: 87%;
+            transition: all 0.3s ease;
+        }
+    </style>
 </head>
 
-<style>
-    *{
-        font-family: monospace;
-    }
-    body {
-        margin: 0px;
-        padding: 0px;
-    }
 
-    .signup_login_header {
-        flex-direction: row;
-        display: flex;
-        gap: 1%;
-        padding: 12px;
-        background-color: rgba(11, 33, 70, 0.75);
-        justify-content: end;
-    }
-
-    .signup_login_header>a {
-        text-decoration: none;
-        color: #e5e7eb;
-        font-size: 16px;
-        text-decoration: underline;
-    }
-
-    .login {
-        display: flex;
-        height: 88vh;
-        flex-direction: column;
-        padding-top: 3%;
-        align-items: center;
-        background-image: url(./background.jpg);
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
-    }
-    .login>h1{
-        font-style: italic;
-        font-size: 30px;
-    }
-
-    .background {
-        background-color: rgba(44, 44, 44, 0.8);
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        justify-content: center;
-        padding: 40px;
-        height: 55%;
-        width: 50%;
-        border-radius: 10px;
-        gap: 20px;
-
-    }
-
-    .login_form {
-        background-color: rgba(100, 91, 91, 0.8);
-        border-radius: 10px;
-        width: 500px;
-        height: 305px;
-        display: flex;
-        flex-direction: column;
-        gap: 4px;
-        justify-content: center;
-        align-items: center;
-        box-shadow: 0 0 10px;
-        border: 1px solid black;
-    }
-
-    .login_form>h1{
-        text-decoration: underline;
-    }
-    .login_form>input {
-        padding: 12px;
-        width: 80%;
-        border-radius: 5px;
-        border: 2px solid rgb(43, 43, 43);
-        color: rgb(0, 0, 0);
-        text-align: center;
-        background-color: rgb(179, 179, 179);
-    }
-
-    .login_form>input:hover {
-        width: 82%;
-        box-shadow: 0 0 10px;
-        transition: all 0.3s ease;
-    }
-
-    input::placeholder {
-        color: rgb(14, 25, 48);
-        font-size: 16px;
-        font-family: monospace;
-    }
-
-    .login_form>a {
-        text-decoration: none;
-        font-size: 18px;
-        color: white;
-        text-decoration: underline;
-    }
-
-    .password_issue{
-        flex-direction: row;
-        display: flex;
-        gap:100px;
-    }
-    .password_issue>label{
-        font-size: 16px;
-        color:white
-    }
-
-    .password_issue>a{
-        text-decoration: none;
-        text-decoration: underline;
-        color:whitesmoke;
-        font-size: 16px;
-    }
-    .submit_btn {
-        background-color: rgb(0, 0, 0);
-        color: white;
-        padding: 10px;
-        font-size: 16px;
-        width: 85%;
-        border-radius: 10px;
-    }
-
-    .submit_btn:hover {
-        box-shadow: 0 0 5px;
-        width: 87%;
-        transition: all 0.3s ease;
-    }
-</style>
 
 <body>
-    <header class="signup_login_header">
+    <nav class="Navigation">
+        <div class="Navigation_logo">
+            <svg width="40" height="40" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M18 10H46C50 10 54 14 54 18V46C54 50 50 54 46 54H18C14 54 10 50 10 46V18C10 14 14 10 18 10Z"
+                    fill="#5f62c2" />
+                <path d="M18 32L28 42L46 22" stroke="white" stroke-width="6" stroke-linecap="round"
+                    stroke-linejoin="round" />
+            </svg>
+
+            <span>Taskora</span>
+        </div>
+        <a href="Home.html"><i class="fa-solid fa-house-chimney"></i>Home</a>
+        <a href=""><i class="fa-solid fa-list-check"></i>Tasks</a>
+        <a href=""><i class="fa-solid fa-envelope"></i>Contact</a>
+        <a href=""><i class="fa-solid fa-user"></i></i>Account</a>
+        <a href="Index.html" id="Login_btn">Login<i class="fa-solid fa-arrow-right-long"></i></a>
+    </nav>
+
+    <footer class="signup_login_footer">
         <a href="">Help</a>
         <a href="">Terms</a>
         <a href="">Privacy</a>
-    </header>
+    </footer>
+
 
     <div class="login">
         <h1>Organise Your Daily Tasks</h1>
         <div class="background">
-            
+
             <form action="post" class="login_form">
 
                 <h1>Login</h1>
                 <input type="text" placeholder="Enter your username">
                 <input type="text" placeholder="Create new password">
-                <div class = "password_issue">
+                <div class="password_issue">
                     <label><input type="checkbox">Remember Me</label>
                     <a href="">Forget password?</a>
                 </div>

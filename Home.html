@@ -6,10 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
     <style>
         body {
-            margin: 0px;
             padding: 0px;
+            margin: 0px;
             font-family: monospace;
         }
 
@@ -54,18 +55,18 @@
             font-size: 20px;
             align-self: center;
             justify-content: center;
-            padding: 13px;
+            padding: 15px;
             border-radius: 7px;
-            background-color: rgb(197, 177, 148);
+            background-color: rgb(190, 172, 143);
             text-decoration: none;
             color: black;
         }
 
-        .Login_btn:hover {
+        #Login_btn:hover {
             box-shadow: 0 0 10px;
-            background-color: rgb(167, 150, 125);
+            background-color: rgb(199, 179, 149);
             transition: all 0.3s ease;
-
+            cursor: pointer;
         }
 
         .fa-house-chimney {
@@ -92,117 +93,86 @@
             margin-right: 8px;
         }
 
-        .signup_login_footer {
+        .home_container {
+            display: flex;
             flex-direction: row;
-            display: flex;
-            gap: 1%;
-            padding: 12px;
-            background-color: rgba(11, 33, 70, 0.75);
-            justify-content: end;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-
-        .signup_login_footer>a {
-            text-decoration: none;
-            color: #e5e7eb;
-            font-size: 16px;
-            text-decoration: underline;
-            padding-right: 30px;
-        }
-
-        .signup {
-            display: flex;
-            height: 88vh;
-            flex-direction: column;
-            padding-top: 3%;
-            align-items: center;
+            gap: 60px;
+            justify-content: center;
             background-image: url(./Home_background.jpg);
             background-repeat: no-repeat;
             background-position: center;
             background-size: cover;
+            height: 89vh;
         }
 
-        .background {
-            background-color: rgba(44, 44, 44, 0.8);
+        .Quote {
+            padding-top: 5%;
+            width: 33%;
+        }
+
+        .Quote>h1 {
+            color: #2e2e2e;
+            font-size: 35px;
+
+        }
+
+        .Quote>h2 {
+            color: rgb(48, 48, 112);
+        }
+
+        .clock-box {
             display: flex;
             align-items: center;
-            flex-direction: column;
-            justify-content: center;
-            padding: 40px;
-            height: 70%;
-            width: 60%;
-            border-radius: 10px;
-            gap: 20px;
-
+            gap: 10px;
+            margin-top: 30px;
+            font-size: 25px;
+            color: #3f195f;
+            font-weight: 600;
         }
 
-        .background>h1 {
-            font-style: italic;
-            font-size: 30px;
+        .clock-box i {
+            color: #342264;
+            font-size: 22px;
         }
 
-        .signup_form {
-            background-color: rgba(100, 91, 91, 0.8);
-            border-radius: 10px;
-            width: 500px;
-            height: 450px;
-            display: flex;
-            flex-direction: column;
-            gap: 4px;
-            justify-content: center;
+        #Start_btn {
+            background-color: rgb(168, 153, 128);
+            padding: 15px;
+            width: 200px;
             align-items: center;
-            box-shadow: 0 0 10px;
-            border: 1px solid black;
-        }
-
-        .signup_form>input {
-            padding: 12px;
-            width: 80%;
-            border-radius: 5px;
+            display: flex;
+            justify-content: center;
+            border-radius: 7px;
             font-size: 20px;
-            border: 2px solid rgb(43, 43, 43);
-            color: rgb(0, 0, 0);
-            text-align: center;
-            background-color: rgb(179, 179, 179);
-        }
-
-        .signup_form>input:hover {
-            width: 82%;
-            box-shadow: 0 0 10px;
-            transition: all 0.3s ease;
-        }
-
-        input::placeholder {
-            color: rgb(14, 25, 48);
-            font-size: 16px;
-            font-family: monospace;
-        }
-
-        .signup_form>a {
             text-decoration: none;
-            font-size: 18px;
-            color: white;
-            text-decoration: underline;
+            color:black;
+            
         }
 
-        .submit_btn {
-            background-color: rgb(0, 0, 0);
-            color: white;
-            padding: 10px;
-            font-size: 16px;
-            width: 85%;
-            border-radius: 10px;
-        }
-
-        .submit_btn:hover {
-            box-shadow: 0 0 5px;
-            width: 87%;
+        #Start_btn:hover {
+            box-shadow: 0 0 8px;
+            background-color: rgb(153, 138, 115);
             transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .fa-arrow-right-long {
+            color: rgb(51, 51, 51);
+            font-size: 22px;
+            margin-left: 8px;
+        }
+
+        .home_img {
+            padding-top: 120px;
+        }
+
+        .home_img>img {
+            box-shadow: 0 0 5px;
+            border-radius: 10px;
+            padding-bottom: 20px;
+            background-color: rgb(100, 133, 133, 0.5);
         }
     </style>
-
 </head>
 
 <body>
@@ -224,26 +194,32 @@
         <a href="Index.html" id="Login_btn">Login<i class="fa-solid fa-arrow-right-long"></i></a>
     </nav>
 
-
-    <div class="signup">
-        <div class=" background">
-            <h1>Create New Account!</h1>
-            <form action="post" class="signup_form">
-                <input type="text" placeholder="Enter your name">
-                <input type="text" placeholder="Enter your username">
-                <input type="text" placeholder="Enter your email">
-                <input type="text" placeholder="Create new password">
-                <input type="text" placeholder="Enter your phone no.">
-                <button type="submit" class="submit_btn">Submit</button>
-                <a href="./Index.html">Already have an Account/Login?</a>
-            </form>
+    <div class="home_container">
+        <div class="Quote">
+            <h1>Capture, organize, and tackle your to-dos from anywhere.</h1>
+            <h2>Escape the clutter and chaos—unleash your productivity.</h2>
+            <a id="Start_btn" href="Signup.html">Start now <i class="fa-solid fa-arrow-right-long"></i></a>
+            <div class="clock-box">
+                <i class="fa-regular fa-clock"></i>
+                <span id="clock"></span>
+            </div>
+        </div>
+        
+        <div class="home_img">
+            <img src="./Home_img.avif" alt="Img Didn't load!">
         </div>
     </div>
-    <footer class="signup_login_footer">
-        <a href="">Help</a>
-        <a href="">Terms</a>
-        <a href="">Privacy</a>
-    </footer>
+
+
+    <script>
+        function updateClock() {
+            const now = new Date();
+            const time = now.toLocaleTimeString();
+            document.getElementById("clock").innerHTML = time;
+        }
+        setInterval(updateClock, 1000);
+        updateClock();
+    </script>
 </body>
 
 </html>
