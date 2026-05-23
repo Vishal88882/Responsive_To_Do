@@ -11,18 +11,5 @@
         "Task": "Hello This Is Me And I am Adding A  Task to My TO-DO App"
       }
     ]
-  },
-  {
-    "name": "Vishal",
-    "username": "Vishal8882",
-    "email": "sunharilalrajpu8882@gmail.com",
-    "password": "ALPHA_BETA",
-    "phone": "8510098551",
-    "Tasks": [
-      {
-        "ID": "NEW 9305",
-        "Task": "NEW 8746"
-      }
-    ]
   }
 ]

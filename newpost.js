@@ -230,7 +230,7 @@ app.post("/addtask", async (req, res) => {
     const { email, password, Task } = req.body;
     const userExists = usercontent.find(el => el.email == email && el.password == password);
 
-    const Remove_Space = Task.trim()
+    const Remove_Space = Task.replace(/\s/g, '')
     const Char = Remove_Space.slice(0, 4)
     const Num = Math.floor(1000 + Math.random() * 9000)
     const ID = Char + Num
@@ -308,6 +308,5 @@ app.post("/removetask", async (req, res) => {
 
     }
 })
-
 
 app.listen(8000, console.log("8000"));
