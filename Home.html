@@ -120,20 +120,7 @@
             color: rgb(48, 48, 112);
         }
 
-        .clock-box {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            margin-top: 30px;
-            font-size: 25px;
-            color: #3f195f;
-            font-weight: 600;
-        }
 
-        .clock-box i {
-            color: #342264;
-            font-size: 22px;
-        }
 
         #Start_btn {
             background-color:rgb(194, 177, 152) ;
@@ -199,10 +186,7 @@
             <h1>Capture, organize, and tackle your to-dos from anywhere.</h1>
             <h2>Escape the clutter and chaos—unleash your productivity.</h2>
             <a id="Start_btn" href="Signup.html">Start now <i class="fa-solid fa-arrow-right-long"></i></a>
-            <div class="clock-box">
-                <i class="fa-regular fa-clock"></i>
-                <span id="clock"></span>
-            </div>
+            
         </div>
         
         <div class="home_img">
@@ -211,15 +195,7 @@
     </div>
 
 
-    <script>
-        function updateClock() {
-            const now = new Date();
-            const time = now.toLocaleTimeString();
-            document.getElementById("clock").innerHTML = time;
-        }
-        setInterval(updateClock, 1000);
-        updateClock();
-    </script>
+
 </body>
 
 </html>

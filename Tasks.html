@@ -213,7 +213,7 @@
             justify-content: center;
             align-items: center;
         }
-        
+
         .Working_btns {
             position: fixed;
             bottom: 0;
@@ -226,7 +226,8 @@
             justify-content: center;
             display: flex;
             gap: 10px;
-            border:2px solid black;
+            border: 2px solid black;
+    
         }
 
         .Working_btns>button {
@@ -241,9 +242,10 @@
             border: none;
             border-radius: 7px;
             justify-content: center;
-
+            
         }
-        .Working_btns>button:hover{
+
+        .Working_btns>button:hover {
             transition: all 0.3s ease;
             cursor: pointer;
             color: black;
@@ -261,22 +263,48 @@
             border: 2px solid rgb(43, 43, 43);
             background-color: rgb(179, 179, 179);
             border-radius: 5px;
+            
 
         }
-        .fa-trash-can{
+
+        .fa-trash-can {
             color: rgb(209, 87, 87);
             font-size: 20px;
             margin-left: 8px;
         }
-        .fa-square-plus{
+
+        .fa-square-plus {
             color: rgb(104, 184, 101);
             font-size: 22px;
             margin-left: 8px;
         }
-        .fa-chart-line{
+
+        .fa-chart-line {
             color: rgb(150, 114, 167);
             font-size: 22px;
             margin-left: 8px;
+        }
+
+        .clock-box {
+         display: flex;
+         text-align: center;
+         justify-content: center;
+         align-items: center;
+         gap:7px;
+         font-size: 22px;
+         position: fixed;
+         left:20px;
+
+         
+
+        }
+        .fa-clock{
+            color:rgb(255, 255, 255);
+            font-size: 22px;
+            margin-left:10px;
+        }
+        #clock{
+            color:white;
         }
     </style>
 </head>
@@ -318,15 +346,25 @@
                     <th>Status</th>
                 </tr>
                 <tr>
-                    <td style="width:60px"><p>Hello this is me </p></td>
-                    <td style="width:300px"><p></p></td>
-                    <td style="width:100px"><p></p></td>
+                    <td style="width:60px">
+                        <p>Hello this is me </p>
+                    </td>
+                    <td style="width:300px">
+                        <p></p>
+                    </td>
+                    <td style="width:100px">
+                        <p></p>
+                    </td>
                 </tr>
 
             </table>
 
         </div>
         <div class="Working_btns">
+            <div class="clock-box">
+                <i class="fa-regular fa-clock"></i>
+                <span id="clock">hello</span>
+            </div>
             <input type="text" placeholder="Task...">
             <button>Add Task<i class="fa-regular fa-square-plus"></i></button>
             <input type="text" placeholder="Task ID...">
@@ -335,6 +373,15 @@
             <button>Status<i class="fa-solid fa-chart-line"></i></button>
         </div>
     </div>
+    <script>
+        function updateClock() {
+            const now = new Date();
+            const time = now.toLocaleTimeString();
+            document.getElementById("clock").innerHTML = time;
+        }
+        setInterval(updateClock, 1000);
+        updateClock();
+    </script>
 
 </body>
 
