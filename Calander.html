@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
     <style>
         body {
             padding: 0px;
@@ -93,84 +92,79 @@
             margin-right: 8px;
         }
 
-        .home_container {
-            display: flex;
-            flex-direction: row;
-            gap: 60px;
-            justify-content: center;
-            background-image: url(./Home_background.jpg);
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: cover;
-            height: 89vh;
-        }
-
-        .Quote {
-            padding-top: 5%;
-            width: 33%;
-        }
-
-        .Quote>h1 {
-            color: #2e2e2e;
-            font-size: 35px;
-
-        }
-
-        .Quote>h2 {
-            color: rgb(48, 48, 112);
-        }
-
-        .clock-box {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            margin-top: 30px;
-            font-size: 25px;
-            color: #3f195f;
-            font-weight: 600;
-        }
-
-        .clock-box i {
-            color: #342264;
-            font-size: 22px;
-        }
-
-        #Start_btn {
-            background-color:rgb(194, 177, 152) ;
-            padding: 15px;
-            width: 200px;
-            align-items: center;
-            display: flex;
-            justify-content: center;
-            border-radius: 7px;
-            font-size: 20px;
-            text-decoration: none;
-            color:black;
-            
-        }
-
-        #Start_btn:hover {
-            box-shadow: 0 0 8px;
-            background-color: rgb(153, 138, 115);
-            transition: all 0.3s ease;
-            cursor: pointer;
-        }
-
         .fa-arrow-right-long {
             color: rgb(51, 51, 51);
             font-size: 22px;
             margin-left: 8px;
         }
 
-        .home_img {
-            padding-top: 120px;
+        .Task_Container {
+            display: flex;
+            background-image: url(./Home_background.jpg);
+            justify-content: left;
+            flex-direction: row;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            height: 89vh;
+            gap: 20px
         }
 
-        .home_img>img {
-            box-shadow: 0 0 5px;
+        .sidebar {
+            width: 220px;
+            height: 84vh;
+            background-color: rgba(35, 56, 37, 0.5);
+            border-right: 1px solid #ddd;
+            padding: 18px;
+            display: flex;
+            gap: 20px;
+            text-align: center;
+            margin-left: auto;
+            font-family: Arial;
+            flex-direction: column;
+            overflow-y: auto;
+        }
+
+        .sidebar>a {
+            text-decoration: none;
+            color: rgb(29, 29, 29);
+            padding: 20px;
+            border-radius: 7px;
+            background-color: rgb(230, 211, 180);
+        }
+
+        .sidebar>a:hover {
+            box-shadow: 0 0 10px;
+            transition: all 0.2s ease;
+            background-color: rgb(241, 219, 189);
+        }
+
+        label {
+            text-align: center;
+            justify-content: center;
+            display: flex;
+        }
+
+        textarea {
+            width: 92%;
+            height: 250px;
+            font-size: 16px;
+            resize: none;
+            border: 5px double;
             border-radius: 10px;
-            padding-bottom: 20px;
-            background-color: rgb(100, 133, 133, 0.5);
+        }
+
+        .fa-book {
+            color: rgb(226, 248, 184);
+            font-size: 23px;
+            margin-right: 8px;
+        }
+
+        .calendar {
+            border: 2px solid black;
+            border-radius: 10px;
+            padding: 2px;
+            height: 65.5vh
         }
     </style>
 </head>
@@ -193,33 +187,24 @@
         <a href=""><i class="fa-solid fa-user"></i></i>Account</a>
         <a href="Index.html" id="Login_btn">Login<i class="fa-solid fa-arrow-right-long"></i></a>
     </nav>
-
-    <div class="home_container">
-        <div class="Quote">
-            <h1>Capture, organize, and tackle your to-dos from anywhere.</h1>
-            <h2>Escape the clutter and chaos—unleash your productivity.</h2>
-            <a id="Start_btn" href="Signup.html">Start now <i class="fa-solid fa-arrow-right-long"></i></a>
-            <div class="clock-box">
-                <i class="fa-regular fa-clock"></i>
-                <span id="clock"></span>
-            </div>
+    <div class="Task_Container">
+        <div class="sidebar_container">
+            <aside class="sidebar">
+                <a href="Tasks.html" style="background-color: rgb(43, 43, 43); color:white"><i class="fa-solid fa-book"></i>Temperary task only!</a>
+                <textarea name="Vishal" id="1234">NOTEBOOK!</textarea>
+                <a href="Calander.html">Calander</a>
+                <a href="">Completed Tasks</a>
+                <a href="">Reamainig Tasks</a>
+            </aside>
         </div>
-        
-        <div class="home_img">
-            <img src="./Home_img.avif" alt="Img Didn't load!">
+        <div class="calendar">
+            <iframe
+                src="https://calendar.google.com/calendar/embed?ctz=Asia%2FKolkata&mode=WEEK&src=c3VuaGFyaWxhbHJhanB1ODg4MkBnbWFpbC5jb20"
+                style="border:0" width="800" height="500">
+            </iframe>
         </div>
     </div>
 
-
-    <script>
-        function updateClock() {
-            const now = new Date();
-            const time = now.toLocaleTimeString();
-            document.getElementById("clock").innerHTML = time;
-        }
-        setInterval(updateClock, 1000);
-        updateClock();
-    </script>
 </body>
 
 </html>

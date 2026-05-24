@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -90,25 +91,74 @@
             font-size: 22px;
             margin-right: 8px;
         }
+
         .fa-arrow-right-long {
             color: rgb(51, 51, 51);
             font-size: 22px;
             margin-left: 8px;
         }
 
-
-
-        .Task_Container{
+        .Task_Container {
             display: flex;
             background-image: url(./Home_background.jpg);
-            justify-content: center;
+            justify-content: left;
             background-repeat: no-repeat;
             background-position: center;
             background-size: cover;
             height: 89vh;
         }
+
+        .sidebar {
+            width: 220px;
+            height: 84vh;
+            background-color:rgba(35, 56, 37, 0.5);
+            border-right: 1px solid #ddd;
+            padding: 18px;
+            display: flex;
+            gap: 20px;
+            text-align: center;
+            margin-left: auto;
+            font-family: Arial;
+            flex-direction: column;
+            overflow-y: auto;
+        }
+
+        .sidebar>a {
+            text-decoration: none;
+            color: rgb(29, 29, 29);
+            padding: 20px;
+            border-radius: 7px;
+            background-color: rgb(230, 211, 180);
+        }
+
+        .sidebar>a:hover {
+            box-shadow: 0 0 10px;
+            transition: all 0.2s ease;
+            background-color: rgb(241, 219, 189);
+        }
+
+        label{
+            text-align: center;
+            justify-content: center;
+            display: flex;
+        }
+        textarea {
+            width: 92%;
+            height: 250px;
+            font-size: 16px;
+            resize: none;
+            border: 5px double;
+            border-radius: 10px;
+        }
+
+        .fa-book {
+            color: rgb(226, 248, 184);
+            font-size: 23px;
+            margin-right: 8px;
+        }
     </style>
 </head>
+
 <body>
     <nav class="Navigation">
         <div class="Navigation_logo">
@@ -128,7 +178,16 @@
         <a href="Index.html" id="Login_btn">Login<i class="fa-solid fa-arrow-right-long"></i></a>
     </nav>
     <div class="Task_Container">
-        
+        <div class="sidebar_container">
+            <aside class="sidebar">
+                <a href="Tasks.html" style="background-color: rgb(43, 43, 43); color:white"><i class="fa-solid fa-book"></i>Temperary task only!</a>
+                <textarea name="Vishal" id="1234">NOTEBOOK!</textarea>
+                <a href="Calander.html">Calander</a>
+                <a href="">Completed Tasks</a>
+                <a href="">Reamainig Tasks</a>
+            </aside>
+        </div>
     </div>
 </body>
+
 </html>
