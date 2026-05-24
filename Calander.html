@@ -118,7 +118,6 @@
             padding: 18px;
             display: flex;
             gap: 20px;
-            text-align: center;
             margin-left: auto;
             font-family: Arial;
             flex-direction: column;
@@ -127,15 +126,16 @@
 
         .sidebar>a {
             text-decoration: none;
-            color: rgb(29, 29, 29);
+            color: rgb(255, 255, 255);
             padding: 20px;
             border-radius: 7px;
-            background-color: rgb(230, 211, 180);
+            background-color: rgb(43, 43, 43);
         }
 
         .sidebar>a:hover {
             box-shadow: 0 0 10px;
             transition: all 0.2s ease;
+            color: rgb(37, 37, 37);
             background-color: rgb(241, 219, 189);
         }
 
@@ -160,11 +160,40 @@
             margin-right: 8px;
         }
 
+        .fa-calendar-days {
+            color: rgb(226, 248, 184);
+            font-size: 23px;
+            margin-right: 8px;
+        }
+
+        .fa-clipboard-check {
+            color: rgb(226, 248, 184);
+            font-size: 25px;
+            margin-right: 8px;
+        }
+
+        .fa-hourglass-end {
+            color: rgb(226, 248, 184);
+            font-size: 25px;
+            margin-right: 8px;
+        }
+
         .calendar {
-            border: 2px solid black;
+            border: 5px double rgb(39, 39, 39);
+            margin-top: 2%;
             border-radius: 10px;
-            padding: 2px;
+            padding: 10px;
             height: 65.5vh
+        }
+        .Under_construction{
+            background-color: bisque;
+            border-radius: 50px;
+            font-size: 16px;
+            color: rgb(82, 82, 82);
+            box-shadow: 0 0 10px;
+            height:480px;
+            padding:30px;
+            width:350px
         }
     </style>
 </head>
@@ -190,11 +219,11 @@
     <div class="Task_Container">
         <div class="sidebar_container">
             <aside class="sidebar">
-                <a href="Tasks.html" style="background-color: rgb(43, 43, 43); color:white"><i class="fa-solid fa-book"></i>Temperary task only!</a>
+                <a href="Tasks.html"><i class="fa-solid fa-book"></i>Temporary task only!</a>
                 <textarea name="Vishal" id="1234">NOTEBOOK!</textarea>
-                <a href="Calander.html">Calander</a>
-                <a href="">Completed Tasks</a>
-                <a href="">Reamainig Tasks</a>
+                <a href="Calander.html"><i class="fa-solid fa-calendar-days"></i></i>Calander</a>
+                <a href=""><i class="fa-solid fa-clipboard-check"></i>Completed Tasks</a>
+                <a href=""><i class="fa-solid fa-hourglass-end"></i>Reamainig Tasks</a>
             </aside>
         </div>
         <div class="calendar">
@@ -202,6 +231,16 @@
                 src="https://calendar.google.com/calendar/embed?ctz=Asia%2FKolkata&mode=WEEK&src=c3VuaGFyaWxhbHJhanB1ODg4MkBnbWFpbC5jb20"
                 style="border:0" width="800" height="500">
             </iframe>
+        </div>
+        <div class="Under_construction">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi animi ipsa deserunt minima laboriosam,
+                optio culpa, praesentium officia perferendis ratione nemo consequuntur nisi sed, sunt distinctio odio
+                debitis amet libero. Inventore culpa dolore, aut blanditiis illo voluptates placeat veniam optio
+                laudantium odio vel! Aperiam reiciendis fugit, quia deserunt ipsa eaque veritatis quasi ea architecto
+                quis voluptates mollitia maiores nemo pariatur voluptate facilis! Mollitia maxime, quas quia porro magni
+                blanditiis quam velit doloribus officia molestias rerum, nesciunt non cupiditate quidem, deleniti
+                commodi atque? Similique dignissimos culpa nihil! Tempora hic cumque nisi non, modi inventore molestiae
+                ea adipisci. Repellat molestias praesentium aspernatur.</p>
         </div>
     </div>
 
