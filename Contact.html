@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+        body {
+            padding: 0px;
+            margin: 0px;
+            font-family: monospace;
+        }
+
+        .Navigation {
+            background-color: rgba(0, 0, 0, 0.8);
+            display: flex;
+            gap: 70px;
+            align-items: center;
+            justify-content: center;
+            flex-direction: row;
+            padding: 15px;
+
+        }
+
+        .Navigation_logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #ff841f;
+            font-size: 28px;
+            font-weight: 700;
+        }
+
+        .Navigation>a {
+            text-decoration: none;
+            font-size: 22px;
+            border-radius: 5px;
+            padding: 10px;
+            color: whitesmoke;
+        }
+
+        .Navigation>a:hover {
+            box-shadow: 0 0 5px rgb(139, 138, 136);
+            transition: all 0.2s ease;
+        }
+
+        #Login_btn {
+            display: flex;
+            align-items: center;
+            margin-left: auto;
+            width: 180px;
+            font-size: 20px;
+            align-self: center;
+            justify-content: center;
+            padding: 15px;
+            border-radius: 7px;
+            background-color: rgb(190, 172, 143);
+            text-decoration: none;
+            color: black;
+        }
+
+        #Login_btn:hover {
+            box-shadow: 0 0 10px;
+            background-color: rgb(199, 179, 149);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .fa-house-chimney {
+            color: #1366b9;
+            font-size: 22px;
+            margin-right: 8px;
+        }
+
+        .fa-list-check {
+            color: rgb(95, 84, 255);
+            font-size: 22px;
+            margin-right: 8px;
+        }
+
+        .fa-envelope {
+            color: rgb(103, 117, 78);
+            font-size: 22px;
+            margin-right: 8px;
+        }
+
+        .fa-user {
+            color: rgb(235, 197, 154);
+            font-size: 22px;
+            margin-right: 8px;
+        }
+
+        .contact_div {
+            display: flex;
+            background-image: url(./Home_background.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            height: 89vh;
+            flex-direction: row;
+            justify-content: center;
+            gap: 5%;
+
+        }
+
+        .contact_qoute {
+            width: 80%;
+            margin-top: 2%;
+            background-color: rgba(39, 80, 47, 0.5);
+            padding: 40px;
+            height: 65vh;
+            display: flex;
+            flex-direction: column;
+            font-family: Arial;
+            border-radius: 10px;
+            gap:5%;
+            position: fixed;
+        }
+        .contact_qoute_h1_h2{
+            background-color: rgba(55, 46, 94, 0.5);
+            padding:10px;
+            border-radius: 7px;
+            border: 2px;
+        }
+        .contact_img>img {
+            margin-top: 40%;
+            width: 90%;
+            margin-left: 50%;
+            padding: 15px;
+            height: 40vh;
+            background-color: rgba(131, 220, 231, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 0 10px;
+        }
+
+        .fa-regular {
+            color: rgb(255, 230, 230);
+            font-size: 38px;
+            margin-right: 8px;
+            margin-top: 2%;
+        }
+
+        .fa-phone {
+            color: rgb(255, 230, 230);
+            font-size: 35px;
+            margin-right: 8px;
+            margin-top: 3%;
+        }
+
+        .fa-instagram {
+            color: rgb(255, 230, 230);
+            font-size: 40px;
+            margin-right: 8px;
+            margin-top: 3%;
+        }
+
+        .fa-github {
+            color: rgb(255, 230, 230);
+            font-size: 40px;
+            margin-right: 8px;
+            margin-top: 3%;
+        }
+        .contact_Routes{
+            background-color: rgba(9, 34, 17, 0.6);
+            padding:30px;
+            border-radius: 10px;
+            gap:30px;
+            display: flex;
+            justify-content: center;
+            width:500px ;
+        }
+        .contact_Routes>span{
+            background-color: rgb(107, 148, 187,0.7);
+            padding:10px;
+            width:150px;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            border-radius: 10px;
+        }
+        .contact_Routes>span:hover{
+            transition: all 0.2s ease;
+            background-color: rgba(127, 174, 219, 0.3);
+
+        }
+        .to_fill_space{
+            display: flex;
+            flex-direction: column;
+            gap:5px;
+        }
+        .to_fill_space>textarea{
+            resize: none;
+            width:43.5%;
+            border-radius: 10px;
+            height:100px;
+            background-color: rgb(179, 179, 179);
+            padding:15px;
+            border: 8px double rgb(5, 21, 39);
+            font-size: 16px;
+        }
+
+        
+        .to_fill_space>button{
+            width:250px;
+            padding:12px;
+            font-size: 16px;
+            border-radius: 7px;
+            background-color: antiquewhite;
+            color:black
+
+        }
+        .to_fill_space>button:hover{
+            cursor: pointer;
+            transition: all 0.3s ease;
+            color:whitesmoke;
+            background-color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="Navigation">
+        <div class="Navigation_logo">
+            <svg width="40" height="40" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M18 10H46C50 10 54 14 54 18V46C54 50 50 54 46 54H18C14 54 10 50 10 46V18C10 14 14 10 18 10Z"
+                    fill="#5f62c2" />
+                <path d="M18 32L28 42L46 22" stroke="white" stroke-width="6" stroke-linecap="round"
+                    stroke-linejoin="round" />
+            </svg>
+
+            <span>Taskora</span>
+        </div>
+        <a href="Home.html"><i class="fa-solid fa-house-chimney"></i>Home</a>
+        <a href="Tasks.html"><i class="fa-solid fa-list-check"></i>Tasks</a>
+        <a href="Contact.html"><i class="fa-solid fa-envelope"></i>Contact</a>
+        <a href="Account.html"><i class="fa-solid fa-user"></i></i>Account</a>
+        <a href="Login.html" id="Login_btn">Login<i class="fa-solid fa-arrow-right-long"></i></a>
+    </nav>
+    <div class="contact_div">
+        <div class="contact_qoute">
+            <div class="contact_qoute_h1_h2">
+                <h1>Get in touch</h1>
+                <h2>Want to get in touch? We'd love to hear from you.Here's how you can reach us.</h2>
+            </div>
+
+            <div class="contact_Routes">
+                <span><a href="mailto:sunharilalrajpu8882@gmail.com" target="_blank"><i
+                            class="fa-regular fa-envelope"></i></a></span>
+                <span><a href="tell:+919990841879" target="_blank"><i class="fa-solid fa-phone"></i></a></span>
+                <span><a href="https://www.instagram.com/vishal__rajput8882/" target="_blank"><i
+                            class="fa-brands fa-instagram"></i></a></span>
+                <span><a href="https://github.com/Vishal88882" target="_blank"><i
+                            class="fa-brands fa-github"></i></a></span>
+            </div>
+            <div class="to_fill_space">
+                <textarea name="Nothing" id="1234" autofocus>Write your valuable feedback here!</textarea>
+                <button>Feedback</button>
+            </div>
+        </div>
+        <div class="contact_img">
+            <img src="./Contact_Side.webp" alt="Img is loading!">
+        </div>
+    </div>
+</body>
