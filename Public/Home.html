@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
     <style>
         body {
             padding: 0px;
@@ -23,7 +22,6 @@
             justify-content: center;
             flex-direction: row;
             padding: 15px;
-
         }
 
         .Navigation_logo {
@@ -97,8 +95,9 @@
         .home_container {
             display: flex;
             flex-direction: row;
-            gap: 60px;
-            justify-content: center;
+            gap: 40px;
+            padding-top: 5%;
+            padding-left: 4%;
             background-image: url(../Assets/Home_background.jpg);
             background-repeat: no-repeat;
             background-position: center;
@@ -106,15 +105,9 @@
             height: 89vh;
         }
 
-        .Quote {
-            padding-top: 5%;
-            width: 33%;
-        }
-
         .Quote>h1 {
             color: #2e2e2e;
             font-size: 35px;
-
         }
 
         .Quote>h2 {
@@ -132,7 +125,6 @@
             font-size: 20px;
             text-decoration: none;
             color: black;
-
         }
 
         #Start_btn:hover {
@@ -149,7 +141,9 @@
         }
 
         .home_img {
-            padding-top: 120px;
+            display: flex;
+            padding-top: 90px;
+            padding-right: 5%;
         }
 
         .home_img>img {
@@ -157,9 +151,10 @@
             border-radius: 10px;
             padding-bottom: 20px;
             background-color: rgb(100, 133, 133, 0.5);
+            min-width: 250px;
+            width: 640px;
+            height: 350px;
         }
-
-
         @media (max-width:1480px) {
             .Navigation {
                 padding: 20px;
@@ -169,16 +164,13 @@
 
             .Navigation_logo {
                 gap: 15px;
-                color: #ff841f;
                 font-size: 20px;
                 font-weight: 700;
             }
 
             .Navigation>a {
                 font-size: 20px;
-                border-radius: 5px;
                 padding: 2px;
-                color: whitesmoke;
             }
 
             .home_img {
@@ -187,30 +179,20 @@
 
             .home_img>img {
                 box-shadow: 0 0 5px;
-                border-radius: 10px;
                 padding-bottom: 20px;
-                background-color: rgb(100, 133, 133, 0.5);
                 width: 150px;
                 height: 100px;
             }
 
             #Login_btn {
-                display: flex;
-                align-items: center;
                 width: 120px;
                 font-size: 18px;
                 padding: 5px;
-                border-radius: 10px;
-
             }
 
             .Navigation_logo {
-                display: flex;
-                align-items: center;
                 gap: 4px;
-                color: #ff841f;
                 font-size: 20px;
-                font-weight: 700;
             }
 
             .fa-arrow-right-long {
@@ -236,6 +218,29 @@
             .fa-user {
                 font-size: 22px;
                 margin-right: 8px;
+            }
+
+            .home_container {
+                gap: 10px;
+                height: 100vh;
+            }
+
+            .Quote {
+                padding-top: 5%;
+                padding-left: 5%;
+                width: 90%;
+            }
+
+            .home_img {
+                display: flex;
+                padding: 20px;
+                padding-top: 14%;
+            }
+
+            .home_img>img {
+                min-width: 250px;
+                width: 570px;
+                height: 300px;
             }
         }
 
@@ -248,16 +253,13 @@
 
             .Navigation_logo {
                 gap: 10px;
-                color: #ff841f;
                 font-size: 25px;
                 font-weight: 700;
             }
 
             .Navigation>a {
                 font-size: 20px;
-                border-radius: 5px;
                 padding: 2px;
-                color: whitesmoke;
             }
 
             .home_img {
@@ -265,31 +267,21 @@
             }
 
             .home_img>img {
-                box-shadow: 0 0 5px;
                 border-radius: 10px;
                 padding-bottom: 20px;
-                background-color: rgb(100, 133, 133, 0.5);
                 width: 150px;
                 height: 100px;
             }
 
             #Login_btn {
-                display: flex;
-                align-items: center;
                 width: 120px;
                 font-size: 16px;
                 padding: 5px;
-                border-radius: 10px;
-
             }
 
             .Navigation_logo {
-                display: flex;
-                align-items: center;
                 gap: 4px;
-                color: #ff841f;
                 font-size: 20px;
-                font-weight: 700;
             }
 
             .fa-arrow-right-long {
@@ -315,28 +307,47 @@
             .fa-user {
                 font-size: 16px;
                 margin-right: 8px;
+            }
+
+            .home_container {
+                gap: 10px;
+                height: 100vh;
+            }
+
+            .Quote {
+                padding-top: 10%;
+                padding-left: 5%;
+                width: 50%;
+            }
+
+            .home_img {
+                display: flex;
+                padding: 20px;
+                padding-top: 14%;
+            }
+
+            .home_img>img {
+                min-width: 250px;
+                width: 520px;
+                height: 250px;
             }
         }
 
         @media (max-width:1024px) {
             .Navigation {
                 padding: 15px;
-                gap: 10px;
+                gap: 22px;
                 justify-content: space-between;
             }
 
             .Navigation_logo {
                 gap: 5px;
-                color: #ff841f;
                 font-size: 22px;
-                font-weight: 700;
             }
 
             .Navigation>a {
                 font-size: 16px;
-                border-radius: 5px;
                 padding: 2px;
-                color: whitesmoke;
             }
 
             .home_img {
@@ -344,31 +355,20 @@
             }
 
             .home_img>img {
-                box-shadow: 0 0 5px;
-                border-radius: 10px;
                 padding-bottom: 20px;
-                background-color: rgb(100, 133, 133, 0.5);
                 width: 150px;
                 height: 100px;
             }
 
             #Login_btn {
-                display: flex;
-                align-items: center;
                 width: 120px;
                 font-size: 16px;
                 padding: 5px;
-                border-radius: 10px;
-
             }
 
             .Navigation_logo {
-                display: flex;
-                align-items: center;
                 gap: 4px;
-                color: #ff841f;
                 font-size: 20px;
-                font-weight: 700;
             }
 
             .fa-arrow-right-long {
@@ -394,6 +394,32 @@
             .fa-user {
                 font-size: 16px;
                 margin-right: 8px;
+            }
+
+            .home_container {
+                flex-direction: column;
+                gap: 10px;
+                height: 100vh;
+            }
+
+            .Quote {
+                padding-top: 10%;
+                padding-left: 5%;
+                width: 90%;
+            }
+
+            .home_img {
+                display: flex;
+                padding: 20px;
+                margin-bottom: 5%;
+                padding-left: 5%;
+                min-height: 180px;
+            }
+
+            .home_img>img {
+                min-width: 250px;
+                width: 520px;
+                height: auto;
             }
         }
 
@@ -405,17 +431,13 @@
             }
 
             .Navigation_logo {
-                gap: 5px;
-                color: #ff841f;
+                gap: 10px;
                 font-size: 20px;
-                font-weight: 700;
             }
 
             .Navigation>a {
                 font-size: 14px;
-                border-radius: 5px;
                 padding: 2px;
-                color: whitesmoke;
             }
 
             .home_img {
@@ -423,31 +445,20 @@
             }
 
             .home_img>img {
-                box-shadow: 0 0 5px;
-                border-radius: 10px;
                 padding-bottom: 20px;
-                background-color: rgb(100, 133, 133, 0.5);
                 width: 150px;
                 height: 100px;
             }
 
             #Login_btn {
-                display: flex;
-                align-items: center;
                 width: 120px;
                 font-size: 12px;
                 padding: 5px;
-                border-radius: 10px;
-
             }
 
             .Navigation_logo {
-                display: flex;
-                align-items: center;
                 gap: 4px;
-                color: #ff841f;
                 font-size: 18px;
-                font-weight: 700;
             }
 
             .fa-arrow-right-long {
@@ -474,10 +485,35 @@
                 font-size: 12px;
                 margin-right: 8px;
             }
+
+            .home_container {
+                flex-direction: column;
+                gap: 10px;
+                height: 100vh;
+            }
+
+            .Quote {
+                padding-top: 10%;
+                padding-left: 5%;
+                width: 90%;
+            }
+
+            .home_img {
+                display: flex;
+                padding: 20px;
+                margin-bottom: 5%;
+                padding-left: 5%;
+                min-height: 180px;
+            }
+
+            .home_img>img {
+                min-width: 250px;
+                width: 520px;
+                height: auto;
+            }
         }
 
         @media(max-width:480px) {
-
             .Navigation {
                 padding: 5px;
                 gap: 5px;
@@ -486,16 +522,12 @@
 
             .Navigation_logo {
                 gap: 5px;
-                color: #ff841f;
                 font-size: 20px;
-                font-weight: 700;
             }
 
             .Navigation>a {
                 font-size: 10px;
-                border-radius: 5px;
                 padding: 2px;
-                color: whitesmoke;
             }
 
             .home_img {
@@ -503,31 +535,20 @@
             }
 
             .home_img>img {
-                box-shadow: 0 0 5px;
-                border-radius: 10px;
                 padding-bottom: 20px;
-                background-color: rgb(100, 133, 133, 0.5);
                 width: 150px;
                 height: 100px;
             }
 
             #Login_btn {
-                display: flex;
-                align-items: center;
                 width: 120px;
                 font-size: 12px;
                 padding: 5px;
-                border-radius: 10px;
-
             }
 
             .Navigation_logo {
-                display: flex;
-                align-items: center;
                 gap: 4px;
-                color: #ff841f;
                 font-size: 12px;
-                font-weight: 700;
             }
 
             .fa-arrow-right-long {
@@ -555,7 +576,30 @@
                 margin-right: 8px;
             }
 
+            .home_container {
+                flex-direction: column;
+                gap: 10px;
+                height: 100vh;
+            }
 
+            .Quote {
+                padding-top: 10%;
+                padding-left: 5%;
+                width: 90%;
+            }
+
+            .home_img {
+                display: flex;
+                padding: 20px;
+                margin-bottom: 5%;
+                min-height: 180px;
+            }
+
+            .home_img>img {
+                min-width: 250px;
+                width: 440px;
+                height: auto;
+            }
         }
     </style>
 </head>
@@ -563,31 +607,24 @@
 <body>
     <nav class="Navigation">
         <div class="Navigation_logo">
-
             <span>Taskora</span>
         </div>
         <a href="Home.html"><i class="fa-solid fa-house-chimney"></i>Home</a>
         <a href="Tasks.html"><i class="fa-solid fa-list-check"></i>Tasks</a>
         <a href="Contact.html"><i class="fa-solid fa-envelope"></i>Contact</a>
-        <a href="Account.html"><i class="fa-solid fa-user"></i></i>Account</a>
+        <a href="Account.html"><i class="fa-solid fa-user"></i>Account</a>
         <a href="Login.html" id="Login_btn">Login<i class="fa-solid fa-arrow-right-long"></i></a>
     </nav>
-
     <div class="home_container">
         <div class="Quote">
             <h1>Capture, organize, and tackle your to-dos from anywhere.</h1>
             <h2>Escape the clutter and chaos—unleash your productivity.</h2>
             <a id="Start_btn" href="Signup.html">Start now <i class="fa-solid fa-arrow-right-long"></i></a>
-
         </div>
-
         <div class="home_img">
             <img src="../Assets/Home_img.avif" alt="Img Didn't load!">
         </div>
     </div>
-
-
-
 </body>
 
 </html>
