@@ -12,6 +12,7 @@
             padding: 0px;
             margin: 0px;
             font-family: monospace;
+            overflow-x: hidden;
         }
 
         .Navigation {
@@ -120,10 +121,8 @@
             color: rgb(48, 48, 112);
         }
 
-
-
         #Start_btn {
-            background-color:rgb(194, 177, 152) ;
+            background-color: rgb(194, 177, 152);
             padding: 15px;
             width: 200px;
             align-items: center;
@@ -132,8 +131,8 @@
             border-radius: 7px;
             font-size: 20px;
             text-decoration: none;
-            color:black;
-            
+            color: black;
+
         }
 
         #Start_btn:hover {
@@ -159,18 +158,411 @@
             padding-bottom: 20px;
             background-color: rgb(100, 133, 133, 0.5);
         }
+
+
+        @media (max-width:1480px) {
+            .Navigation {
+                padding: 20px;
+                gap: 40px;
+                justify-content: space-between;
+            }
+
+            .Navigation_logo {
+                gap: 15px;
+                color: #ff841f;
+                font-size: 20px;
+                font-weight: 700;
+            }
+
+            .Navigation>a {
+                font-size: 20px;
+                border-radius: 5px;
+                padding: 2px;
+                color: whitesmoke;
+            }
+
+            .home_img {
+                padding-top: 120px;
+            }
+
+            .home_img>img {
+                box-shadow: 0 0 5px;
+                border-radius: 10px;
+                padding-bottom: 20px;
+                background-color: rgb(100, 133, 133, 0.5);
+                width: 150px;
+                height: 100px;
+            }
+
+            #Login_btn {
+                display: flex;
+                align-items: center;
+                width: 120px;
+                font-size: 18px;
+                padding: 5px;
+                border-radius: 10px;
+
+            }
+
+            .Navigation_logo {
+                display: flex;
+                align-items: center;
+                gap: 4px;
+                color: #ff841f;
+                font-size: 20px;
+                font-weight: 700;
+            }
+
+            .fa-arrow-right-long {
+                font-size: 22px;
+                margin-left: 4px;
+            }
+
+            .fa-house-chimney {
+                font-size: 22px;
+                margin-right: 8px;
+            }
+
+            .fa-list-check {
+                font-size: 22px;
+                margin-right: 8px;
+            }
+
+            .fa-envelope {
+                font-size: 22px;
+                margin-right: 8px;
+            }
+
+            .fa-user {
+                font-size: 22px;
+                margin-right: 8px;
+            }
+        }
+
+        @media (max-width:1280px) {
+            .Navigation {
+                padding: 15px;
+                gap: 40px;
+                justify-content: space-between;
+            }
+
+            .Navigation_logo {
+                gap: 10px;
+                color: #ff841f;
+                font-size: 25px;
+                font-weight: 700;
+            }
+
+            .Navigation>a {
+                font-size: 20px;
+                border-radius: 5px;
+                padding: 2px;
+                color: whitesmoke;
+            }
+
+            .home_img {
+                padding-top: 120px;
+            }
+
+            .home_img>img {
+                box-shadow: 0 0 5px;
+                border-radius: 10px;
+                padding-bottom: 20px;
+                background-color: rgb(100, 133, 133, 0.5);
+                width: 150px;
+                height: 100px;
+            }
+
+            #Login_btn {
+                display: flex;
+                align-items: center;
+                width: 120px;
+                font-size: 16px;
+                padding: 5px;
+                border-radius: 10px;
+
+            }
+
+            .Navigation_logo {
+                display: flex;
+                align-items: center;
+                gap: 4px;
+                color: #ff841f;
+                font-size: 20px;
+                font-weight: 700;
+            }
+
+            .fa-arrow-right-long {
+                font-size: 16px;
+                margin-left: 4px;
+            }
+
+            .fa-house-chimney {
+                font-size: 16px;
+                margin-right: 8px;
+            }
+
+            .fa-list-check {
+                font-size: 16px;
+                margin-right: 8px;
+            }
+
+            .fa-envelope {
+                font-size: 16px;
+                margin-right: 8px;
+            }
+
+            .fa-user {
+                font-size: 16px;
+                margin-right: 8px;
+            }
+        }
+
+        @media (max-width:1024px) {
+            .Navigation {
+                padding: 15px;
+                gap: 10px;
+                justify-content: space-between;
+            }
+
+            .Navigation_logo {
+                gap: 5px;
+                color: #ff841f;
+                font-size: 22px;
+                font-weight: 700;
+            }
+
+            .Navigation>a {
+                font-size: 16px;
+                border-radius: 5px;
+                padding: 2px;
+                color: whitesmoke;
+            }
+
+            .home_img {
+                padding-top: 120px;
+            }
+
+            .home_img>img {
+                box-shadow: 0 0 5px;
+                border-radius: 10px;
+                padding-bottom: 20px;
+                background-color: rgb(100, 133, 133, 0.5);
+                width: 150px;
+                height: 100px;
+            }
+
+            #Login_btn {
+                display: flex;
+                align-items: center;
+                width: 120px;
+                font-size: 16px;
+                padding: 5px;
+                border-radius: 10px;
+
+            }
+
+            .Navigation_logo {
+                display: flex;
+                align-items: center;
+                gap: 4px;
+                color: #ff841f;
+                font-size: 20px;
+                font-weight: 700;
+            }
+
+            .fa-arrow-right-long {
+                font-size: 16px;
+                margin-left: 4px;
+            }
+
+            .fa-house-chimney {
+                font-size: 16px;
+                margin-right: 8px;
+            }
+
+            .fa-list-check {
+                font-size: 16px;
+                margin-right: 8px;
+            }
+
+            .fa-envelope {
+                font-size: 16px;
+                margin-right: 8px;
+            }
+
+            .fa-user {
+                font-size: 16px;
+                margin-right: 8px;
+            }
+        }
+
+        @media (max-width:770px) {
+            .Navigation {
+                padding: 7px;
+                gap: 8px;
+                justify-content: space-between;
+            }
+
+            .Navigation_logo {
+                gap: 5px;
+                color: #ff841f;
+                font-size: 20px;
+                font-weight: 700;
+            }
+
+            .Navigation>a {
+                font-size: 14px;
+                border-radius: 5px;
+                padding: 2px;
+                color: whitesmoke;
+            }
+
+            .home_img {
+                padding-top: 120px;
+            }
+
+            .home_img>img {
+                box-shadow: 0 0 5px;
+                border-radius: 10px;
+                padding-bottom: 20px;
+                background-color: rgb(100, 133, 133, 0.5);
+                width: 150px;
+                height: 100px;
+            }
+
+            #Login_btn {
+                display: flex;
+                align-items: center;
+                width: 120px;
+                font-size: 12px;
+                padding: 5px;
+                border-radius: 10px;
+
+            }
+
+            .Navigation_logo {
+                display: flex;
+                align-items: center;
+                gap: 4px;
+                color: #ff841f;
+                font-size: 18px;
+                font-weight: 700;
+            }
+
+            .fa-arrow-right-long {
+                font-size: 12px;
+                margin-left: 4px;
+            }
+
+            .fa-house-chimney {
+                font-size: 12px;
+                margin-right: 8px;
+            }
+
+            .fa-list-check {
+                font-size: 12px;
+                margin-right: 8px;
+            }
+
+            .fa-envelope {
+                font-size: 12px;
+                margin-right: 8px;
+            }
+
+            .fa-user {
+                font-size: 12px;
+                margin-right: 8px;
+            }
+        }
+
+        @media(max-width:480px) {
+
+            .Navigation {
+                padding: 5px;
+                gap: 5px;
+                justify-content: space-between;
+            }
+
+            .Navigation_logo {
+                gap: 5px;
+                color: #ff841f;
+                font-size: 20px;
+                font-weight: 700;
+            }
+
+            .Navigation>a {
+                font-size: 10px;
+                border-radius: 5px;
+                padding: 2px;
+                color: whitesmoke;
+            }
+
+            .home_img {
+                padding-top: 120px;
+            }
+
+            .home_img>img {
+                box-shadow: 0 0 5px;
+                border-radius: 10px;
+                padding-bottom: 20px;
+                background-color: rgb(100, 133, 133, 0.5);
+                width: 150px;
+                height: 100px;
+            }
+
+            #Login_btn {
+                display: flex;
+                align-items: center;
+                width: 120px;
+                font-size: 12px;
+                padding: 5px;
+                border-radius: 10px;
+
+            }
+
+            .Navigation_logo {
+                display: flex;
+                align-items: center;
+                gap: 4px;
+                color: #ff841f;
+                font-size: 12px;
+                font-weight: 700;
+            }
+
+            .fa-arrow-right-long {
+                font-size: 12px;
+                margin-left: 4px;
+            }
+
+            .fa-house-chimney {
+                font-size: 12px;
+                margin-right: 8px;
+            }
+
+            .fa-list-check {
+                font-size: 12px;
+                margin-right: 8px;
+            }
+
+            .fa-envelope {
+                font-size: 12px;
+                margin-right: 8px;
+            }
+
+            .fa-user {
+                font-size: 12px;
+                margin-right: 8px;
+            }
+
+
+        }
     </style>
 </head>
 
 <body>
     <nav class="Navigation">
         <div class="Navigation_logo">
-            <svg width="40" height="40" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M18 10H46C50 10 54 14 54 18V46C54 50 50 54 46 54H18C14 54 10 50 10 46V18C10 14 14 10 18 10Z"
-                    fill="#5f62c2" />
-                <path d="M18 32L28 42L46 22" stroke="white" stroke-width="6" stroke-linecap="round"
-                    stroke-linejoin="round" />
-            </svg>
 
             <span>Taskora</span>
         </div>
@@ -186,9 +578,9 @@
             <h1>Capture, organize, and tackle your to-dos from anywhere.</h1>
             <h2>Escape the clutter and chaos—unleash your productivity.</h2>
             <a id="Start_btn" href="Signup.html">Start now <i class="fa-solid fa-arrow-right-long"></i></a>
-            
+
         </div>
-        
+
         <div class="home_img">
             <img src="../Assets/Home_img.avif" alt="Img Didn't load!">
         </div>
