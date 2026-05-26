@@ -1,0 +1,703 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&display=swap');
+
+.fa-house-chimney {
+    color: #1366b9;
+    font-size: 22px;
+    margin-right: 8px;
+}
+
+.fa-list-check {
+    color: rgb(95, 84, 255);
+    font-size: 22px;
+    margin-right: 8px;
+}
+
+.fa-envelope {
+    color: rgb(103, 117, 78);
+    font-size: 22px;
+    margin-right: 8px;
+}
+
+.fa-user {
+    color: rgb(235, 197, 154);
+    font-size: 22px;
+    margin-right: 8px;
+}
+
+.fa-arrow-right-long {
+    color: rgb(51, 51, 51);
+    font-size: 22px;
+    margin-left: 8px;
+}
+
+.fa-book {
+    color: rgb(226, 248, 184);
+    font-size: 23px;
+    margin-right: 8px;
+}
+
+.fa-calendar-days {
+    color: rgb(226, 248, 184);
+    font-size: 23px;
+    margin-right: 8px;
+}
+
+.fa-clipboard-check {
+    color: rgb(226, 248, 184);
+    font-size: 25px;
+    margin-right: 8px;
+}
+
+.fa-hourglass-end {
+    color: rgb(226, 248, 184);
+    font-size: 25px;
+    margin-right: 8px;
+}
+
+.fa-trash-can {
+    color: rgb(209, 87, 87);
+    font-size: 20px;
+    margin-left: 8px;
+}
+
+.fa-square-plus {
+    color: rgb(104, 184, 101);
+    font-size: 22px;
+    margin-left: 8px;
+}
+
+.fa-chart-line {
+    color: rgb(150, 114, 167);
+    font-size: 22px;
+    margin-left: 8px;
+}
+
+.fa-clock {
+    color: rgb(255, 255, 255);
+    font-size: 22px;
+    margin-left: 10px;
+}
+
+.clock-box {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    gap: 7px;
+    font-size: 22px;
+    position: fixed;
+    left: 20px;
+}
+
+#clock {
+    color: white;
+}
+
+.Navigation>a:hover {
+    box-shadow: 0 0 5px rgb(139, 138, 136);
+    transition: all 0.3s ease;
+    text-decoration: underline;
+    text-decoration-color: white;
+    text-decoration-thickness: 3px;
+}
+
+#Login_btn:hover {
+    box-shadow: 0 0 10px;
+    background-color: rgb(199, 179, 149);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.sidebar>a:hover {
+    box-shadow: 0 0 10px;
+    transition: all 0.2s ease;
+    color: rgb(39, 39, 39);
+    background-color: rgb(241, 219, 189);
+}
+
+.Working_btns>button:hover {
+    transition: all 0.3s ease;
+    cursor: pointer;
+    color: black;
+    background-color: rgb(160, 138, 98);
+}
+
+
+
+
+
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: "Baloo 2", Arial, Helvetica, sans-serif;
+}
+
+.Navigation {
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    gap: 70px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    padding: 15px;
+}
+
+.Navigation_logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #ff841f;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.Navigation>a {
+    text-decoration: none;
+    font-size: 22px;
+    border-radius: 5px;
+    padding: 10px;
+    color: whitesmoke;
+}
+
+#Login_btn {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    width: 180px;
+    font-size: 20px;
+    align-self: center;
+    justify-content: center;
+    padding: 15px;
+    border-radius: 7px;
+    background-color: rgb(190, 172, 143);
+    text-decoration: none;
+    color: black;
+}
+
+.Task_Container {
+    display: flex;
+    background-image: url(../Assets/Home_background.jpg);
+    justify-content: left;
+    background-repeat: no-repeat;
+    flex-direction: row;
+    background-position: center;
+    background-size: cover;
+    height: 89vh;
+}
+
+.sidebar {
+    width: 220px;
+    height: 84vh;
+    background-color: rgba(35, 56, 37, 0.5);
+    border-right: 1px solid #ddd;
+    padding: 18px;
+    display: flex;
+    gap: 20px;
+    margin-left: auto;
+    font-family: Arial;
+    flex-direction: column;
+}
+
+.sidebar>a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    padding: 20px;
+    width: 90%;
+    border-radius: 7px;
+    background-color: rgb(43, 43, 43);
+}
+
+label {
+    text-align: center;
+    justify-content: center;
+    display: flex;
+}
+
+textarea {
+    width: 92%;
+    height: 250px;
+    font-size: 16px;
+    resize: none;
+    border: 5px double;
+    border-radius: 10px;
+    background-color: rgb(240, 231, 231);
+}
+
+.task_table {
+    border: 2px solid black;
+    border-radius: 5px;
+    width: 80.5%;
+    margin: 0.5%;
+    flex-direction: column;
+
+}
+
+table {
+    width: 167vh;
+    font-family: Arial;
+}
+
+th {
+    border: 1px solid black;
+    border-radius: 4px;
+    padding: 5px;
+    font-size: 18px;
+}
+
+td {
+    border: 1px solid black;
+    border-radius: 4px;
+    padding: 5px;
+    font-size: 16px;
+}
+
+td>p {
+    padding: 1px;
+    font-size: 16px;
+    height: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Working_btns {
+    padding: 20px;
+    background-color: rgb(88, 88, 88);
+    color: black;
+    flex-direction: column;
+    display: flex;
+    width: fit-content;
+    gap: 10px;
+    border: 2px solid black;
+}
+
+.Working_btns>button {
+    font-size: 14px;
+    padding: 22px;
+    width: 220px;
+    height: 33px;
+    align-items: center;
+    display: flex;
+    background-color: black;
+    color: whitesmoke;
+    border: none;
+    border-radius: 7px;
+    justify-content: center;
+}
+
+.Working_btns>input {
+    font-size: 16px;
+    width: 200px;
+    padding: 7px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    border: 2px solid rgb(43, 43, 43);
+    background-color: rgb(179, 179, 179);
+    border-radius: 5px;
+}
+
+
+@media(max-width:1440px) {
+    .Navigation {
+        padding: 20px;
+        gap: 40px;
+        justify-content: space-between;
+    }
+
+    .Navigation_logo {
+        gap: 15px;
+        font-size: 20px;
+        font-weight: 700;
+    }
+
+    .Navigation>a {
+        font-size: 20px;
+        padding: 2px;
+    }
+
+    .home_img {
+        padding-top: 120px;
+    }
+
+    .home_img>img {
+        box-shadow: 0 0 5px;
+        padding-bottom: 20px;
+        width: 150px;
+        height: 100px;
+    }
+
+    #Login_btn {
+        width: 120px;
+        font-size: 18px;
+        padding: 5px;
+    }
+
+    .Navigation_logo {
+        gap: 4px;
+        font-size: 20px;
+    }
+
+    .fa-arrow-right-long {
+        font-size: 22px;
+        margin-left: 4px;
+    }
+
+    .fa-house-chimney {
+        font-size: 22px;
+        margin-right: 8px;
+    }
+
+    .fa-list-check {
+        font-size: 22px;
+        margin-right: 8px;
+    }
+
+    .fa-envelope {
+        font-size: 22px;
+        margin-right: 8px;
+    }
+
+    .fa-user {
+        font-size: 22px;
+        margin-right: 8px;
+    }
+}
+
+@media (max-width:1280px) {
+    .Navigation {
+        padding: 15px;
+        gap: 40px;
+        justify-content: space-between;
+    }
+
+    .Navigation_logo {
+        gap: 10px;
+        font-size: 25px;
+        font-weight: 700;
+    }
+
+    .Navigation>a {
+        font-size: 20px;
+
+        padding: 2px;
+    }
+
+    .home_img {
+        padding-top: 120px;
+    }
+
+    .home_img>img {
+        border-radius: 10px;
+        padding-bottom: 20px;
+        width: 150px;
+        height: 100px;
+    }
+
+    #Login_btn {
+        width: 120px;
+        font-size: 16px;
+        padding: 5px;
+    }
+
+    .Navigation_logo {
+        gap: 4px;
+        font-size: 20px;
+    }
+
+    .fa-arrow-right-long {
+        font-size: 16px;
+        margin-left: 4px;
+    }
+
+    .fa-house-chimney {
+        font-size: 16px;
+        margin-right: 8px;
+    }
+
+    .fa-list-check {
+        font-size: 16px;
+        margin-right: 8px;
+    }
+
+    .fa-envelope {
+        font-size: 16px;
+        margin-right: 8px;
+    }
+
+    .fa-user {
+        font-size: 16px;
+        margin-right: 8px;
+    }
+}
+
+@media (max-width:1024px) {
+    .Navigation {
+        padding: 15px;
+        gap: 22px;
+        justify-content: space-between;
+    }
+
+    .Navigation_logo {
+        gap: 5px;
+        font-size: 22px;
+    }
+
+    .Navigation>a {
+        font-size: 16px;
+        padding: 2px;
+    }
+
+    .home_img {
+        padding-top: 120px;
+    }
+
+    .home_img>img {
+        padding-bottom: 20px;
+        width: 150px;
+        height: 100px;
+    }
+
+    #Login_btn {
+        width: 120px;
+        font-size: 16px;
+        padding: 5px;
+    }
+
+    .Navigation_logo {
+        gap: 4px;
+        font-size: 20px;
+    }
+
+    .fa-arrow-right-long {
+        font-size: 16px;
+        margin-left: 4px;
+    }
+
+    .fa-house-chimney {
+        font-size: 16px;
+        margin-right: 8px;
+    }
+
+    .fa-list-check {
+        font-size: 16px;
+        margin-right: 8px;
+    }
+
+    .fa-envelope {
+        font-size: 16px;
+        margin-right: 8px;
+    }
+
+    .fa-user {
+        font-size: 16px;
+        margin-right: 8px;
+    }
+}
+
+@media(max-width:770px) {
+    .Navigation {
+        padding: 7px;
+        gap: 8px;
+        justify-content: space-between;
+    }
+
+    .Navigation_logo {
+        gap: 10px;
+        font-size: 20px;
+    }
+
+    .Navigation>a {
+        font-size: 14px;
+        padding: 2px;
+    }
+
+    .home_img {
+        padding-top: 120px;
+    }
+
+    .home_img>img {
+        padding-bottom: 20px;
+        width: 150px;
+        height: 100px;
+    }
+
+    #Login_btn {
+        width: 120px;
+        font-size: 12px;
+        padding: 5px;
+    }
+
+    .Navigation_logo {
+        gap: 4px;
+        font-size: 18px;
+    }
+
+    .fa-arrow-right-long {
+        font-size: 12px;
+        margin-left: 4px;
+    }
+
+    .fa-house-chimney {
+        font-size: 12px;
+        margin-right: 8px;
+    }
+
+    .fa-list-check {
+        font-size: 12px;
+        margin-right: 8px;
+    }
+
+    .fa-envelope {
+        font-size: 12px;
+        margin-right: 8px;
+    }
+
+    .fa-user {
+        font-size: 12px;
+        margin-right: 8px;
+    }
+
+}
+
+@media (max-width:480px) {
+    .Navigation {
+        padding: 2px;
+        gap: 5px;
+        justify-content: space-between;
+    }
+
+    .Navigation_logo {
+        gap: 5px;
+        font-size: 14px;
+    }
+
+    .Navigation>a {
+        font-size: 12px;
+        padding: 2px;
+    }
+
+    #Login_btn {
+        width: 80px;
+        font-size: 12px;
+        padding: 4px;
+    }
+
+    .fa-arrow-right-long {
+        font-size: 8px;
+        margin-left: 4px;
+    }
+
+    .fa-house-chimney {
+        font-size: 12px;
+        margin-right: 8px;
+    }
+
+    .fa-list-check {
+        font-size: 12px;
+        margin-right: 8px;
+    }
+
+    .fa-envelope {
+        font-size: 12px;
+        margin-right: 8px;
+    }
+
+    .fa-user {
+        font-size: 12px;
+        margin-right: 8px;
+    }
+
+    .Task_Container {
+        display: flex;
+        background-image: url(../Assets/Home_background.jpg);
+        justify-content: left;
+        flex-direction: column;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        height: 89vh;
+    }
+
+    .sidebar {
+        width: auto;
+        padding: 6px;
+        gap: 10px;
+        margin-left: 0;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .sidebar>a {
+        padding: 10px;
+        width: 85%;
+    }
+
+    .Working_btns {
+        width: auto;
+        justify-content: center;
+    }
+
+    .Working_btns>button {
+        width: 40%;
+        border-radius: 7px;
+    }
+
+    .Working_btns>input {
+        width: 90%;
+        padding: 7px;
+    }
+
+    .task_table {
+        border: 2px solid black;
+        border-radius: 5px;
+        width: auto;
+        padding: 5px;
+        margin:0.5%;
+        margin: 0%;
+    }
+
+    table {
+        width: auto;
+        height:20vh;
+        font-family: Arial;
+    }
+
+    th {
+        border: 1px solid black;
+        border-radius: 4px;
+        padding: 0px;
+        font-size: 16px;
+    }
+
+    td {
+        border: 1px solid black;
+        border-radius: 4px;
+        padding: 5px;
+        font-size: 16px;
+    }
+
+    td>p {
+        padding: 12px;
+        font-size: 12px;
+        line-height: 1.0;
+        
+        min-height: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        letter-spacing: -0.5px;
+    }
+
+    td:nth-child(1){
+        width:25%;
+        height:35x; }
+    td:nth-child(2){
+        width:55%;
+        height:35x; }
+    td:nth-child(3){
+        width:20%;
+        height:35x; }
+}
