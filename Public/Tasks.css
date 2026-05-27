@@ -304,7 +304,7 @@ td>p {
 
     .Navigation_logo {
         gap: 15px;
-        font-size: 20px;
+        font-size: 28px;
         font-weight: 700;
     }
 
@@ -330,10 +330,6 @@ td>p {
         padding: 5px;
     }
 
-    .Navigation_logo {
-        gap: 4px;
-        font-size: 20px;
-    }
 
     .fa-arrow-right-long {
         font-size: 22px;
@@ -472,7 +468,7 @@ td>p {
 
     .Navigation_logo {
         gap: 15px;
-        font-size: 20px;
+        font-size: 28px;
         font-weight: 700;
     }
 
@@ -496,11 +492,6 @@ td>p {
         width: 120px;
         font-size: 18px;
         padding: 5px;
-    }
-
-    .Navigation_logo {
-        gap: 4px;
-        font-size: 20px;
     }
 
     .fa-arrow-right-long {
@@ -666,11 +657,6 @@ td>p {
         padding: 5px;
     }
 
-    .Navigation_logo {
-        gap: 4px;
-        font-size: 20px;
-    }
-
     .fa-arrow-right-long {
         font-size: 16px;
         margin-left: 4px;
@@ -828,11 +814,6 @@ td>p {
         width: 120px;
         font-size: 16px;
         padding: 5px;
-    }
-
-    .Navigation_logo {
-        gap: 4px;
-        font-size: 20px;
     }
 
     .fa-arrow-right-long {
@@ -994,11 +975,6 @@ td>p {
         padding: 5px;
     }
 
-    .Navigation_logo {
-        gap: 4px;
-        font-size: 18px;
-    }
-
     .fa-arrow-right-long {
         font-size: 12px;
         margin-left: 4px;
@@ -1119,7 +1095,6 @@ td>p {
         height: 35x;
     }
 }
-
 
 @media (max-width:480px) {
     .Navigation {
