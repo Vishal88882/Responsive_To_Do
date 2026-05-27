@@ -124,8 +124,6 @@
 
 
 
-
-
 * {
     padding: 0px;
     margin: 0px;
@@ -177,7 +175,6 @@
 .Task_Container {
     display: flex;
     background-image: url(../Assets/Home_background.jpg);
-    justify-content: left;
     background-repeat: no-repeat;
     flex-direction: row;
     background-position: center;
@@ -233,7 +230,6 @@ textarea {
 }
 
 table {
-    width: 167vh;
     font-family: Arial;
 }
 
@@ -261,7 +257,7 @@ td>p {
 }
 
 .Working_btns {
-    padding: 20px;
+    padding: 8px;
     background-color: rgb(88, 88, 88);
     color: black;
     flex-direction: column;
@@ -557,8 +553,104 @@ td>p {
         font-size: 12px;
         margin-right: 8px;
     }
+    .Task_Container {
+        display: flex;
+        background-image: url(../Assets/Home_background.jpg);
+        flex-direction: row;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        height: 84vh;
+        
+    }
 
+    .sidebar {
+        width: auto;
+        padding: 6px;
+        gap: 10px;
+        margin-left: 0;
+        align-items: center;
+        box-sizing: border-box;
+    }
+
+    .sidebar>a {
+        padding: 10px;
+        width: 85%;
+    }
+
+    .Working_btns {
+        width: auto;
+        
+    }
+
+    .Working_btns>button {
+        width: 80%;
+        border-radius: 7px;
+    }
+
+    .Working_btns>input {
+        width: 90%;
+        padding: 7px;
+    }
+
+    .task_table {
+        border: 2px solid black;
+        border-radius: 5px;
+        width: auto;
+        align-items: center;
+        display: flex;
+        padding: 2px;
+        margin: 0%;
+        margin: 0%;
+    }
+
+    table {
+        width: fit-content;
+
+    }
+
+    th {
+        border: 1px solid black;
+        border-radius: 4px;
+        padding: 0px;
+        font-size: 16px;
+    }
+
+    td {
+        border: 1px solid black;
+        border-radius: 4px;
+        padding: 5px;
+        font-size: 16px;
+    }
+
+    td>p {
+        padding: 12px;
+        font-size: 12px;
+        line-height: 1.0;
+        min-height: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+    }
+
+    td:nth-child(1) {
+        width: 45%;
+        height: 35x;
+    }
+
+    td:nth-child(2) {
+        width: 75%;
+        height: 35x;
+    }
+
+    td:nth-child(3) {
+        width: 50%;
+        height: 35x;
+    }
 }
+
 
 @media (max-width:480px) {
     .Navigation {
@@ -611,7 +703,6 @@ td>p {
     .Task_Container {
         display: flex;
         background-image: url(../Assets/Home_background.jpg);
-        justify-content: left;
         flex-direction: column;
         background-repeat: no-repeat;
         background-position: center;
@@ -624,7 +715,6 @@ td>p {
         padding: 6px;
         gap: 10px;
         margin-left: 0;
-        justify-content: center;
         align-items: center;
     }
 
@@ -651,16 +741,17 @@ td>p {
     .task_table {
         border: 2px solid black;
         border-radius: 5px;
+        justify-content: center;
         width: auto;
-        padding: 5px;
-        margin:0.5%;
+        align-items: center;
+        display: flex;
+        padding: 2px;
+        margin: 0%;
         margin: 0%;
     }
 
     table {
         width: auto;
-        height:20vh;
-        font-family: Arial;
     }
 
     th {
@@ -681,23 +772,26 @@ td>p {
         padding: 12px;
         font-size: 12px;
         line-height: 1.0;
-        
         min-height: 20px;
         display: flex;
         justify-content: center;
         align-items: center;
         overflow-wrap: break-word;
         word-wrap: break-word;
-        letter-spacing: -0.5px;
     }
 
-    td:nth-child(1){
-        width:25%;
-        height:35x; }
-    td:nth-child(2){
-        width:55%;
-        height:35x; }
-    td:nth-child(3){
-        width:20%;
-        height:35x; }
+    td:nth-child(1) {
+        width: 25%;
+        height: 35x;
+    }
+
+    td:nth-child(2) {
+        width: 55%;
+        height: 35x;
+    }
+
+    td:nth-child(3) {
+        width: 20%;
+        height: 35x;
+    }
 }
