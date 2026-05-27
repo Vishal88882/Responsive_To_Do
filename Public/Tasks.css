@@ -187,7 +187,7 @@
     width: 220px;
     height: 84vh;
     background-color: rgba(35, 56, 37, 0.5);
-    border-right: 1px solid #ddd;
+    border-right: 1px solid #000000;
     padding: 18px;
     display: flex;
     gap: 20px;
@@ -369,6 +369,7 @@ td>p {
         background-position: center;
         background-size: cover;
         height: 84vh;
+        min-height: 100vh;
 
     }
 
@@ -379,6 +380,7 @@ td>p {
         margin-left: 0;
         align-items: center;
         box-sizing: border-box;
+        min-height: 100vh;
     }
 
     .sidebar>a {
@@ -410,7 +412,7 @@ td>p {
         padding: 2px;
         margin: 0%;
         flex-grow: 1;
-        margin: 0%;
+        margin: 0.5%;
     }
 
     table {
@@ -535,6 +537,7 @@ td>p {
         background-position: center;
         background-size: cover;
         height: 84vh;
+        min-height: 100vh;
 
     }
 
@@ -545,6 +548,7 @@ td>p {
         margin-left: 0;
         align-items: center;
         box-sizing: border-box;
+        min-height: 100vh;
     }
 
     .sidebar>a {
@@ -576,7 +580,7 @@ td>p {
         padding: 2px;
         margin: 0%;
         flex-grow: 1;
-        margin: 0%;
+        margin: 0.5%;
     }
 
     table {
@@ -701,6 +705,7 @@ td>p {
         background-position: center;
         background-size: cover;
         height: 84vh;
+        min-height: 100vh;
 
     }
 
@@ -711,6 +716,7 @@ td>p {
         margin-left: 0;
         align-items: center;
         box-sizing: border-box;
+        min-height: 100vh;
     }
 
     .sidebar>a {
@@ -742,7 +748,7 @@ td>p {
         padding: 2px;
         margin: 0%;
         flex-grow: 1;
-        margin: 0%;
+        margin: 0.5%;
     }
 
     table {
@@ -863,7 +869,7 @@ td>p {
         background-position: center;
         background-size: cover;
         height: 84vh;
-
+        min-height: 100vh;
     }
 
     .sidebar {
@@ -873,6 +879,7 @@ td>p {
         margin-left: 0;
         align-items: center;
         box-sizing: border-box;
+        min-height: 100vh;
     }
 
     .sidebar>a {
@@ -904,7 +911,7 @@ td>p {
         padding: 2px;
         margin: 0%;
         flex-grow: 1;
-        margin: 0%;
+        margin: 1%;
     }
 
     table {
@@ -1065,7 +1072,7 @@ td>p {
         display: flex;
         padding: 2px;
         flex-grow: 1;
-        margin: 0%;
+        margin: 3%;
     }
 
     table {
@@ -1210,7 +1217,7 @@ td>p {
         align-items: center;
         display: flex;
         padding: 2px;
-        margin: 0%;
+        margin: 3%;
 
     }
 
