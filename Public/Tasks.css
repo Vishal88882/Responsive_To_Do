@@ -265,9 +265,8 @@ td>p {
     color: black;
     flex-direction: column;
     display: flex;
-
     gap: 10px;
-    border: 2px solid black;
+    border: 1px solid black;
 }
 
 .Working_btns>button {
