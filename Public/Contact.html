@@ -14,7 +14,7 @@
             margin: 0px;
             font-family: monospace;
         }
-
+        
         .Navigation {
             background-color: rgba(0, 0, 0, 0.8);
             display: flex;
@@ -23,9 +23,8 @@
             justify-content: center;
             flex-direction: row;
             padding: 15px;
-
         }
-
+        
         .Navigation_logo {
             display: flex;
             align-items: center;
@@ -34,7 +33,7 @@
             font-size: 28px;
             font-weight: 700;
         }
-
+        
         .Navigation>a {
             text-decoration: none;
             font-size: 22px;
@@ -42,12 +41,12 @@
             padding: 10px;
             color: whitesmoke;
         }
-
+        
         .Navigation>a:hover {
             box-shadow: 0 0 5px rgb(139, 138, 136);
             transition: all 0.2s ease;
         }
-
+        
         #Login_btn {
             display: flex;
             align-items: center;
@@ -62,38 +61,38 @@
             text-decoration: none;
             color: black;
         }
-
+        
         #Login_btn:hover {
             box-shadow: 0 0 10px;
             background-color: rgb(199, 179, 149);
             transition: all 0.3s ease;
             cursor: pointer;
         }
-
+        
         .fa-house-chimney {
             color: #1366b9;
             font-size: 22px;
             margin-right: 8px;
         }
-
+        
         .fa-list-check {
             color: rgb(95, 84, 255);
             font-size: 22px;
             margin-right: 8px;
         }
-
+        
         .fa-envelope {
             color: rgb(103, 117, 78);
             font-size: 22px;
             margin-right: 8px;
         }
-
+        
         .fa-user {
             color: rgb(235, 197, 154);
             font-size: 22px;
             margin-right: 8px;
         }
-
+        
         .contact_div {
             display: flex;
             background-image: url(../Assets/Home_background.jpg);
@@ -104,9 +103,8 @@
             flex-direction: row;
             justify-content: center;
             gap: 5%;
-
         }
-
+        
         .contact_qoute {
             width: 80%;
             margin-top: 2%;
@@ -117,15 +115,17 @@
             flex-direction: column;
             font-family: Arial;
             border-radius: 10px;
-            gap:5%;
+            gap: 5%;
             position: fixed;
         }
-        .contact_qoute_h1_h2{
+        
+        .contact_qoute_h1_h2 {
             background-color: rgba(55, 46, 94, 0.5);
-            padding:10px;
+            padding: 10px;
             border-radius: 7px;
             border: 2px;
         }
+        
         .contact_img>img {
             margin-top: 40%;
             width: 90%;
@@ -136,87 +136,90 @@
             border-radius: 10px;
             box-shadow: 0 0 10px;
         }
-
+        
         .fa-regular {
             color: rgb(255, 230, 230);
             font-size: 38px;
             margin-right: 8px;
             margin-top: 2%;
         }
-
+        
         .fa-phone {
             color: rgb(255, 230, 230);
             font-size: 35px;
             margin-right: 8px;
             margin-top: 3%;
         }
-
+        
         .fa-instagram {
             color: rgb(255, 230, 230);
             font-size: 40px;
             margin-right: 8px;
             margin-top: 3%;
         }
-
+        
         .fa-github {
             color: rgb(255, 230, 230);
             font-size: 40px;
             margin-right: 8px;
             margin-top: 3%;
         }
-        .contact_Routes{
+        
+        .contact_Routes {
             background-color: rgba(9, 34, 17, 0.6);
-            padding:30px;
+            padding: 30px;
             border-radius: 10px;
-            gap:30px;
+            gap: 30px;
             display: flex;
             justify-content: center;
-            width:500px ;
+            width: 500px;
         }
-        .contact_Routes>span{
-            background-color: rgb(107, 148, 187,0.7);
-            padding:10px;
-            width:150px;
+        
+        .contact_Routes>span {
+            background-color: rgb(107, 148, 187, 0.7);
+            padding: 10px;
+            width: 150px;
             justify-content: center;
             align-items: center;
             display: flex;
             border-radius: 10px;
         }
-        .contact_Routes>span:hover{
+        
+        .contact_Routes>span:hover {
             transition: all 0.2s ease;
             background-color: rgba(127, 174, 219, 0.3);
-
         }
-        .to_fill_space{
+        
+        .to_fill_space {
             display: flex;
             flex-direction: column;
-            gap:5px;
+            gap: 5px;
         }
-        .to_fill_space>textarea{
+        
+        .to_fill_space>textarea {
             resize: none;
-            width:43.5%;
+            width: 43.5%;
             border-radius: 10px;
-            height:100px;
+            height: 100px;
             background-color: rgb(179, 179, 179);
-            padding:15px;
+            padding: 15px;
             border: 8px double rgb(5, 21, 39);
             font-size: 16px;
         }
-
         
-        .to_fill_space>button{
-            width:250px;
-            padding:12px;
+        .to_fill_space>button {
+            width: 250px;
+            padding: 12px;
             font-size: 16px;
             border-radius: 7px;
             background-color: antiquewhite;
-            color:black
-
+            color: black
         }
-        .to_fill_space>button:hover{
+        
+        .to_fill_space>button:hover {
             cursor: pointer;
             transition: all 0.3s ease;
-            color:whitesmoke;
+            color: whitesmoke;
             background-color: black;
         }
     </style>
@@ -257,8 +260,8 @@
                             class="fa-brands fa-github"></i></a></span>
             </div>
             <div class="to_fill_space">
-                <textarea name="Nothing" id="1234" autofocus>Write your valuable feedback here!</textarea>
-                <button>Feedback</button>
+                <textarea name="Nothing" id="1234" autofocus placeholder="feedback!">Write your valuable feedback here!</textarea>
+                <button type="button">Feedback</button>
             </div>
         </div>
         <div class="contact_img">

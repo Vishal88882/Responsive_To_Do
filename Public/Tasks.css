@@ -129,6 +129,7 @@
     margin: 0px;
     font-family: "Baloo 2", Arial, Helvetica, sans-serif;
     box-sizing: border-box;
+    
 }
 
 .Navigation {
@@ -226,7 +227,7 @@ textarea {
     border-radius: 5px;
     width: 80.5%;
     margin: 0.5%;
-    overflow-y:auto ;
+    overflow-y: auto;
     scrollbar-width: none;
     flex-direction: column;
 
@@ -582,7 +583,7 @@ td>p {
         border: 1px solid black;
         border-radius: 4px;
         padding: 0px;
-        height:30px;
+        height: 30px;
         font-size: 16px;
     }
 
