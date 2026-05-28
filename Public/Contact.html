@@ -24,7 +24,6 @@
             justify-content: center;
             flex-direction: row;
             padding: 15px;
-            flex-wrap: wrap;
         }
         
         .Navigation_logo {
@@ -95,6 +94,120 @@
             font-size: 22px;
             margin-right: 8px;
         }
+
+        @media (max-width:1480px) {
+            .Navigation {
+                padding: 20px;
+                gap: 40px;
+                justify-content: space-between;
+            }
+
+            .Navigation_logo {
+                gap: 15px;
+                font-size: 20px;
+                font-weight: 700;
+            }
+
+            .Navigation>a {
+                font-size: 20px;
+                padding: 2px;
+            }
+
+            #Login_btn {
+                width: 120px;
+                font-size: 20px;
+                padding: 10px;
+            }
+
+            .Navigation_logo {
+                gap: 4px;
+                font-size: 20px;
+            }
+
+            .fa-arrow-right-long {
+                font-size: 22px;
+                margin-left: 4px;
+            }
+
+            .fa-house-chimney {
+                font-size: 22px;
+                margin-right: 8px;
+            }
+
+            .fa-list-check {
+                font-size: 22px;
+                margin-right: 8px;
+            }
+
+            .fa-envelope {
+                font-size: 22px;
+                margin-right: 8px;
+            }
+
+            .fa-user {
+                font-size: 22px;
+                margin-right: 8px;
+            }
+
+            
+        }
+
+        @media (max-width:1280px) {
+            .Navigation {
+                padding: 15px;
+                gap: 40px;
+                justify-content: space-between;
+            }
+
+            .Navigation_logo {
+                gap: 10px;
+                font-size: 25px;
+                font-weight: 700;
+            }
+
+            .Navigation>a {
+                font-size: 20px;
+                padding: 8px;
+            }
+
+            #Login_btn {
+                width: 120px;
+                font-size: 20px;
+                padding: 15px;
+            }
+
+            .Navigation_logo {
+                gap: 4px;
+                font-size: 20px;
+            }
+
+            .fa-arrow-right-long {
+                font-size: 16px;
+                margin-left: 4px;
+            }
+
+            .fa-house-chimney {
+                font-size: 16px;
+                margin-right: 8px;
+            }
+
+            .fa-list-check {
+                font-size: 16px;
+                margin-right: 8px;
+            }
+
+            .fa-envelope {
+                font-size: 16px;
+                margin-right: 8px;
+            }
+
+            .fa-user {
+                font-size: 16px;
+                margin-right: 8px;
+            }
+
+            
+        }
         
         .contact_div {
             display: flex;
@@ -102,11 +215,11 @@
             background-repeat: no-repeat;
             background-position: center;
             background-size: cover;
-            min-height: 89vh;
+            min-height: 100vh;
             flex-direction: row;
             justify-content: center;
             align-items: flex-start;
-            gap: 5%;
+            gap: 3%;
             padding: 24px clamp(12px, 3vw, 36px);
             box-sizing: border-box;
         }
@@ -121,7 +234,7 @@
             flex-direction: column;
             font-family: Arial;
             border-radius: 10px;
-            gap: 5%;
+            gap: 18px;
             position: static;
             box-sizing: border-box;
         }
@@ -132,10 +245,27 @@
             border-radius: 7px;
             border: 2px;
         }
+
+        .contact_qoute_h1_h2>h1 {
+            margin: 0;
+        }
+
+        .contact_qoute_h1_h2>h2 {
+            margin: 8px 0 0 0;
+        }
+
+        .contact_img {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 12px;
+            margin-left: clamp(0px, 1.25vw, 24px);
+            box-sizing: border-box;
+        }
         
         .contact_img>img {
-            margin-top: 24px;
-            width: min(520px, 100%);
+            margin-top: 88px;
+            width: min(624px, 100%);
             margin-left: 0%;
             padding: 15px;
             height: auto;
@@ -144,6 +274,8 @@
             box-shadow: 0 0 10px;
             box-sizing: border-box;
         }
+
+
         
         .fa-regular {
             color: rgb(255, 230, 230);
@@ -203,7 +335,7 @@
         .to_fill_space {
             display: flex;
             flex-direction: column;
-            gap: 5px;
+            gap: 10px;
         }
         
         .to_fill_space>textarea {
@@ -257,15 +389,49 @@
                 padding: 5px;
             }
 
+            .Navigation_logo {
+                gap: 4px;
+                font-size: 20px;
+            }
+
+            .fa-arrow-right-long {
+                font-size: 16px;
+                margin-left: 4px;
+            }
+
+            .fa-house-chimney {
+                font-size: 16px;
+                margin-right: 8px;
+            }
+
+            .fa-list-check {
+                font-size: 16px;
+                margin-right: 8px;
+            }
+
+            .fa-envelope {
+                font-size: 16px;
+                margin-right: 8px;
+            }
+
+            .fa-user {
+                font-size: 16px;
+                margin-right: 8px;
+            }
+
             .contact_div {
                 flex-direction: column;
                 align-items: center;
             }
 
+            .contact_img>img {
+                margin-top: 24px;
+                width: min(520px, 100%);
+            }
+
             .contact_img {
-                width: 100%;
-                display: flex;
-                justify-content: center;
+                margin-left: 0px;
+                padding: 0px;
             }
         }
 
@@ -278,7 +444,7 @@
 
             .Navigation_logo {
                 gap: 10px;
-                font-size: 18px;
+                font-size: 20px;
             }
 
             .Navigation>a {
@@ -292,6 +458,36 @@
                 padding: 5px;
             }
 
+            .Navigation_logo {
+                gap: 4px;
+                font-size: 18px;
+            }
+
+            .fa-arrow-right-long {
+                font-size: 12px;
+                margin-left: 4px;
+            }
+
+            .fa-house-chimney {
+                font-size: 12px;
+                margin-right: 8px;
+            }
+
+            .fa-list-check {
+                font-size: 12px;
+                margin-right: 8px;
+            }
+
+            .fa-envelope {
+                font-size: 12px;
+                margin-right: 8px;
+            }
+
+            .fa-user {
+                font-size: 12px;
+                margin-right: 8px;
+            }
+
             .contact_Routes {
                 padding: 18px;
                 gap: 16px;
@@ -302,7 +498,7 @@
             }
         }
 
-        @media (max-width:480px) {
+        @media(max-width:480px) {
             .Navigation {
                 padding: 5px;
                 gap: 5px;
@@ -310,8 +506,8 @@
             }
 
             .Navigation_logo {
-                gap: 4px;
-                font-size: 12px;
+                gap: 5px;
+                font-size: 20px;
             }
 
             .Navigation>a {
@@ -320,9 +516,39 @@
             }
 
             #Login_btn {
-                width: 100px;
+                width: 120px;
                 font-size: 12px;
                 padding: 5px;
+            }
+
+            .Navigation_logo {
+                gap: 4px;
+                font-size: 12px;
+            }
+
+            .fa-arrow-right-long {
+                font-size: 12px;
+                margin-left: 4px;
+            }
+
+            .fa-house-chimney {
+                font-size: 12px;
+                margin-right: 8px;
+            }
+
+            .fa-list-check {
+                font-size: 12px;
+                margin-right: 8px;
+            }
+
+            .fa-envelope {
+                font-size: 12px;
+                margin-right: 8px;
+            }
+
+            .fa-user {
+                font-size: 12px;
+                margin-right: 8px;
             }
 
             .contact_qoute_h1_h2 h1 {
@@ -339,13 +565,6 @@
 <body>
     <nav class="Navigation">
         <div class="Navigation_logo">
-            <svg width="40" height="40" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M18 10H46C50 10 54 14 54 18V46C54 50 50 54 46 54H18C14 54 10 50 10 46V18C10 14 14 10 18 10Z"
-                    fill="#5f62c2" />
-                <path d="M18 32L28 42L46 22" stroke="white" stroke-width="6" stroke-linecap="round"
-                    stroke-linejoin="round" />
-            </svg>
-
             <span>Taskora</span>
         </div>
         <a href="Home.html"><i class="fa-solid fa-house-chimney"></i>Home</a>
@@ -374,6 +593,7 @@
                 <textarea name="Nothing" id="1234" autofocus placeholder="feedback!">Write your valuable feedback here!</textarea>
                 <button type="button">Feedback</button>
             </div>
+
         </div>
         <div class="contact_img">
             <img src="../Assets/Contact_Side.webp" alt="Img is loading!">
