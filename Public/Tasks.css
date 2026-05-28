@@ -89,6 +89,7 @@
     margin: 0px;
     font-family: "Baloo 2", Arial, Helvetica, sans-serif;
     box-sizing: border-box;
+    scrollbar-width: none;
 }
 .Navigation {
     background-color: rgba(0, 0, 0, 0.8);
