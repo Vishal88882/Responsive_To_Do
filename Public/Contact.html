@@ -13,6 +13,7 @@
             padding: 0px;
             margin: 0px;
             font-family: monospace;
+            overflow-x: hidden;
         }
         
         .Navigation {
@@ -23,6 +24,7 @@
             justify-content: center;
             flex-direction: row;
             padding: 15px;
+            flex-wrap: wrap;
         }
         
         .Navigation_logo {
@@ -45,6 +47,7 @@
         .Navigation>a:hover {
             box-shadow: 0 0 5px rgb(139, 138, 136);
             transition: all 0.2s ease;
+            text-decoration: underline;
         }
         
         #Login_btn {
@@ -99,24 +102,28 @@
             background-repeat: no-repeat;
             background-position: center;
             background-size: cover;
-            height: 89vh;
+            min-height: 89vh;
             flex-direction: row;
             justify-content: center;
+            align-items: flex-start;
             gap: 5%;
+            padding: 24px clamp(12px, 3vw, 36px);
+            box-sizing: border-box;
         }
         
         .contact_qoute {
-            width: 80%;
+            width: min(860px, 100%);
             margin-top: 2%;
             background-color: rgba(39, 80, 47, 0.5);
-            padding: 40px;
-            height: 65vh;
+            padding: clamp(16px, 3vw, 40px);
+            min-height: 65vh;
             display: flex;
             flex-direction: column;
             font-family: Arial;
             border-radius: 10px;
             gap: 5%;
-            position: fixed;
+            position: static;
+            box-sizing: border-box;
         }
         
         .contact_qoute_h1_h2 {
@@ -127,14 +134,15 @@
         }
         
         .contact_img>img {
-            margin-top: 40%;
-            width: 90%;
-            margin-left: 50%;
+            margin-top: 24px;
+            width: min(520px, 100%);
+            margin-left: 0%;
             padding: 15px;
-            height: 40vh;
+            height: auto;
             background-color: rgba(131, 220, 231, 0.8);
             border-radius: 10px;
             box-shadow: 0 0 10px;
+            box-sizing: border-box;
         }
         
         .fa-regular {
@@ -172,7 +180,9 @@
             gap: 30px;
             display: flex;
             justify-content: center;
-            width: 500px;
+            width: min(560px, 100%);
+            flex-wrap: wrap;
+            box-sizing: border-box;
         }
         
         .contact_Routes>span {
@@ -198,17 +208,18 @@
         
         .to_fill_space>textarea {
             resize: none;
-            width: 43.5%;
+            width: 100%;
             border-radius: 10px;
             height: 100px;
             background-color: rgb(179, 179, 179);
             padding: 15px;
             border: 8px double rgb(5, 21, 39);
             font-size: 16px;
+            box-sizing: border-box;
         }
         
         .to_fill_space>button {
-            width: 250px;
+            width: min(250px, 100%);
             padding: 12px;
             font-size: 16px;
             border-radius: 7px;
@@ -221,6 +232,106 @@
             transition: all 0.3s ease;
             color: whitesmoke;
             background-color: black;
+        }
+
+        @media (max-width:1024px) {
+            .Navigation {
+                padding: 15px;
+                gap: 22px;
+                justify-content: space-between;
+            }
+
+            .Navigation_logo {
+                gap: 5px;
+                font-size: 22px;
+            }
+
+            .Navigation>a {
+                font-size: 16px;
+                padding: 6px;
+            }
+
+            #Login_btn {
+                width: 120px;
+                font-size: 16px;
+                padding: 5px;
+            }
+
+            .contact_div {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .contact_img {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+            }
+        }
+
+        @media (max-width:770px) {
+            .Navigation {
+                padding: 7px;
+                gap: 8px;
+                justify-content: space-between;
+            }
+
+            .Navigation_logo {
+                gap: 10px;
+                font-size: 18px;
+            }
+
+            .Navigation>a {
+                font-size: 14px;
+                padding: 2px;
+            }
+
+            #Login_btn {
+                width: 120px;
+                font-size: 12px;
+                padding: 5px;
+            }
+
+            .contact_Routes {
+                padding: 18px;
+                gap: 16px;
+            }
+
+            .contact_Routes>span {
+                width: 130px;
+            }
+        }
+
+        @media (max-width:480px) {
+            .Navigation {
+                padding: 5px;
+                gap: 5px;
+                justify-content: space-between;
+            }
+
+            .Navigation_logo {
+                gap: 4px;
+                font-size: 12px;
+            }
+
+            .Navigation>a {
+                font-size: 10px;
+                padding: 2px;
+            }
+
+            #Login_btn {
+                width: 100px;
+                font-size: 12px;
+                padding: 5px;
+            }
+
+            .contact_qoute_h1_h2 h1 {
+                font-size: 22px;
+            }
+
+            .contact_qoute_h1_h2 h2 {
+                font-size: 14px;
+            }
         }
     </style>
 </head>
@@ -253,7 +364,7 @@
             <div class="contact_Routes">
                 <span><a href="mailto:sunharilalrajpu8882@gmail.com" target="_blank"><i
                             class="fa-regular fa-envelope"></i></a></span>
-                <span><a href="tell:+919990841879" target="_blank"><i class="fa-solid fa-phone"></i></a></span>
+                <span><a href="tel:+919990841879" target="_blank"><i class="fa-solid fa-phone"></i></a></span>
                 <span><a href="https://www.instagram.com/vishal__rajput8882/" target="_blank"><i
                             class="fa-brands fa-instagram"></i></a></span>
                 <span><a href="https://github.com/Vishal88882" target="_blank"><i
@@ -269,3 +380,5 @@
         </div>
     </div>
 </body>
+
+</html>
