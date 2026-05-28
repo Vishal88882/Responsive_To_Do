@@ -10,15 +10,15 @@
     <style>
         * {
             font-family: monospace;
-            overflow-y:hidden;
+           
         }
-        
+
         body {
             margin: 0px;
             padding: 0px;
-         
+
         }
-        
+
         .Navigation {
             background-color: rgba(0, 0, 0, 0.8);
             display: flex;
@@ -28,7 +28,7 @@
             flex-direction: row;
             padding: 15px;
         }
-        
+
         .Navigation_logo {
             display: flex;
             align-items: center;
@@ -37,7 +37,7 @@
             font-size: 28px;
             font-weight: 700;
         }
-        
+
         .Navigation>a {
             text-decoration: none;
             font-size: 22px;
@@ -45,12 +45,13 @@
             padding: 10px;
             color: whitesmoke;
         }
-        
+
         .Navigation>a:hover {
             box-shadow: 0 0 5px rgb(139, 138, 136);
             transition: all 0.2s ease;
+            text-decoration: underline;
         }
-        
+
         #Login_btn {
             display: flex;
             align-items: center;
@@ -65,43 +66,43 @@
             text-decoration: none;
             color: black;
         }
-        
+
         .Login_btn:hover {
             box-shadow: 0 0 10px;
             background-color: rgb(167, 150, 125);
             transition: all 0.3s ease;
         }
-        
+
         .fa-arrow-right-long {
             color: rgb(51, 51, 51);
             font-size: 22px;
             margin-left: 8px;
         }
-        
+
         .fa-house-chimney {
             color: #1366b9;
             font-size: 22px;
             margin-right: 8px;
         }
-        
+
         .fa-list-check {
             color: rgb(95, 84, 255);
             font-size: 22px;
             margin-right: 8px;
         }
-        
+
         .fa-envelope {
             color: rgb(103, 117, 78);
             font-size: 22px;
             margin-right: 8px;
         }
-        
+
         .fa-user {
             color: rgb(235, 197, 154);
             font-size: 22px;
             margin-right: 8px;
         }
-        
+
         .signup_login_footer {
             flex-direction: row;
             display: flex;
@@ -113,7 +114,7 @@
             bottom: 0;
             width: 100%;
         }
-        
+
         .signup_login_footer>a {
             text-decoration: none;
             color: #e5e7eb;
@@ -121,10 +122,10 @@
             text-decoration: underline;
             padding-right: 30px;
         }
-        
+
         .login {
             display: flex;
-            min-height:100vh;
+            min-height: 100vh;
             height: 83vh;
             flex-direction: column;
             padding-top: 3%;
@@ -133,14 +134,14 @@
             background-repeat: no-repeat;
             background-position: center;
             background-size: cover;
-            
+
         }
-        
+
         .login>h1 {
             font-style: italic;
             font-size: 30px;
         }
-        
+
         .background {
             background-color: rgba(44, 44, 44, 0.8);
             display: flex;
@@ -148,17 +149,17 @@
             flex-direction: column;
             justify-content: center;
             padding: 40px;
-            height: 55%;
+            height: 65%;
             width: 50%;
             border-radius: 10px;
             gap: 20px;
         }
-        
+
         .login_form {
             background-color: rgba(100, 91, 91, 0.8);
             border-radius: 10px;
             width: 500px;
-            height: 305px;
+            height: 555px;
             display: flex;
             flex-direction: column;
             gap: 4px;
@@ -167,11 +168,11 @@
             box-shadow: 0 0 10px;
             border: 1px solid black;
         }
-        
+
         .login_form>h1 {
             text-decoration: underline;
         }
-        
+
         .login_form>input {
             padding: 12px;
             width: 80%;
@@ -181,19 +182,19 @@
             text-align: center;
             background-color: rgb(179, 179, 179);
         }
-        
+
         .login_form>input:hover {
             width: 82%;
             box-shadow: 0 0 10px;
             transition: all 0.3s ease;
         }
-        
+
         input::placeholder {
             color: rgb(14, 25, 48);
             font-size: 16px;
             font-family: monospace;
         }
-        
+
         .login_form>a {
             text-decoration: none;
             font-size: 18px;
@@ -201,25 +202,25 @@
             width: 400px;
             text-decoration: underline;
         }
-        
+
         .password_issue {
             flex-direction: row;
             display: flex;
             gap: 100px;
         }
-        
+
         .password_issue>label {
             font-size: 16px;
             color: white
         }
-        
+
         .password_issue>a {
             text-decoration: none;
             text-decoration: underline;
             color: whitesmoke;
             font-size: 16px;
         }
-        
+
         .submit_btn {
             background-color: rgb(0, 0, 0);
             color: white;
@@ -228,12 +229,13 @@
             width: 85%;
             border-radius: 10px;
         }
-        
+
         .submit_btn:hover {
             box-shadow: 0 0 5px;
             width: 87%;
             transition: all 0.3s ease;
         }
+
         @media (max-width:1480px) {
             .Navigation {
                 padding: 7px;
@@ -250,39 +252,33 @@
                 font-size: 20px;
                 padding: 2px;
             }
-            
+
             #Login_btn {
                 width: 120px;
                 font-size: 20px;
                 padding: 5px;
             }
 
-
             .fa-arrow-right-long {
-                font-size: 22px;
                 margin-left: 4px;
             }
 
             .fa-house-chimney {
                 font-size: 20px;
-                margin-right: 8px;
             }
 
             .fa-list-check {
                 font-size: 22px;
-                margin-right: 8px;
             }
 
             .fa-envelope {
                 font-size: 22px;
-                margin-right: 8px;
             }
 
             .fa-user {
                 font-size: 22px;
-                margin-right: 8px;
             }
-                    
+
             .login {
                 display: flex;
                 min-height: 100vh;
@@ -291,9 +287,11 @@
                 padding-top: 3%;
                 align-items: center;
             }
-            .login>h1{
-                font-size:30px;
+
+            .login>h1 {
+                font-size: 30px;
             }
+
             .background {
                 background-color: rgba(44, 44, 44, 0.8);
                 display: flex;
@@ -306,20 +304,22 @@
                 border-radius: 10px;
                 gap: 5px;
             }
+
             .login_form {
                 border-radius: 7px;
                 width: 75%;
                 height: 405px;
                 gap: 4px;
                 overflow: hidden;
-                text-align:center;
+                text-align: center;
             }
-        
+
             .login_form>h1 {
                 text-decoration: underline;
-                justify-content:center;
-                
+                justify-content: center;
+
             }
+
             .login_form>input {
                 padding: 12px;
                 width: 80%;
@@ -327,24 +327,27 @@
 
             .password_issue>label {
                 font-size: 14px;
-                padding:5px;
+                padding: 5px;
                 color: white
-            }   
+            }
 
             .password_issue>a {
                 text-decoration: none;
                 text-decoration: underline;
                 color: whitesmoke;
-                padding:5px;
+                padding: 5px;
                 font-size: 14px;
             }
+
             .signup_login_footer {
                 flex-direction: row;
                 display: flex;
                 gap: 1%;
                 width: 100%;
 
-        } 
+            }
+        }
+
         @media (max-width:1280px) {
             .Navigation {
                 padding: 7px;
@@ -361,13 +364,12 @@
                 font-size: 18px;
                 padding: 2px;
             }
-            
+
             #Login_btn {
                 width: 120px;
                 font-size: 18px;
                 padding: 5px;
             }
-
 
             .fa-arrow-right-long {
                 font-size: 18px;
@@ -376,24 +378,20 @@
 
             .fa-house-chimney {
                 font-size: 16px;
-                margin-right: 8px;
             }
 
             .fa-list-check {
                 font-size: 18px;
-                margin-right: 8px;
             }
 
             .fa-envelope {
                 font-size: 18px;
-                margin-right: 8px;
             }
 
             .fa-user {
                 font-size: 18px;
-                margin-right: 8px;
             }
-                    
+
             .login {
                 display: flex;
                 min-height: 100vh;
@@ -402,9 +400,11 @@
                 padding-top: 3%;
                 align-items: center;
             }
-            .login>h1{
-                font-size:30px;
+
+            .login>h1 {
+                font-size: 30px;
             }
+
             .background {
                 background-color: rgba(44, 44, 44, 0.8);
                 display: flex;
@@ -417,20 +417,22 @@
                 border-radius: 10px;
                 gap: 5px;
             }
+
             .login_form {
                 border-radius: 7px;
                 width: 75%;
                 height: 405px;
                 gap: 4px;
                 overflow: hidden;
-                text-align:center;
+                text-align: center;
             }
-        
+
             .login_form>h1 {
                 text-decoration: underline;
-                justify-content:center;
-                
+                justify-content: center;
+
             }
+
             .login_form>input {
                 padding: 12px;
                 width: 80%;
@@ -438,24 +440,27 @@
 
             .password_issue>label {
                 font-size: 14px;
-                padding:5px;
+                padding: 5px;
                 color: white
-            }   
+            }
 
             .password_issue>a {
                 text-decoration: none;
                 text-decoration: underline;
                 color: whitesmoke;
-                padding:5px;
+                padding: 5px;
                 font-size: 14px;
             }
+
             .signup_login_footer {
                 flex-direction: row;
                 display: flex;
                 gap: 1%;
                 width: 100%;
 
-        } 
+            }
+        }
+
         @media (max-width:1024px) {
             .Navigation {
                 padding: 7px;
@@ -472,39 +477,33 @@
                 font-size: 18px;
                 padding: 2px;
             }
-            
+
             #Login_btn {
                 width: 90px;
                 font-size: 16px;
                 padding: 5px;
             }
 
-
             .fa-arrow-right-long {
                 font-size: 16px;
-                margin-left: 4px;
             }
 
             .fa-house-chimney {
                 font-size: 14px;
-                margin-right: 8px;
             }
 
             .fa-list-check {
                 font-size: 16px;
-                margin-right: 8px;
             }
 
             .fa-envelope {
                 font-size: 16px;
-                margin-right: 8px;
             }
 
             .fa-user {
                 font-size: 14px;
-                margin-right: 8px;
             }
-                    
+
             .login {
                 display: flex;
                 min-height: 100vh;
@@ -513,9 +512,11 @@
                 padding-top: 3%;
                 align-items: center;
             }
-            .login>h1{
-                font-size:25px;
+
+            .login>h1 {
+                font-size: 25px;
             }
+
             .background {
                 background-color: rgba(44, 44, 44, 0.8);
                 display: flex;
@@ -528,20 +529,22 @@
                 border-radius: 10px;
                 gap: 5px;
             }
+
             .login_form {
                 border-radius: 7px;
                 width: 90%;
                 height: 405px;
                 gap: 4px;
                 overflow: hidden;
-                text-align:center;
+                text-align: center;
             }
-        
+
             .login_form>h1 {
                 text-decoration: underline;
-                justify-content:center;
-       
+                justify-content: center;
+
             }
+
             .login_form>input {
                 padding: 12px;
                 width: 80%;
@@ -549,23 +552,26 @@
 
             .password_issue>label {
                 font-size: 12px;
-                padding:5px;
+                padding: 5px;
                 color: white
-            }   
+            }
 
             .password_issue>a {
                 text-decoration: none;
                 text-decoration: underline;
                 color: whitesmoke;
-                padding:5px;
+                padding: 5px;
                 font-size: 12px;
             }
+
             .signup_login_footer {
                 flex-direction: row;
                 display: flex;
                 gap: 1%;
                 width: 100%;
-        }     
+            }
+        }
+
         @media (max-width:770px) {
             .Navigation {
                 padding: 7px;
@@ -582,39 +588,33 @@
                 font-size: 14px;
                 padding: 2px;
             }
-            
+
             #Login_btn {
                 width: 90px;
                 font-size: 14px;
                 padding: 5px;
             }
 
-
             .fa-arrow-right-long {
                 font-size: 14px;
-                margin-left: 4px;
             }
 
             .fa-house-chimney {
                 font-size: 14px;
-                margin-right: 8px;
             }
 
             .fa-list-check {
                 font-size: 12px;
-                margin-right: 8px;
             }
 
             .fa-envelope {
                 font-size: 14px;
-                margin-right: 8px;
             }
 
             .fa-user {
                 font-size: 14px;
-                margin-right: 8px;
             }
-                    
+
             .login {
                 display: flex;
                 min-height: 100vh;
@@ -623,9 +623,11 @@
                 padding-top: 3%;
                 align-items: center;
             }
-            .login>h1{
-                font-size:20px;
+
+            .login>h1 {
+                font-size: 20px;
             }
+
             .background {
                 background-color: rgba(44, 44, 44, 0.8);
                 display: flex;
@@ -638,44 +640,49 @@
                 border-radius: 10px;
                 gap: 5px;
             }
+
             .login_form {
                 border-radius: 7px;
                 width: 90%;
                 height: 455px;
                 gap: 4px;
                 overflow: hidden;
-                text-align:center;
+                text-align: center;
             }
-        
+
             .login_form>h1 {
                 text-decoration: underline;
-                justify-content:center;
-           
+                justify-content: center;
+
             }
+
             .login_form>input {
                 padding: 12px;
                 width: 80%;
-            }  
+            }
 
             .password_issue>label {
                 font-size: 12px;
-                padding:5px;
+                padding: 5px;
                 color: white
-            }   
+            }
 
             .password_issue>a {
                 text-decoration: none;
                 text-decoration: underline;
                 color: whitesmoke;
-                padding:5px;
+                padding: 5px;
                 font-size: 12px;
             }
+
             .signup_login_footer {
                 flex-direction: row;
                 display: flex;
                 gap: 1%;
                 width: 100%;
-        }  
+            }
+        }
+
         @media (max-width:480px) {
             .Navigation {
                 padding: 5px;
@@ -692,39 +699,33 @@
                 font-size: 12px;
                 padding: 2px;
             }
-            
+
             #Login_btn {
                 width: 80px;
                 font-size: 12px;
                 padding: 5px;
             }
 
-
             .fa-arrow-right-long {
                 font-size: 12px;
-                margin-left: 4px;
             }
 
             .fa-house-chimney {
                 font-size: 12px;
-                margin-right: 8px;
             }
 
             .fa-list-check {
                 font-size: 12px;
-                margin-right: 8px;
             }
 
             .fa-envelope {
                 font-size: 12px;
-                margin-right: 8px;
             }
 
             .fa-user {
                 font-size: 12px;
-                margin-right: 8px;
             }
-                    
+
             .login {
                 display: flex;
                 min-height: 100vh;
@@ -733,9 +734,11 @@
                 padding-top: 3%;
                 align-items: center;
             }
-            .login>h1{
-                font-size:20px;
+
+            .login>h1 {
+                font-size: 20px;
             }
+
             .background {
                 background-color: rgba(44, 44, 44, 0.8);
                 display: flex;
@@ -748,47 +751,52 @@
                 border-radius: 10px;
                 gap: 5px;
             }
+
             .login_form {
                 border-radius: 7px;
                 width: 98%;
                 height: 455px;
                 gap: 4px;
                 overflow: hidden;
-                text-align:center;
+                text-align: center;
             }
-        
+
             .login_form>h1 {
                 text-decoration: underline;
-                justify-content:center;
-        
+                justify-content: center;
+
             }
+
             .login_form>input {
                 padding: 12px;
                 width: 80%;
             }
+
             .password_issue {
                 gap: 0%;
                 justify-content: space-between;
-            }   
+            }
 
             .password_issue>label {
                 font-size: 12px;
-                padding:5px;
+                padding: 5px;
                 color: white
-            }   
+            }
 
             .password_issue>a {
                 text-decoration: none;
                 text-decoration: underline;
                 color: whitesmoke;
-                padding:5px;
+                padding: 5px;
                 font-size: 12px;
             }
+
             .signup_login_footer {
                 flex-direction: row;
                 display: flex;
                 gap: 1%;
                 width: 100%;
+            }
         }
     </style>
 </head>
@@ -817,11 +825,11 @@
         <div class="background">
             <form action="post" class="login_form">
                 <h1>Create Account</h1>
-                <input type="text" id = "A1" placeholder="Enter your name">
-                <input type="text" id = "A2" placeholder="Enter your username">
-                <input type="text" id = "A3" placeholder="Enter your email">
-                <input type="text" id = "A4" placeholder="Enter your phone">
-                <input type="text" id = "A5" placeholder="Create new password">
+                <input type="text" id="A1" placeholder="Enter your name">
+                <input type="text" id="A2" placeholder="Enter your username">
+                <input type="text" id="A3" placeholder="Enter your email">
+                <input type="text" id="A4" placeholder="Enter your phone">
+                <input type="text" id="A5" placeholder="Create new password">
                 <button type="submit" class="submit_btn">Submit</button>
                 <a href="Login.html">Already have and account/Login?</a>
             </form>
@@ -829,8 +837,6 @@
     </div>
 
     <script>
-        
-    
 
     </script>
 
