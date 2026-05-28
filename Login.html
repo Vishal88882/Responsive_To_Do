@@ -128,7 +128,7 @@
             flex-direction: column;
             padding-top: 3%;
             align-items: center;
-            background-image: url(../Assets/Home_background.jpg);
+            background-image: url(./Home_background.jpg);
             background-repeat: no-repeat;
             background-position: center;
             background-size: cover;
@@ -234,7 +234,7 @@
             transition: all 0.3s ease;
         }
 
-         @media (max-width:1480px) {
+        @media (max-width:1480px) {
             .Navigation {
                 padding: 12px;
                 gap: 60px;
@@ -385,11 +385,11 @@
                 margin-right: 8px;
             }
 
-            .login {    
+            .login {
                 min-height: 100vh;
                 height: 83vh;
                 padding-top: 3%;
-             
+
             }
 
             .login>h1 {
@@ -400,7 +400,7 @@
                 height: 65%;
                 width: 80%;
                 gap: 5px;
-                padding:1%;
+                padding: 1%;
             }
 
             .login_form {
@@ -504,7 +504,7 @@
                 height: 405px;
                 gap: 4px;
                 overflow: hidden;
-               
+
             }
 
             .login_form>input {
@@ -752,18 +752,55 @@
             <form action="post" class="login_form">
 
                 <h1>Login</h1>
-                <input type="text" placeholder="Enter your username">
-                <input type="text" placeholder="Enter your password">
+                <input type="text" placeholder="Enter your username" id="B1">
+                <input type="text" placeholder="Enter your password" id="B2">
                 <div class="password_issue">
                     <label><input type="checkbox">Remember Me</label>
                     <a href="Forget.html">Forget password?</a>
                 </div>
-                <button type="submit" class="submit_btn">Submit</button>
+                <button type="button" id="_btn1" class="submit_btn">Submit</button>
                 <a href="Signup.html">New User/Signup?</a>
             </form>
         </div>
     </div>
 
+    <script>
+
+        const submit_btn1 = document.getElementById("_btn1")
+        submit_btn1.addEventListener('click', async (e) => {
+            e.preventDefault();
+
+            const userData = {
+                username: document.querySelector('#B1').value,
+                password: document.querySelector('#B2').value
+            };
+
+            if (!userData.username || !userData.password) {
+                return alert("Fill in all fields!");
+            }
+
+            try {
+                const response = await fetch('http://localhost:8000/login', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(userData)
+                });
+
+                const result = await response.json();
+
+                // Just check the 'success' property sent by your server
+                if (result.success) {
+                    alert('Login successful!');
+                    window.location.href = "./Dashboard.html";
+                } else {
+                    alert('Error: ' + result.message);
+                }
+            } catch (error) {
+                console.error('Fetch error:', error);
+            }
+        });
+
+    </script>
 </body>
 
 </html>

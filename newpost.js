@@ -8,6 +8,8 @@ app.use((req, res, next) => {
     req.example = "exampleValue";
     next();
 });
+const cors = require('cors');
+app.use(cors());
 
 app.post("/signup", async (req, res) => {
 
@@ -16,7 +18,7 @@ app.post("/signup", async (req, res) => {
         const usercontent = JSON.parse(filecontent)
         const { name, username, email, password, phone } = req.body;
         if (!name || !username || !email || !password || !phone)
-            return res.json({ message: "Data Missing" })
+            return res.status(404).json({ message: "Data Missing" })
         else {
             // check to see if any user with the given email address already exists in the usercontent arrray
             const userExists = usercontent.some(el => el.username === username || el.email === email);
@@ -30,7 +32,7 @@ app.post("/signup", async (req, res) => {
         }
     } catch (error) {
         console.log("Error : ", error.message);
-        res.json({ message: error.message });
+        res.status(404).json({ message: error.message });
     }
 })
 

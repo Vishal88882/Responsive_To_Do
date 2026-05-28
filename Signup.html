@@ -10,7 +10,6 @@
     <style>
         * {
             font-family: monospace;
-           
         }
 
         body {
@@ -130,7 +129,7 @@
             flex-direction: column;
             padding-top: 3%;
             align-items: center;
-            background-image: url(../Assets/Home_background.jpg);
+            background-image: url(./Home_background.jpg);
             background-repeat: no-repeat;
             background-position: center;
             background-size: cover;
@@ -798,6 +797,29 @@
                 width: 100%;
             }
         }
+
+        #msg_box {
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 6px;
+            text-align: center;
+            font-family: monospace;
+            display: none;
+        }
+
+        #msg_box.success {
+            display: block;
+            background-color: #d4edda;
+            color: green;
+            border: 1px solid green;
+        }
+
+        #msg_box.error {
+            display: block;
+            background-color: #f8d7da;
+            color: red;
+            border: 1px solid red;
+        }
     </style>
 </head>
 
@@ -823,20 +845,63 @@
     <div class="login">
         <h1>Organise Your Daily Tasks</h1>
         <div class="background">
-            <form action="post" class="login_form">
+            <form id="signup_form" class="login_form">
+                <div id="msg_box"></div>
                 <h1>Create Account</h1>
                 <input type="text" id="A1" placeholder="Enter your name">
                 <input type="text" id="A2" placeholder="Enter your username">
                 <input type="text" id="A3" placeholder="Enter your email">
                 <input type="text" id="A4" placeholder="Enter your phone">
                 <input type="text" id="A5" placeholder="Create new password">
-                <button type="submit" class="submit_btn">Submit</button>
+                <button type="button" id="_btn" class="submit_btn">Submit</button>
                 <a href="Login.html">Already have and account/Login?</a>
             </form>
         </div>
     </div>
 
     <script>
+
+        const submit_btn = document.getElementById("_btn")
+        const msgBox = document.getElementById("msg_box");
+
+        submit_btn.addEventListener('click', async (e) => {
+            e.preventDefault();
+
+            const userData = {
+                name: document.querySelector('#A1').value,
+                username: document.querySelector('#A2').value,
+                email: document.querySelector('#A3').value,
+                phone: document.querySelector('#A4').value,
+                password: document.querySelector('#A5').value
+            };
+            if (!userData.name || !userData.username || !userData.email || !userData.phone || !userData.password) {
+                return alert("Please fill complete details!");
+            }
+            else {
+                try {
+                    const response = await fetch('http://localhost:8000/signup', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify(userData)
+                    });
+
+                    const result = await response.json();
+
+                    if (response.ok) {
+                        alert('Signup successful!');
+                        // window.location.href = "./Login.html";
+                    } else {
+                        alert('Error: ' + (result.message || "Signup failed"));
+                    }
+                } catch (error) {
+                    console.error('Fetch error:', error);
+                }
+
+            }
+        }
+        )
 
     </script>
 
