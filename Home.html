@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taskora</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style>
+        body {
+            padding: 0px;
+            margin: 0px;
+            font-family: monospace;
+            overflow-y: hidden;
+            overflow-x: hidden;
+
+        }
+
+        .Navigation {
+            background-color: rgba(0, 0, 0, 0.8);
+            display: flex;
+            gap: 70px;
+            align-items: center;
+            justify-content: center;
+            flex-direction: row;
+            padding: 15px;
+        }
+
+        .Navigation_logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #ff841f;
+            font-size: 28px;
+            font-weight: 700;
+        }
+
+        .Navigation>a {
+            text-decoration: none;
+            font-size: 22px;
+            border-radius: 5px;
+            padding: 10px;
+            color: whitesmoke;
+        }
+
+        .Navigation>a:hover {
+            box-shadow: 0 0 5px rgb(139, 138, 136);
+            transition: all 0.2s ease;
+            text-decoration: underline;
+        }
+
+        #Login_btn {
+            display: flex;
+            align-items: center;
+            margin-left: auto;
+            width: 180px;
+            font-size: 20px;
+            align-self: center;
+            justify-content: center;
+            padding: 15px;
+            border-radius: 7px;
+            background-color: rgb(190, 172, 143);
+            text-decoration: none;
+            color: black;
+        }
+
+        #Login_btn:hover {
+            box-shadow: 0 0 10px;
+            background-color: rgb(199, 179, 149);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .fa-house-chimney {
+            color: #1366b9;
+            font-size: 22px;
+            margin-right: 8px;
+        }
+
+        .fa-list-check {
+            color: rgb(95, 84, 255);
+            font-size: 22px;
+            margin-right: 8px;
+        }
+
+        .fa-envelope {
+            color: rgb(103, 117, 78);
+            font-size: 22px;
+            margin-right: 8px;
+        }
+
+        .fa-user {
+            color: rgb(235, 197, 154);
+            font-size: 22px;
+            margin-right: 8px;
+        }
+
+        .home_container {
+            display: flex;
+            flex-direction: row;
+            gap: 40px;
+            padding-top: 5%;
+            padding-left: 4%;
+            background-image: url(./Home_background.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            height: 89vh;
+        }
+
+        .Quote>h1 {
+            color: #2e2e2e;
+            font-size: 35px;
+        }
+
+        .Quote>h2 {
+            color: rgb(48, 48, 112);
+        }
+
+        #Start_btn {
+            background-color: rgb(194, 177, 152);
+            padding: 15px;
+            width: 200px;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            border-radius: 7px;
+            font-size: 20px;
+            text-decoration: none;
+            color: black;
+        }
+
+        #Start_btn:hover {
+            box-shadow: 0 0 8px;
+            background-color: rgb(153, 138, 115);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .fa-arrow-right-long {
+            color: rgb(51, 51, 51);
+            font-size: 22px;
+            margin-left: 8px;
+        }
+
+        .home_img {
+            display: flex;
+            padding-top: 90px;
+            padding-right: 5%;
+        }
+
+        .home_img>img {
+            box-shadow: 0 0 5px;
+            border-radius: 10px;
+            padding-bottom: 20px;
+            background-color: rgb(100, 133, 133, 0.5);
+            min-width: 250px;
+            width: 640px;
+            height: 350px;
+        }
+
+        @media (max-width:1480px) {
+            .Navigation {
+                padding: 20px;
+                gap: 40px;
+                justify-content: space-between;
+            }
+
+            .Navigation_logo {
+                gap: 15px;
+                font-size: 20px;
+                font-weight: 700;
+            }
+
+            .Navigation>a {
+                font-size: 20px;
+                padding: 2px;
+            }
+
+            .home_img {
+                padding-top: 120px;
+            }
+
+            .home_img>img {
+                box-shadow: 0 0 5px;
+                padding-bottom: 20px;
+                width: 150px;
+                height: 100px;
+            }
+
+            #Login_btn {
+                width: 120px;
+                font-size: 20px;
+                padding: 10px;
+            }
+
+            .Navigation_logo {
+                gap: 4px;
+                font-size: 20px;
+            }
+
+            .fa-arrow-right-long {
+                font-size: 22px;
+                margin-left: 4px;
+            }
+
+            .fa-house-chimney {
+                font-size: 22px;
+                margin-right: 8px;
+            }
+
+            .fa-list-check {
+                font-size: 22px;
+                margin-right: 8px;
+            }
+
+            .fa-envelope {
+                font-size: 22px;
+                margin-right: 8px;
+            }
+
+            .fa-user {
+                font-size: 22px;
+                margin-right: 8px;
+            }
+
+            .home_container {
+                gap: 10px;
+                height: 100vh;
+            }
+
+            .Quote {
+                padding-top: 5%;
+                padding-left: 5%;
+                width: 90%;
+            }
+
+            .home_img {
+                display: flex;
+                padding: 20px;
+                padding-top: 14%;
+            }
+
+            .home_img>img {
+                min-width: 250px;
+                width: 570px;
+                height: 300px;
+            }
+        }
+
+        @media (max-width:1280px) {
+            .Navigation {
+                padding: 15px;
+                gap: 40px;
+                justify-content: space-between;
+            }
+
+            .Navigation_logo {
+                gap: 10px;
+                font-size: 25px;
+                font-weight: 700;
+            }
+
+            .Navigation>a {
+                font-size: 20px;
+                padding: 8px;
+            }
+
+            .home_img {
+                padding-top: 120px;
+            }
+
+            .home_img>img {
+                border-radius: 10px;
+                padding-bottom: 20px;
+                width: 150px;
+                height: 100px;
+            }
+
+            #Login_btn {
+                width: 120px;
+                font-size: 20px;
+                padding: 15px;
+            }
+
+            .Navigation_logo {
+                gap: 4px;
+                font-size: 20px;
+            }
+
+            .fa-arrow-right-long {
+                font-size: 16px;
+                margin-left: 4px;
+            }
+
+            .fa-house-chimney {
+                font-size: 16px;
+                margin-right: 8px;
+            }
+
+            .fa-list-check {
+                font-size: 16px;
+                margin-right: 8px;
+            }
+
+            .fa-envelope {
+                font-size: 16px;
+                margin-right: 8px;
+            }
+
+            .fa-user {
+                font-size: 16px;
+                margin-right: 8px;
+            }
+
+            .home_container {
+                gap: 10px;
+                height: 100vh;
+            }
+
+            .Quote {
+                padding-top: 10%;
+                padding-left: 5%;
+                width: 50%;
+            }
+
+            .home_img {
+                display: flex;
+                padding: 20px;
+                padding-top: 14%;
+            }
+
+            .home_img>img {
+                min-width: 250px;
+                width: 520px;
+                height: 250px;
+            }
+        }
+
+        @media (max-width:1024px) {
+            .Navigation {
+                padding: 15px;
+                gap: 22px;
+                justify-content: space-between;
+            }
+
+            .Navigation_logo {
+                gap: 5px;
+                font-size: 22px;
+            }
+
+            .Navigation>a {
+                font-size: 16px;
+                padding: 6px;
+            }
+
+            .home_img {
+                padding-top: 120px;
+            }
+
+            .home_img>img {
+                padding-bottom: 20px;
+                width: 150px;
+                height: 100px;
+            }
+
+            #Login_btn {
+                width: 120px;
+                font-size: 16px;
+                padding: 5px;
+            }
+
+            .Navigation_logo {
+                gap: 4px;
+                font-size: 20px;
+            }
+
+            .fa-arrow-right-long {
+                font-size: 16px;
+                margin-left: 4px;
+            }
+
+            .fa-house-chimney {
+                font-size: 16px;
+                margin-right: 8px;
+            }
+
+            .fa-list-check {
+                font-size: 16px;
+                margin-right: 8px;
+            }
+
+            .fa-envelope {
+                font-size: 16px;
+                margin-right: 8px;
+            }
+
+            .fa-user {
+                font-size: 16px;
+                margin-right: 8px;
+            }
+
+            .home_container {
+                flex-direction: column;
+                gap: 10px;
+                height: 100vh;
+            }
+
+            .Quote {
+                padding-top: 10%;
+                padding-left: 5%;
+                width: 90%;
+            }
+
+            .home_img {
+                display: flex;
+                padding: 20px;
+                margin-bottom: 5%;
+                padding-left: 5%;
+                min-height: 180px;
+            }
+
+            .home_img>img {
+                min-width: 250px;
+                width: 520px;
+                height: auto;
+            }
+        }
+
+        @media (max-width:770px) {
+            .Navigation {
+                padding: 7px;
+                gap: 8px;
+                justify-content: space-between;
+            }
+
+            .Navigation_logo {
+                gap: 10px;
+                font-size: 20px;
+            }
+
+            .Navigation>a {
+                font-size: 14px;
+                padding: 2px;
+            }
+
+            .home_img {
+                padding-top: 120px;
+            }
+
+            .home_img>img {
+                padding-bottom: 20px;
+                width: 150px;
+                height: 100px;
+            }
+
+            #Login_btn {
+                width: 120px;
+                font-size: 12px;
+                padding: 5px;
+            }
+
+            .Navigation_logo {
+                gap: 4px;
+                font-size: 18px;
+            }
+
+            .fa-arrow-right-long {
+                font-size: 12px;
+                margin-left: 4px;
+            }
+
+            .fa-house-chimney {
+                font-size: 12px;
+                margin-right: 8px;
+            }
+
+            .fa-list-check {
+                font-size: 12px;
+                margin-right: 8px;
+            }
+
+            .fa-envelope {
+                font-size: 12px;
+                margin-right: 8px;
+            }
+
+            .fa-user {
+                font-size: 12px;
+                margin-right: 8px;
+            }
+
+            .home_container {
+                flex-direction: column;
+                gap: 10px;
+                height: 100vh;
+            }
+
+            .Quote {
+                padding-top: 10%;
+                padding-left: 5%;
+                width: 90%;
+            }
+
+            .home_img {
+                display: flex;
+                padding: 20px;
+                margin-bottom: 5%;
+                padding-left: 5%;
+                min-height: 180px;
+            }
+
+            .home_img>img {
+                min-width: 250px;
+                width: 520px;
+                height: auto;
+            }
+        }
+
+        @media(max-width:480px) {
+            .Navigation {
+                padding: 5px;
+                gap: 5px;
+                justify-content: space-between;
+            }
+
+            .Navigation>a {
+                font-size: 10px;
+                padding: 2px;
+            }
+
+            #Login_btn {
+                width: 120px;
+                font-size: 12px;
+                padding: 5px;
+            }
+
+            .Navigation_logo {
+                gap: 4px;
+                font-size: 12px;
+            }
+
+            .fa-arrow-right-long {
+                font-size: 12px;
+                margin-left: 4px;
+            }
+
+            .fa-house-chimney {
+                font-size: 12px;
+                margin-right: 8px;
+            }
+
+            .fa-list-check {
+                font-size: 12px;
+                margin-right: 8px;
+            }
+
+            .fa-envelope {
+                font-size: 12px;
+                margin-right: 8px;
+            }
+
+            .fa-user {
+                font-size: 12px;
+                margin-right: 8px;
+            }
+
+            .home_container {
+                flex-direction: column;
+                gap: 10px;
+                height: 100vh;
+            }
+
+            .Quote {
+                padding-top: 10%;
+                padding-left: 5%;
+                width: 90%;
+            }
+
+            .home_img {
+                display: flex;
+                padding: 20px;
+                margin-bottom: 5%;
+                min-height: 180px;
+            }
+
+            .home_img>img {
+                min-width: 250px;
+                width: 440px;
+                height: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="Navigation">
+        <div class="Navigation_logo">
+            <span>Taskora</span>
+        </div>
+        <a href="Home.html"><i class="fa-solid fa-house-chimney"></i>Home</a>
+        <a href="Tasks.html"><i class="fa-solid fa-list-check"></i>Tasks</a>
+        <a href="Contact.html"><i class="fa-solid fa-envelope"></i>Contact</a>
+        <a href="Account.html"><i class="fa-solid fa-user"></i>Account</a>
+        <a href="Login.html" id="Login_btn">Login<i class="fa-solid fa-arrow-right-long"></i></a>
+    </nav>
+    <div class="home_container">
+        <div class="Quote">
+            <h1>Capture, organize, and tackle your to-dos from anywhere.</h1>
+            <h2>Escape the clutter and chaos—unleash your productivity.</h2>
+            <a id="Start_btn" href="Signup.html">Start now <i class="fa-solid fa-arrow-right-long"></i></a>
+        </div>
+        <div class="home_img">
+            <img src="./Home_img.avif" alt="Img Didn't load!">
+        </div>
+    </div>
+</body>
+
+</html>
+

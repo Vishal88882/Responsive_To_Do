@@ -6,16 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-  
+
     <style>
         * {
             font-family: monospace;
-            overflow-y:hidden;
         }
 
         body {
             margin: 0px;
             padding: 0px;
+
         }
 
         .Navigation {
@@ -26,7 +26,6 @@
             justify-content: center;
             flex-direction: row;
             padding: 15px;
-
         }
 
         .Navigation_logo {
@@ -49,6 +48,7 @@
         .Navigation>a:hover {
             box-shadow: 0 0 5px rgb(139, 138, 136);
             transition: all 0.2s ease;
+            text-decoration: underline;
         }
 
         #Login_btn {
@@ -70,8 +70,8 @@
             box-shadow: 0 0 10px;
             background-color: rgb(167, 150, 125);
             transition: all 0.3s ease;
-
         }
+
         .fa-arrow-right-long {
             color: rgb(51, 51, 51);
             font-size: 22px;
@@ -101,6 +101,7 @@
             font-size: 22px;
             margin-right: 8px;
         }
+
         .signup_login_footer {
             flex-direction: row;
             display: flex;
@@ -110,8 +111,7 @@
             justify-content: end;
             position: fixed;
             bottom: 0;
-            width:100%;
-            
+            width: 100%;
         }
 
         .signup_login_footer>a {
@@ -124,14 +124,16 @@
 
         .login {
             display: flex;
+            min-height: 100vh;
             height: 83vh;
             flex-direction: column;
             padding-top: 3%;
             align-items: center;
-            background-image: url(../Assets/Home_background.jpg);
+            background-image: url(./Home_background.jpg);
             background-repeat: no-repeat;
             background-position: center;
             background-size: cover;
+
         }
 
         .login>h1 {
@@ -146,18 +148,17 @@
             flex-direction: column;
             justify-content: center;
             padding: 40px;
-            height: 55%;
+            height: 65%;
             width: 50%;
             border-radius: 10px;
             gap: 20px;
-
         }
 
         .login_form {
             background-color: rgba(100, 91, 91, 0.8);
             border-radius: 10px;
             width: 500px;
-            height: 305px;
+            height: 555px;
             display: flex;
             flex-direction: column;
             gap: 4px;
@@ -197,7 +198,7 @@
             text-decoration: none;
             font-size: 18px;
             color: white;
-            width:400px;
+            width: 400px;
             text-decoration: underline;
         }
 
@@ -224,15 +225,16 @@
             color: white;
             padding: 10px;
             font-size: 16px;
-            width: 100%;
+            width: 85%;
             border-radius: 10px;
         }
 
         .submit_btn:hover {
             box-shadow: 0 0 5px;
-            width: 100%;
+            width: 87%;
             transition: all 0.3s ease;
         }
+
         @media (max-width:1480px) {
             .Navigation {
                 padding: 7px;
@@ -249,39 +251,33 @@
                 font-size: 20px;
                 padding: 2px;
             }
-            
+
             #Login_btn {
                 width: 120px;
                 font-size: 20px;
                 padding: 5px;
             }
 
-
             .fa-arrow-right-long {
-                font-size: 22px;
                 margin-left: 4px;
             }
 
             .fa-house-chimney {
                 font-size: 20px;
-                margin-right: 8px;
             }
 
             .fa-list-check {
                 font-size: 22px;
-                margin-right: 8px;
             }
 
             .fa-envelope {
                 font-size: 22px;
-                margin-right: 8px;
             }
 
             .fa-user {
                 font-size: 22px;
-                margin-right: 8px;
             }
-                    
+
             .login {
                 display: flex;
                 min-height: 100vh;
@@ -290,9 +286,11 @@
                 padding-top: 3%;
                 align-items: center;
             }
-            .login>h1{
-                font-size:30px;
+
+            .login>h1 {
+                font-size: 30px;
             }
+
             .background {
                 background-color: rgba(44, 44, 44, 0.8);
                 display: flex;
@@ -305,20 +303,22 @@
                 border-radius: 10px;
                 gap: 5px;
             }
+
             .login_form {
                 border-radius: 7px;
                 width: 75%;
                 height: 405px;
                 gap: 4px;
                 overflow: hidden;
-                text-align:center;
+                text-align: center;
             }
-        
+
             .login_form>h1 {
                 text-decoration: underline;
-                justify-content:center;
-                
+                justify-content: center;
+
             }
+
             .login_form>input {
                 padding: 12px;
                 width: 80%;
@@ -326,24 +326,27 @@
 
             .password_issue>label {
                 font-size: 14px;
-                padding:5px;
+                padding: 5px;
                 color: white
-            }   
+            }
 
             .password_issue>a {
                 text-decoration: none;
                 text-decoration: underline;
                 color: whitesmoke;
-                padding:5px;
+                padding: 5px;
                 font-size: 14px;
             }
+
             .signup_login_footer {
                 flex-direction: row;
                 display: flex;
                 gap: 1%;
                 width: 100%;
 
-        } 
+            }
+        }
+
         @media (max-width:1280px) {
             .Navigation {
                 padding: 7px;
@@ -360,13 +363,12 @@
                 font-size: 18px;
                 padding: 2px;
             }
-            
+
             #Login_btn {
                 width: 120px;
                 font-size: 18px;
                 padding: 5px;
             }
-
 
             .fa-arrow-right-long {
                 font-size: 18px;
@@ -375,24 +377,20 @@
 
             .fa-house-chimney {
                 font-size: 16px;
-                margin-right: 8px;
             }
 
             .fa-list-check {
                 font-size: 18px;
-                margin-right: 8px;
             }
 
             .fa-envelope {
                 font-size: 18px;
-                margin-right: 8px;
             }
 
             .fa-user {
                 font-size: 18px;
-                margin-right: 8px;
             }
-                    
+
             .login {
                 display: flex;
                 min-height: 100vh;
@@ -401,9 +399,11 @@
                 padding-top: 3%;
                 align-items: center;
             }
-            .login>h1{
-                font-size:30px;
+
+            .login>h1 {
+                font-size: 30px;
             }
+
             .background {
                 background-color: rgba(44, 44, 44, 0.8);
                 display: flex;
@@ -416,20 +416,22 @@
                 border-radius: 10px;
                 gap: 5px;
             }
+
             .login_form {
                 border-radius: 7px;
                 width: 75%;
                 height: 405px;
                 gap: 4px;
                 overflow: hidden;
-                text-align:center;
+                text-align: center;
             }
-        
+
             .login_form>h1 {
                 text-decoration: underline;
-                justify-content:center;
-                
+                justify-content: center;
+
             }
+
             .login_form>input {
                 padding: 12px;
                 width: 80%;
@@ -437,24 +439,27 @@
 
             .password_issue>label {
                 font-size: 14px;
-                padding:5px;
+                padding: 5px;
                 color: white
-            }   
+            }
 
             .password_issue>a {
                 text-decoration: none;
                 text-decoration: underline;
                 color: whitesmoke;
-                padding:5px;
+                padding: 5px;
                 font-size: 14px;
             }
+
             .signup_login_footer {
                 flex-direction: row;
                 display: flex;
                 gap: 1%;
                 width: 100%;
 
-        } 
+            }
+        }
+
         @media (max-width:1024px) {
             .Navigation {
                 padding: 7px;
@@ -471,39 +476,33 @@
                 font-size: 18px;
                 padding: 2px;
             }
-            
+
             #Login_btn {
                 width: 90px;
                 font-size: 16px;
                 padding: 5px;
             }
 
-
             .fa-arrow-right-long {
                 font-size: 16px;
-                margin-left: 4px;
             }
 
             .fa-house-chimney {
                 font-size: 14px;
-                margin-right: 8px;
             }
 
             .fa-list-check {
                 font-size: 16px;
-                margin-right: 8px;
             }
 
             .fa-envelope {
                 font-size: 16px;
-                margin-right: 8px;
             }
 
             .fa-user {
                 font-size: 14px;
-                margin-right: 8px;
             }
-                    
+
             .login {
                 display: flex;
                 min-height: 100vh;
@@ -512,9 +511,11 @@
                 padding-top: 3%;
                 align-items: center;
             }
-            .login>h1{
-                font-size:25px;
+
+            .login>h1 {
+                font-size: 25px;
             }
+
             .background {
                 background-color: rgba(44, 44, 44, 0.8);
                 display: flex;
@@ -527,20 +528,22 @@
                 border-radius: 10px;
                 gap: 5px;
             }
+
             .login_form {
                 border-radius: 7px;
                 width: 90%;
                 height: 405px;
                 gap: 4px;
                 overflow: hidden;
-                text-align:center;
+                text-align: center;
             }
-        
+
             .login_form>h1 {
                 text-decoration: underline;
-                justify-content:center;
-       
+                justify-content: center;
+
             }
+
             .login_form>input {
                 padding: 12px;
                 width: 80%;
@@ -548,23 +551,26 @@
 
             .password_issue>label {
                 font-size: 12px;
-                padding:5px;
+                padding: 5px;
                 color: white
-            }   
+            }
 
             .password_issue>a {
                 text-decoration: none;
                 text-decoration: underline;
                 color: whitesmoke;
-                padding:5px;
+                padding: 5px;
                 font-size: 12px;
             }
+
             .signup_login_footer {
                 flex-direction: row;
                 display: flex;
                 gap: 1%;
                 width: 100%;
-        }     
+            }
+        }
+
         @media (max-width:770px) {
             .Navigation {
                 padding: 7px;
@@ -581,39 +587,33 @@
                 font-size: 14px;
                 padding: 2px;
             }
-            
+
             #Login_btn {
                 width: 90px;
                 font-size: 14px;
                 padding: 5px;
             }
 
-
             .fa-arrow-right-long {
                 font-size: 14px;
-                margin-left: 4px;
             }
 
             .fa-house-chimney {
                 font-size: 14px;
-                margin-right: 8px;
             }
 
             .fa-list-check {
                 font-size: 12px;
-                margin-right: 8px;
             }
 
             .fa-envelope {
                 font-size: 14px;
-                margin-right: 8px;
             }
 
             .fa-user {
                 font-size: 14px;
-                margin-right: 8px;
             }
-                    
+
             .login {
                 display: flex;
                 min-height: 100vh;
@@ -622,9 +622,11 @@
                 padding-top: 3%;
                 align-items: center;
             }
-            .login>h1{
-                font-size:20px;
+
+            .login>h1 {
+                font-size: 20px;
             }
+
             .background {
                 background-color: rgba(44, 44, 44, 0.8);
                 display: flex;
@@ -632,61 +634,51 @@
                 flex-direction: column;
                 justify-content: center;
                 padding: 10px;
-                height: 55%;
-                width: 80%;
+                height: 65%;
+                width: 83%;
                 border-radius: 10px;
                 gap: 5px;
             }
+
             .login_form {
                 border-radius: 7px;
                 width: 90%;
-                height: 305px;
+                height: 455px;
                 gap: 4px;
                 overflow: hidden;
-                text-align:center;
+                text-align: center;
             }
-        
+
             .login_form>h1 {
                 text-decoration: underline;
-                justify-content:center;
-           
+                justify-content: center;
+
             }
+
             .login_form>input {
                 padding: 12px;
                 width: 80%;
-            }  
+            }
 
             .password_issue>label {
                 font-size: 12px;
-                padding:5px;
+                padding: 5px;
                 color: white
-            }   
+            }
 
             .password_issue>a {
                 text-decoration: none;
                 text-decoration: underline;
                 color: whitesmoke;
-                padding:5px;
+                padding: 5px;
                 font-size: 12px;
             }
+
             .signup_login_footer {
                 flex-direction: row;
                 display: flex;
                 gap: 1%;
                 width: 100%;
-            }  
-            .submit_btn {
-                background-color: rgb(0, 0, 0);
-                color: white;
-                padding: 10px;
-                font-size: 16px;
-                width: 80%;
-                border-radius: 10px;
-            }
-            .submit_btn:hover {
-                box-shadow: 0 0 5px;
-                width: 83%;
-                transition: all 0.3s ease;
             }
         }
 
@@ -706,39 +698,33 @@
                 font-size: 12px;
                 padding: 2px;
             }
-            
+
             #Login_btn {
                 width: 80px;
                 font-size: 12px;
                 padding: 5px;
             }
 
-
             .fa-arrow-right-long {
                 font-size: 12px;
-                margin-left: 4px;
             }
 
             .fa-house-chimney {
                 font-size: 12px;
-                margin-right: 8px;
             }
 
             .fa-list-check {
                 font-size: 12px;
-                margin-right: 8px;
             }
 
             .fa-envelope {
                 font-size: 12px;
-                margin-right: 8px;
             }
 
             .fa-user {
                 font-size: 12px;
-                margin-right: 8px;
             }
-                    
+
             .login {
                 display: flex;
                 min-height: 100vh;
@@ -747,9 +733,11 @@
                 padding-top: 3%;
                 align-items: center;
             }
-            .login>h1{
-                font-size:20px;
+
+            .login>h1 {
+                font-size: 20px;
             }
+
             .background {
                 background-color: rgba(44, 44, 44, 0.8);
                 display: flex;
@@ -757,78 +745,87 @@
                 flex-direction: column;
                 justify-content: center;
                 padding: 10px;
-                height: 55%;
-                width: 80%;
+                height: 65%;
+                width: 85%;
                 border-radius: 10px;
                 gap: 5px;
             }
+
             .login_form {
                 border-radius: 7px;
-                width: 90%;
-                height: 305px;
+                width: 98%;
+                height: 455px;
                 gap: 4px;
                 overflow: hidden;
-                text-align:center;
+                text-align: center;
             }
-        
+
             .login_form>h1 {
                 text-decoration: underline;
-                justify-content:center;
-                font-size:18px;
-        
+                justify-content: center;
+
             }
+
             .login_form>input {
                 padding: 12px;
                 width: 80%;
             }
+
             .password_issue {
                 gap: 0%;
                 justify-content: space-between;
-            }   
+            }
 
             .password_issue>label {
                 font-size: 12px;
-                padding:5px;
+                padding: 5px;
                 color: white
-            }   
+            }
 
             .password_issue>a {
                 text-decoration: none;
                 text-decoration: underline;
                 color: whitesmoke;
-                padding:5px;
+                padding: 5px;
                 font-size: 12px;
             }
+
             .signup_login_footer {
                 flex-direction: row;
                 display: flex;
                 gap: 1%;
                 width: 100%;
-            
-            .submit_btn {
-                background-color: rgb(0, 0, 0);
-                color: white;
-                padding: 10px;
-                font-size: 16px;
-                width: 50%;
-                border-radius: 10px;
             }
-            .submit_btn:hover {
-                box-shadow: 0 0 5px;
-                width: 52%;
-                transition: all 0.3s ease;
-            }
+        }
+
+        #msg_box {
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 6px;
+            text-align: center;
+            font-family: monospace;
+            display: none;
+        }
+
+        #msg_box.success {
+            display: block;
+            background-color: #d4edda;
+            color: green;
+            border: 1px solid green;
+        }
+
+        #msg_box.error {
+            display: block;
+            background-color: #f8d7da;
+            color: red;
+            border: 1px solid red;
         }
     </style>
 </head>
 
-
-
 <body>
     <nav class="Navigation">
         <div class="Navigation_logo">
-
-
             <span>Taskora</span>
         </div>
         <a href="Home.html"><i class="fa-solid fa-house-chimney"></i>Home</a>
@@ -844,23 +841,68 @@
         <a href="">Privacy</a>
     </footer>
 
-
     <div class="login">
         <h1>Organise Your Daily Tasks</h1>
         <div class="background">
-
-            <form action="post" class="login_form">
-
-                <h1>Reset Password</h1>
-                <input type="text" placeholder="Enter your email">
-                <input type="text" placeholder="Enter your new password">
-                <input type="text" placeholder="Enter your OTP">
-                <div class="password_issue">
-                </div>
-                <a href=""><button type="button" class="submit_btn">Change Password</button></a>
+            <form id="signup_form" class="login_form">
+                <div id="msg_box"></div>
+                <h1>Create Account</h1>
+                <input type="text" id="A1" placeholder="Enter your name">
+                <input type="text" id="A2" placeholder="Enter your username">
+                <input type="text" id="A3" placeholder="Enter your email">
+                <input type="text" id="A4" placeholder="Enter your phone">
+                <input type="text" id="A5" placeholder="Create new password">
+                <button type="button" id="_btn" class="submit_btn">Submit</button>
+                <a href="Login.html">Already have and account/Login?</a>
             </form>
         </div>
     </div>
+
+    <script>
+
+        const submit_btn = document.getElementById("_btn")
+        const msgBox = document.getElementById("msg_box");
+
+        submit_btn.addEventListener('click', async (e) => {
+            e.preventDefault();
+
+            const userData = {
+                name: document.querySelector('#A1').value,
+                username: document.querySelector('#A2').value,
+                email: document.querySelector('#A3').value,
+                phone: document.querySelector('#A4').value,
+                password: document.querySelector('#A5').value
+            };
+            if (!userData.name || !userData.username || !userData.email || !userData.phone || !userData.password) {
+                return alert("Please fill complete details!");
+            }
+            else {
+                try {
+                    const response = await fetch('http://localhost:8000/signup', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify(userData)
+                    });
+
+                    const result = await response.json();
+
+                    if (response.ok) {
+                        alert('Signup successful!');
+                        // window.location.href = "./Login.html";
+                    } else {
+                        alert('Error: ' + (result.message || "Signup failed"));
+                    }
+                } catch (error) {
+                    console.error('Fetch error:', error);
+                }
+
+            }
+        }
+        )
+
+    </script>
 
 </body>
 
