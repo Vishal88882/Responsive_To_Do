@@ -26,13 +26,13 @@ app.post("/signup", async (req, res) => {
             usercontent.push(req.body)
             const stringusercontent = JSON.stringify(usercontent, null, 2)
             await fs.writeFile("./users.json", stringusercontent)
-            res.json({
+            res.status(200).json({
                 message: "User Signed Up"
             })
         }
     } catch (error) {
         console.log("Error : ", error.message);
-        res.status(404).json({ message: error.message });
+        res.status(401).json({ message: error.message });
     }
 })
 
@@ -46,13 +46,13 @@ app.post("/login", async (req, res) => {
         const userExists = usercontent.some(el => el.username == username && el.password == password);
         if (!userExists) throw new Error("Signed up first!");
         else {
-            res.json({
+            res.status(200).json({
                 message: "User Loged In"
             })
         }
     } catch (error) {
         console.log("Error : ", error.message);
-        res.json({ message: error.message });
+        res.status(401).json({ message: error.message });
     }
 })
 
@@ -176,10 +176,10 @@ app.post("/forget_password", async (req, res) => {
             }
         )
             .then(() => {
-                console.log("Email sent")
+                res.status(200).json({message:"Email Sent!"})
             })
             .catch((error) => {
-                console.error("Error :", error);
+                res.status(201).json({message:"Email Not Sent!"})
             })
 
         const Phone = userExists.phone

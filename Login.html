@@ -8,8 +8,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&display=swap');
         * {
-            font-family: monospace;
+            font-family: "baloo",monospace;
         }
 
         body {
@@ -785,16 +786,11 @@
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify(userData)
                 });
-
-                const result = await response.json();
-
-                // Just check the 'success' property sent by your server
-                if (result.success) {
+                if(!response.ok)
+                    return alert("Invalid credentials!")
                     alert('Login successful!');
-                    window.location.href = "./Dashboard.html";
-                } else {
-                    alert('Error: ' + result.message);
-                }
+                    window.location.href = "Home.html";
+              
             } catch (error) {
                 console.error('Fetch error:', error);
             }
