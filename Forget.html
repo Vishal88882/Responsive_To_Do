@@ -851,18 +851,57 @@
         <h1>Organise Your Daily Tasks</h1>
         <div class="background">
 
-            <form action="post" class="login_form">
+            <form class="login_form">
 
                 <h1>Forget Password</h1>
-                <input type="text" placeholder="Enter your email!">
+                <input type="text" placeholder="Enter your email!" id="C1">
                 <div class="password_issue">
                     <a href="">Resend Otp</a>
                 </div>
-                <a href="Reset.html"><button type="button" class="submit_btn">Send Otp!</button></a>
+                <button type="button" class="submit_btn" id="_btn2">Send Otp!</button>
             </form>
         </div>
     </div>
 
+    <script>
+        
+const submit_btn2 = document.getElementById("_btn2")
+
+submit_btn2.addEventListener('click', async (e) => {
+    e.preventDefault();
+
+    const userData = {
+        email: document.querySelector('#c1').value,
+        
+    };
+    if (!userData.email) {
+        return alert("Please Provide email!");
+    }
+    else {
+        try {
+            const response = await fetch('http://localhost:8000/forget_password', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(userData)
+            });
+            const result = await response.json();
+
+            if (response.ok) {
+                alert('Otp Sent!');
+                window.location.href = "Reset.html"
+
+            } else {
+                alert('Error: ' + (result.message || "Signup failed"));
+            }
+        } catch (error) {
+            console.error('Fetch error:', error);
+        }
+    }
+}
+)
+</script>
 </body>
 
 </html>

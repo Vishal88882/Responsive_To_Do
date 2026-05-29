@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&display=swap');
+
 .fa-house-chimney {
     color: #1366b9;
     font-size: 26px;
@@ -87,7 +87,7 @@
 * {
     padding: 0px;
     margin: 0px;
-    font-family: "Baloo 2", Arial, Helvetica, sans-serif;
+    font-family: monospace;
     box-sizing: border-box;
     scrollbar-width: none;
 }
@@ -105,7 +105,7 @@
     align-items: center;
     gap: 10px;
     color: #ff841f;
-    font-size: 28px;
+    font-size: 20px;
     font-weight: 700;
 }
 .Navigation>a {
