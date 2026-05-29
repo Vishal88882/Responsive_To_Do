@@ -9,8 +9,9 @@
 
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&display=swap');
+
         * {
-            font-family: "baloo",monospace;
+            font-family: "baloo", monospace;
         }
 
         body {
@@ -725,17 +726,15 @@
     </style>
 </head>
 
-
-
 <body>
     <nav class="Navigation">
         <div class="Navigation_logo">
             <span>Taskora</span>
         </div>
-        <a href="Home.html"><i class="fa-solid fa-house-chimney"></i>Home</a>
+        <!-- <a href="Home.html"><i class="fa-solid fa-house-chimney"></i>Home</a>
         <a href="Tasks.html"><i class="fa-solid fa-list-check"></i>Tasks</a>
         <a href="Contact.html"><i class="fa-solid fa-envelope"></i>Contact</a>
-        <a href="Account.html"><i class="fa-solid fa-user"></i></i>Account</a>
+        <a href="Account.html"><i class="fa-solid fa-user"></i></i>Account</a> -->
         <a href="Login.html" id="Login_btn">Login<i class="fa-solid fa-arrow-right-long"></i></a>
     </nav>
 
@@ -786,11 +785,17 @@
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify(userData)
                 });
-                if(!response.ok)
+                const result = await response.json();
+
+                if (!response.ok)
                     return alert("Invalid credentials!")
-                    alert('Login successful!');
-                    window.location.href = "Home.html";
-              
+                sessionStorage.setItem(
+                    "currentUser",
+                    JSON.stringify(result)
+                );
+                alert('Login successful!');
+                window.location.href = "Home.html";
+
             } catch (error) {
                 console.error('Fetch error:', error);
             }

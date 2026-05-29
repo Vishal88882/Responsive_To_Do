@@ -142,7 +142,7 @@
 .sidebar {
     width: auto;
     height: 84vh;
-    background-color: rgba(35, 56, 37, 0.5);
+    background:linear-gradient(to top, rgba(28, 14, 53, 0.5),rgba(158, 131, 131, 0.5));
     border-right: 1px solid #000000;
     padding: 10px;
     display: flex;
@@ -181,6 +181,8 @@ textarea {
     border-radius: 5px;
     width: auto;
     align-items: center;
+    background:linear-gradient(to right,rgb(116, 116, 116),rgb(195, 203, 214));
+    color:rgb(35, 35, 35);
     display: flex;
     padding: 2px;
     margin: 0%;
@@ -206,6 +208,7 @@ td {
     border-radius: 4px;
     padding: 5px;
     font-size: 16px;
+    
 }
 td>p {
     padding: 12px;

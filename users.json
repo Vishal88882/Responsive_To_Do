@@ -1,9 +1,15 @@
 [
   {
-    "name": "Vishal",
+    "name": "Vishal Rajput",
     "username": "Vishal8882",
     "email": "sunharilalrajpu8882@gmail.com",
     "phone": "9990841879",
-    "password": "123"
+    "password": "22222",
+    "Tasks" : [
+      {
+        "Task" : "",
+        "ID":""
+      }
+    ]
   }
 ]

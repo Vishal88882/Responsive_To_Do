@@ -824,19 +824,15 @@
     </style>
 </head>
 
-
-
 <body>
     <nav class="Navigation">
         <div class="Navigation_logo">
-
-
             <span>Taskora</span>
         </div>
-        <a href="Home.html"><i class="fa-solid fa-house-chimney"></i>Home</a>
+        <!-- <a href="Home.html"><i class="fa-solid fa-house-chimney"></i>Home</a>
         <a href="Tasks.html"><i class="fa-solid fa-list-check"></i>Tasks</a>
         <a href="Contact.html"><i class="fa-solid fa-envelope"></i>Contact</a>
-        <a href="Account.html"><i class="fa-solid fa-user"></i></i>Account</a>
+        <a href="Account.html"><i class="fa-solid fa-user"></i></i>Account</a> -->
         <a href="Login.html" id="Login_btn">Login<i class="fa-solid fa-arrow-right-long"></i></a>
     </nav>
 
@@ -871,27 +867,27 @@ submit_btn2.addEventListener('click', async (e) => {
     e.preventDefault();
 
     const userData = {
-        email: document.querySelector('#c1').value,
+        Email: document.querySelector('#C1').value,
         
     };
-    if (!userData.email) {
+    email = userData.Email
+    if (!userData.Email) {
         return alert("Please Provide email!");
     }
     else {
         try {
-            const response = await fetch('http://localhost:8000/forget_password', {
+            const response = await fetch('http://localhost:8000/forget_password',{
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify(userData)
+                body: JSON.stringify({email})
             });
             const result = await response.json();
 
             if (response.ok) {
                 alert('Otp Sent!');
                 window.location.href = "Reset.html"
-
             } else {
                 alert('Error: ' + (result.message || "Signup failed"));
             }

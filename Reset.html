@@ -9,8 +9,9 @@
 
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&display=swap');
+
         * {
-            font-family:monospace;
+            font-family: monospace;
             overflow-y: hidden;
         }
 
@@ -863,10 +864,10 @@
         <div class="Navigation_logo">
             <span>Taskora</span>
         </div>
-        <a href="Home.html"><i class="fa-solid fa-house-chimney"></i>Home</a>
+        <!-- <a href="Home.html"><i class="fa-solid fa-house-chimney"></i>Home</a>
         <a href="Tasks.html"><i class="fa-solid fa-list-check"></i>Tasks</a>
         <a href="Contact.html"><i class="fa-solid fa-envelope"></i>Contact</a>
-        <a href="Account.html"><i class="fa-solid fa-user"></i></i>Account</a>
+        <a href="Account.html"><i class="fa-solid fa-user"></i></i>Account</a> -->
         <a href="Login.html" id="Login_btn">Login<i class="fa-solid fa-arrow-right-long"></i></a>
     </nav>
 
@@ -875,25 +876,63 @@
         <a href="">Terms</a>
         <a href="">Privacy</a>
     </footer>
-
-
     <div class="login">
         <h1>Organise Your Daily Tasks</h1>
         <div class="background">
-
-            <form action="post" class="login_form">
-
+            <form class="login_form">
                 <h1>Reset Password</h1>
-                <input type="text" placeholder="Enter your email">
-                <input type="text" placeholder="Enter your new password">
-                <input type="text" placeholder="Enter your OTP">
+                <input type="text" placeholder="Enter your email" id="D1">
+                <input type="text" placeholder="Enter your new password" id="D2">
+                <input type="text" placeholder="Enter your OTP" id="D3">
                 <div class="password_issue">
                 </div>
-                <a href=""><button type="button" class="submit_btn">Change Password</button></a>
+                <a href=""><button type="button" class="submit_btn" id="_btn3">Change Password</button></a>
             </form>
         </div>
     </div>
 
+    <script>
+        const submit_btn3 = document.getElementById("_btn3")
+
+        submit_btn3.addEventListener('click', async (e) => {
+            e.preventDefault();
+            const userData = {
+                Email: document.querySelector('#D1').value,
+                Password: document.querySelector('#D2').value,
+                Otp: document.querySelector('#D3').value,
+            };
+
+            email = userData.Email
+            newpassword = userData.Password
+            otp = userData.Otp
+
+            if (!userData.Email && !userData.Password && !userData.Otp) {
+                return alert("Please Fill the Details");
+            }
+            else {
+                try {
+                    const response = await fetch('http://localhost:8000/reset_password', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({ email, newpassword, otp })
+                    });
+                    const result = await response.json();
+
+                    if (response.ok) {
+                        alert('Password Changed');
+                        window.location.href = "Login.html"
+                    } else {
+                        alert('Error: ' + (result.message || "Error! Occured Pls Try Latter!"));
+                    }
+                } catch (error) {
+                    console.error('Fetch error:', error);
+                }
+            }
+        }
+        )
+    </script>
 </body>
 
 </html>

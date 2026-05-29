@@ -30,7 +30,7 @@
                 <a href=""><i class="fa-solid fa-hourglass-end"></i>Reamainig Tasks</a>
             </aside>
         </div>
-        
+
 
         <div class="task_table">
             <table>
@@ -39,30 +39,68 @@
                     <th>Task</th>
                     <th>Status</th>
                 </tr>
-                <tr>
-                    <td>
-                        <p id="ID">Hello this is me </p>
-                    </td>
-                    <td>
-                        <p id="task"></p>
-                    </td>
-                    <td >
-                        <p id="Status"></p>
-                    </td>
-                </tr>
+                <tr></tr>
             </table>
-
         </div>
         <div class="Working_btns">
-
-            <input type="text" placeholder="Task...">
-            <button>Add Task<i class="fa-regular fa-square-plus"></i></button>
-            <input type="text" placeholder="Task ID...">
-            <button>Remove Task<i class="fa-solid fa-trash-can"></i></button>
-            <input type="text" placeholder="Status...">
-            <button>Status<i class="fa-solid fa-chart-line"></i></button>
+            <input type="text" placeholder="Task..." id="F1">
+            <button type="button" id="_btn4">Add Task<i class="fa-regular fa-square-plus"></i></button>
+            <input type="text" placeholder="Task ID..." id="F2">
+            <button type="button" id="_btn5">Remove Task<i class="fa-solid fa-trash-can"></i></button>
+            <input type="text" placeholder="Status..." id="F3">
+            <button type="button" id="_btn6">Status<i class="fa-solid fa-chart-line"></i></button>
         </div>
     </div>
+
+    <script>
+
+
+
+        const submit_btn4 = document.getElementById("_btn4")
+        const Data_Of_Task = document.getElementById("Task_Box")
+        const Table = document.querySelector("table")
+
+        submit_btn4.addEventListener('click', async (e) => {
+            e.preventDefault();
+
+            const userData = {
+                task: document.querySelector('#F1').value
+            };
+            const currentUser =
+                JSON.parse(sessionStorage.getItem("currentUser"));
+
+            if (!currentUser) { 
+                return alert("Login first!"); 
+            }
+            const Task = userData.task
+            const email = currentUser.email;
+            const password = currentUser.password;
+
+            if (!userData.task) {
+                return alert("Write Task first");
+            }
+            try {
+                const response = await fetch('http://localhost:8000/addtask', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ email, password, Task })
+                });
+                const result = await response.json();
+
+                if (!response.ok)
+                    return alert("Invalid credentials!")
+                alert('Task Added!');
+                const Id = result.task.ID;
+                const row = document.createElement("tr");
+                row.innerHTML = `<td>${Id}</td>
+                                 <td>${Task}</td>`;
+                Table.appendChild(row);
+            } catch (error) {
+                console.error('Fetch error:', error);
+            }
+        });
+
+    </script>
 
 </body>
 

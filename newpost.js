@@ -176,24 +176,25 @@ app.post("/forget_password", async (req, res) => {
             }
         )
             .then(() => {
-                res.status(200).json({message:"Email Sent!"})
+                console.log("Mail sent")
             })
             .catch((error) => {
-                res.status(201).json({message:"Email Not Sent!"})
+                console.log("Error: ", error.message)
             })
 
         const Phone = userExists.phone
+
         try {
             const SMS = await fetch("https://2factor.in/API/V1/7fa29106-533c-11f1-9800-0200cd936042/SMS/+91" + Phone + "/" + otp + "/VISH2026");
             const response = await SMS.json()
             res.json({ message: "OTP sent!" })
         } catch (error) {
-            console.log("error : ", error.message)
-            res.json({ message: "Error Occured!" })
+
+            res.status(200).json({ message: "Error Occured!" })
         }
 
     } catch (error) {
-        res.json({ message: "error" })
+        res.status(401).json({ message: "error" })
     }
 })
 
@@ -210,7 +211,7 @@ app.post("/reset_password", async (req, res) => {
 
         const request_exist = usercontent.find(el => el.email == email && el.otp == otp)
         if (!request_exist) {
-            throw new Error("Make Request First!")
+            res.status(401).json({ message: "Make Request First!" })
         }
 
         request_exist.password = newpassword
@@ -218,10 +219,10 @@ app.post("/reset_password", async (req, res) => {
 
         const stringusercontent = JSON.stringify(usercontent, null, 2)
         await fs.writeFile("./users.json", stringusercontent)
-        res.json({ message: "Password Reset!" })
+        res.status(200).json({ message: "Password Reset!" })
     } catch (error) {
         console.log("Error : ", error.message)
-        res.status(400).json({ message: error.message })
+        res.status(401).json({ message: error.message })
     }
 })
 
@@ -243,22 +244,20 @@ app.post("/addtask", async (req, res) => {
     } else {
 
         if (!userExists.Tasks) {
-            
-            userExists.Tasks = [{ ID, Task : Remove_Space }]
+            userExists.Tasks = [{ ID, Task: Remove_Space }]
             const stringusercontent = JSON.stringify(usercontent, null, 2)
             await fs.writeFile("./users.json", stringusercontent)
-            res.json({ message: "Array setup complete!" })
+            res.status(200).json({message: "Task Added!"})
         }
         else {
             const TaskExist = userExists.Tasks.find(el => el.Task == Task && el.ID == ID)
             if (TaskExist) {
-                return res.json({ message: "Task Already Exists!" })
+                return res.status(401).json({ message: "Task Already Exists!" })
             } else {
-
                 userExists.Tasks.push({ ID, Task: Remove_Space })
                 const stringusercontent = JSON.stringify(usercontent, null, 2)
                 await fs.writeFile("./users.json", stringusercontent)
-                res.json({
+                res.status(200).json({
                     message: "Task Added!"
                 })
             }
