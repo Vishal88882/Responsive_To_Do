@@ -11,7 +11,7 @@ app.use((req, res, next) => {
 const cors = require('cors');
 app.use(cors());
 
-app.post("/signup", async (req, res) => {
+app.post("/signup", async(req, res) => {
 
     try {
         const filecontent = await fs.readFile("./users.json", "utf-8")
@@ -36,14 +36,14 @@ app.post("/signup", async (req, res) => {
     }
 })
 
-app.post("/login", async (req, res) => {
+app.post("/login", async(req, res) => {
 
     try {
         const filecontent = await fs.readFile("./users.json", "utf-8")
 
         const usercontent = JSON.parse(filecontent)
-        const { username, password } = req.body;
-        const userExists = usercontent.some(el => el.username == username && el.password == password);
+        const { email, password } = req.body;
+        const userExists = usercontent.some(el => el.email == email && el.password == password);
         if (!userExists) throw new Error("Signed up first!");
         else {
             res.status(200).json({
@@ -56,7 +56,7 @@ app.post("/login", async (req, res) => {
     }
 })
 
-app.post("/forget_password", async (req, res) => {
+app.post("/forget_password", async(req, res) => {
 
     try {
 
@@ -166,15 +166,13 @@ app.post("/forget_password", async (req, res) => {
                 pass: "gxgo vita sphh glwl"
             }
         });
-        transport.sendMail(
-            {
+        transport.sendMail({
                 to: email,
                 from: "codewithvishal001@gmail.com",
                 subject: "Reset Your Password",
                 html: Mail_Template,
                 text: "Don't share this OTP with anyone!"
-            }
-        )
+            })
             .then(() => {
                 console.log("Mail sent")
             })
@@ -198,7 +196,7 @@ app.post("/forget_password", async (req, res) => {
     }
 })
 
-app.post("/reset_password", async (req, res) => {
+app.post("/reset_password", async(req, res) => {
 
     try {
         const filecontent = await fs.readFile("./users.json", "utf-8")
@@ -226,7 +224,7 @@ app.post("/reset_password", async (req, res) => {
     }
 })
 
-app.post("/addtask", async (req, res) => {
+app.post("/addtask", async(req, res) => {
 
     const filecontent = await fs.readFile("./users.json", "utf-8")
     const usercontent = JSON.parse(filecontent)
@@ -240,32 +238,35 @@ app.post("/addtask", async (req, res) => {
 
 
     if (!userExists) {
-        res.json({ message: "Invalid Password or Email!" })
+        res.status(401).json({ message: "Invalid Password or Email!" })
+        console.log("A")
     } else {
 
         if (!userExists.Tasks) {
             userExists.Tasks = [{ ID, Task: Remove_Space }]
             const stringusercontent = JSON.stringify(usercontent, null, 2)
             await fs.writeFile("./users.json", stringusercontent)
-            res.status(200).json({message: "Task Added!"})
-        }
-        else {
+            Data = userExists
+            res.status(200).json(Data.Tasks)
+            console.log("B")
+        } else {
             const TaskExist = userExists.Tasks.find(el => el.Task == Task && el.ID == ID)
             if (TaskExist) {
-                return res.status(401).json({ message: "Task Already Exists!" })
+                res.status(401).json({ message: "Task Already Exists!" })
+                console.log("C")
             } else {
                 userExists.Tasks.push({ ID, Task: Remove_Space })
                 const stringusercontent = JSON.stringify(usercontent, null, 2)
                 await fs.writeFile("./users.json", stringusercontent)
-                res.status(200).json({
-                    message: "Task Added!"
-                })
+                Data = userExists
+                res.status(200).json(Data.Tasks)
+                console.log("D")
             }
         }
     }
 })
 
-app.post("/taskinfo", async (req, res) => {
+app.post("/taskinfo", async(req, res) => {
 
     const filecontent = await fs.readFile("./users.json", "utf-8")
     const usercontent = JSON.parse(filecontent)
@@ -280,7 +281,7 @@ app.post("/taskinfo", async (req, res) => {
     }
 })
 
-app.post("/removetask", async (req, res) => {
+app.post("/removetask", async(req, res) => {
 
     const filecontent = await fs.readFile("./users.json", "utf-8")
     const usercontent = JSON.parse(filecontent)

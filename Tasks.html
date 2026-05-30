@@ -39,8 +39,8 @@
                     <th>Task</th>
                     <th>Status</th>
                 </tr>
-                <tr></tr>
             </table>
+            <table id="Task_Box"></table>
         </div>
         <div class="Working_btns">
             <input type="text" placeholder="Task..." id="F1">
@@ -53,53 +53,81 @@
     </div>
 
     <script>
-
-
-
         const submit_btn4 = document.getElementById("_btn4")
         const Data_Of_Task = document.getElementById("Task_Box")
-        const Table = document.querySelector("table")
+        const table = document.getElementById("Task_table")
 
-        submit_btn4.addEventListener('click', async (e) => {
+        submit_btn4.addEventListener('click', async(e) => {
             e.preventDefault();
 
             const userData = {
                 task: document.querySelector('#F1').value
             };
-            const currentUser =
-                JSON.parse(sessionStorage.getItem("currentUser"));
 
-            if (!currentUser) { 
-                return alert("Login first!"); 
-            }
             const Task = userData.task
-            const email = currentUser.email;
-            const password = currentUser.password;
+            const email = localStorage.getItem("email")
+            const password = localStorage.getItem("password")
+
+            if (!email || !password) {
+                return alert("Emial not found");
+            }
 
             if (!userData.task) {
                 return alert("Write Task first");
             }
+
             try {
                 const response = await fetch('http://localhost:8000/addtask', {
                     method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ email, password, Task })
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        email,
+                        password,
+                        Task
+                    })
                 });
                 const result = await response.json();
 
                 if (!response.ok)
                     return alert("Invalid credentials!")
                 alert('Task Added!');
-                const Id = result.task.ID;
-                const row = document.createElement("tr");
-                row.innerHTML = `<td>${Id}</td>
-                                 <td>${Task}</td>`;
-                Table.appendChild(row);
+
+                const ID = result[result.length - 1].ID;
+                console.log(ID)
+                console.log(result)
+                Data_Of_Task.innerHTML += ` <tr>
+                    <td>${ID}</td>
+                    <td>${Task}</td>
+                    <td>Pending</td>
+                </tr>`
+
+                async function Render_Task(result) {
+                    const Data_Of_Task = document.getElementById("Task_Box")
+
+                    if (result.length === 0) {
+                        Data_Of_Task.innerHTML += ` <tr>
+                    <td>No ID Available</td>
+                    <td>No Task Available</td>
+                    <td>No Status Available</td>
+                </tr>`
+                        return
+                    }
+
+                    Data_Of_Task.innerHTML = result.map((task,i) => {
+                        return ` <tr>
+                                <td>${task.ID}</td>
+                                <td>${task.Task}</td>
+                                <td>Pending</td>
+                                </tr>`
+                            }).join("");
+                }
+                Render_Task(result);
             } catch (error) {
                 console.error('Fetch error:', error);
             }
         });
-
     </script>
 
 </body>

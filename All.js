@@ -1,10 +1,10 @@
-
 const submit_btn = document.getElementById("_btn")
 const msgBox = document.getElementById("msg_box");
 
-submit_btn.addEventListener('click', async (e) => {
+submit_btn.addEventListener('click', async(e) => {
     e.preventDefault();
-    console.log("hi there!")
+
+
 
     const userData = {
         name: document.querySelector('#A1').value,
@@ -34,12 +34,9 @@ submit_btn.addEventListener('click', async (e) => {
             } else {
                 alert('Error: ' + (result.message || "Signup failed"));
             }
+
         } catch (error) {
             console.error('Fetch error:', error);
         }
     }
-}
-)
-
-
-
+})
