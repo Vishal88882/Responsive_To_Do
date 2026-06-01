@@ -11,7 +11,7 @@ app.use((req, res, next) => {
 const cors = require('cors');
 app.use(cors());
 
-app.post("/signup", async(req, res) => {
+app.post("/signup", async (req, res) => {
 
     try {
         const filecontent = await fs.readFile("./users.json", "utf-8")
@@ -36,7 +36,7 @@ app.post("/signup", async(req, res) => {
     }
 })
 
-app.post("/login", async(req, res) => {
+app.post("/login", async (req, res) => {
 
     try {
         const filecontent = await fs.readFile("./users.json", "utf-8")
@@ -56,7 +56,7 @@ app.post("/login", async(req, res) => {
     }
 })
 
-app.post("/forget_password", async(req, res) => {
+app.post("/forget_password", async (req, res) => {
 
     try {
 
@@ -167,12 +167,12 @@ app.post("/forget_password", async(req, res) => {
             }
         });
         transport.sendMail({
-                to: email,
-                from: "codewithvishal001@gmail.com",
-                subject: "Reset Your Password",
-                html: Mail_Template,
-                text: "Don't share this OTP with anyone!"
-            })
+            to: email,
+            from: "codewithvishal001@gmail.com",
+            subject: "Reset Your Password",
+            html: Mail_Template,
+            text: "Don't share this OTP with anyone!"
+        })
             .then(() => {
                 console.log("Mail sent")
             })
@@ -196,7 +196,7 @@ app.post("/forget_password", async(req, res) => {
     }
 })
 
-app.post("/reset_password", async(req, res) => {
+app.post("/reset_password", async (req, res) => {
 
     try {
         const filecontent = await fs.readFile("./users.json", "utf-8")
@@ -224,7 +224,7 @@ app.post("/reset_password", async(req, res) => {
     }
 })
 
-app.post("/addtask", async(req, res) => {
+app.post("/addtask", async (req, res) => {
 
     const filecontent = await fs.readFile("./users.json", "utf-8")
     const usercontent = JSON.parse(filecontent)
@@ -266,7 +266,7 @@ app.post("/addtask", async(req, res) => {
     }
 })
 
-app.post("/taskinfo", async(req, res) => {
+app.post("/taskinfo", async (req, res) => {
 
     const filecontent = await fs.readFile("./users.json", "utf-8")
     const usercontent = JSON.parse(filecontent)
@@ -281,7 +281,7 @@ app.post("/taskinfo", async(req, res) => {
     }
 })
 
-app.post("/removetask", async(req, res) => {
+app.post("/removetask", async (req, res) => {
 
     const filecontent = await fs.readFile("./users.json", "utf-8")
     const usercontent = JSON.parse(filecontent)
@@ -310,5 +310,21 @@ app.post("/removetask", async(req, res) => {
 
     }
 })
+
+app.post("/userdetails", async (req, res) => {
+
+    const filecontent = await fs.readFile("./users.json", "utf-8")
+    const usercontent = JSON.parse(filecontent)
+    const {email, password} = req.body;
+    const userExists = usercontent.find(el => el.email == email && el.password == password)
+    const User_Details = {"Name": userExists.name, "Username" : userExists.username, "Email" : userExists.email, "Phone" : userExists.phone}
+
+    if (!userExists) {
+        res.status(401).json({ message: "Invalid Email!" })
+    } else {
+            res.status(200).json(User_Details)
+        }
+    }
+)
 
 app.listen(8000, console.log("8000"));
