@@ -7,23 +7,34 @@
     <title>Taskora</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Kablammo&family=Silkscreen:wght@400;700&family=Syne:wght@400..800&display=swap');
+        *{
+            font-family: "Black Ops One",Arial, Helvetica, sans-serif;
+        }
         body {
             padding: 0px;
             margin: 0px;
             font-family: monospace;
             overflow-y: hidden;
             overflow-x: hidden;
+            background-image: url(./94560fe3-0c9a-433d-a899-e67c257e2c6c.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
 
         }
 
         .Navigation {
-            background-color: rgba(0, 0, 0, 0.8);
+            background-color: rgba(36, 36, 36, 0.8);
             display: flex;
             gap: 70px;
             align-items: center;
+            margin:0.5%;
             justify-content: center;
             flex-direction: row;
             padding: 15px;
+            border-bottom-left-radius: 50px;
+            border-top-right-radius: 50px;
         }
 
         .Navigation_logo {
@@ -38,7 +49,8 @@
         .Navigation>a {
             text-decoration: none;
             font-size: 22px;
-            border-radius: 5px;
+            border-bottom-left-radius: 15px;
+            border-top-right-radius: 15px;
             padding: 10px;
             color: whitesmoke;
         }
@@ -101,20 +113,16 @@
             gap: 40px;
             padding-top: 5%;
             padding-left: 4%;
-            background-image: url(./Home_background.jpg);
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: cover;
             height: 89vh;
         }
 
         .Quote>h1 {
-            color: #2e2e2e;
+            color: #ffffff;
             font-size: 35px;
         }
 
         .Quote>h2 {
-            color: rgb(48, 48, 112);
+            color: rgb(255, 255, 255);
         }
 
         #Start_btn {

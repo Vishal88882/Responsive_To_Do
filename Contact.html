@@ -9,27 +9,37 @@
 
 
     <style>
+                @import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Kablammo&family=Silkscreen:wght@400;700&family=Syne:wght@400..800&display=swap');
         *{
+            font-family: "Black Ops One",Arial, Helvetica, sans-serif;
             scrollbar-width: none;
         }
+
         body {
             padding: 0px;
             margin: 0px;
             font-family: monospace;
             overflow-x: hidden;
-            
+            background-image: url(./94560fe3-0c9a-433d-a899-e67c257e2c6c.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+
         }
-        
+
         .Navigation {
-            background-color: rgba(0, 0, 0, 0.8);
+            background-color: rgba(36, 36, 36, 0.8);
             display: flex;
             gap: 70px;
             align-items: center;
             justify-content: center;
             flex-direction: row;
             padding: 15px;
+            border-bottom-left-radius: 50px;
+            border-top-right-radius: 50px;
+            margin: 0.5%;
         }
-        
+
         .Navigation_logo {
             display: flex;
             align-items: center;
@@ -38,7 +48,7 @@
             font-size: 28px;
             font-weight: 700;
         }
-        
+
         .Navigation>a {
             text-decoration: none;
             font-size: 22px;
@@ -46,13 +56,13 @@
             padding: 10px;
             color: whitesmoke;
         }
-        
+
         .Navigation>a:hover {
             box-shadow: 0 0 5px rgb(139, 138, 136);
             transition: all 0.2s ease;
             text-decoration: underline;
         }
-        
+
         #Login_btn {
             display: flex;
             align-items: center;
@@ -67,32 +77,32 @@
             text-decoration: none;
             color: black;
         }
-        
+
         #Login_btn:hover {
             box-shadow: 0 0 10px;
             background-color: rgb(199, 179, 149);
             transition: all 0.3s ease;
             cursor: pointer;
         }
-        
+
         .fa-house-chimney {
             color: #1366b9;
             font-size: 22px;
             margin-right: 8px;
         }
-        
+
         .fa-list-check {
             color: rgb(95, 84, 255);
             font-size: 22px;
             margin-right: 8px;
         }
-        
+
         .fa-envelope {
             color: rgb(103, 117, 78);
             font-size: 22px;
             margin-right: 8px;
         }
-        
+
         .fa-user {
             color: rgb(235, 197, 154);
             font-size: 22px;
@@ -153,7 +163,7 @@
                 margin-right: 8px;
             }
 
-            
+
         }
 
         @media (max-width:1280px) {
@@ -209,13 +219,11 @@
                 font-size: 16px;
                 margin-right: 8px;
             }
-
-            
         }
-        
+
         .contact_div {
             display: flex;
-            background-image: url(./Home_background.jpg);
+            background-image: url(./94560fe3-0c9a-433d-a899-e67c257e2c6c.jpg);
             background-repeat: no-repeat;
             background-position: center;
             background-size: cover;
@@ -227,7 +235,7 @@
             padding: 24px clamp(12px, 3vw, 36px);
             box-sizing: border-box;
         }
-        
+
         .contact_qoute {
             width: min(860px, 100%);
             margin-top: 2%;
@@ -242,7 +250,7 @@
             position: static;
             box-sizing: border-box;
         }
-        
+
         .contact_qoute_h1_h2 {
             background-color: rgba(55, 46, 94, 0.5);
             padding: 10px;
@@ -266,7 +274,7 @@
             margin-left: clamp(0px, 1.25vw, 24px);
             box-sizing: border-box;
         }
-        
+
         .contact_img>img {
             margin-top: 88px;
             width: min(624px, 100%);
@@ -280,35 +288,35 @@
         }
 
 
-        
+
         .fa-regular {
             color: rgb(255, 230, 230);
             font-size: 38px;
             margin-right: 8px;
             margin-top: 2%;
         }
-        
+
         .fa-phone {
             color: rgb(255, 230, 230);
             font-size: 35px;
             margin-right: 8px;
             margin-top: 3%;
         }
-        
+
         .fa-instagram {
             color: rgb(255, 230, 230);
             font-size: 40px;
             margin-right: 8px;
             margin-top: 3%;
         }
-        
+
         .fa-github {
             color: rgb(255, 230, 230);
             font-size: 40px;
             margin-right: 8px;
             margin-top: 3%;
         }
-        
+
         .contact_Routes {
             background-color: rgba(9, 34, 17, 0.6);
             padding: 30px;
@@ -320,7 +328,7 @@
             flex-wrap: wrap;
             box-sizing: border-box;
         }
-        
+
         .contact_Routes>span {
             background-color: rgb(107, 148, 187, 0.7);
             padding: 10px;
@@ -330,18 +338,18 @@
             display: flex;
             border-radius: 10px;
         }
-        
+
         .contact_Routes>span:hover {
             transition: all 0.2s ease;
             background-color: rgba(127, 174, 219, 0.3);
         }
-        
+
         .to_fill_space {
             display: flex;
             flex-direction: column;
             gap: 10px;
         }
-        
+
         .to_fill_space>textarea {
             resize: none;
             width: 100%;
@@ -353,7 +361,7 @@
             font-size: 16px;
             box-sizing: border-box;
         }
-        
+
         .to_fill_space>button {
             width: min(250px, 100%);
             padding: 12px;
@@ -362,7 +370,7 @@
             background-color: antiquewhite;
             color: black
         }
-        
+
         .to_fill_space>button:hover {
             cursor: pointer;
             transition: all 0.3s ease;
@@ -594,7 +602,8 @@
                             class="fa-brands fa-github"></i></a></span>
             </div>
             <div class="to_fill_space">
-                <textarea name="Nothing" id="1234" autofocus placeholder="feedback!">Write your valuable feedback here!</textarea>
+                <textarea name="Nothing" id="1234" autofocus
+                    placeholder="feedback!">Write your valuable feedback here!</textarea>
                 <button type="button">Feedback</button>
             </div>
 
