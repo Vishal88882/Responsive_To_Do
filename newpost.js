@@ -275,9 +275,9 @@ app.post("/taskinfo", async(req, res) => {
     const Task_Details = userExists.Tasks
 
     if (!userExists) {
-        res.json({ message: "Invalid Details!" })
+        res.status(200).json({ message: "Invalid Details!" })
     } else {
-        res.json(Task_Details)
+        res.status(401).json(Task_Details)
     }
 })
 
@@ -289,12 +289,12 @@ app.post("/removetask", async(req, res) => {
     const userExists = usercontent.find(el => el.email == email && el.password == password)
 
     if (!userExists) {
-        res.json({ message: "Invalid Details!" })
+        res.status(401).json({ message: "Invalid Details!" })
     } else {
         const Find_ID = userExists.Tasks.find(el => el.ID == Task_ID)
 
         if (!Find_ID) {
-            res.json({ message: "Task Didn't found!" })
+            res.status(401).json({ message: "Task Didn't found!" })
         } else {
             userExists.Tasks = userExists.Tasks.filter(el => el.ID !== Task_ID)
 
@@ -303,7 +303,7 @@ app.post("/removetask", async(req, res) => {
 
             const stringusercontent = JSON.stringify(usercontent, null, 2)
             await fs.writeFile("./users.json", stringusercontent)
-            res.json({
+            res.status(200).json({
                 message: "Task removed!"
             })
         }

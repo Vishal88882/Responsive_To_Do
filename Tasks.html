@@ -34,21 +34,22 @@
 
         <div class="task_table">
             <table>
-                <tr>
-                    <th>Task ID</th>
-                    <th>Task</th>
-                    <th>Status</th>
-                </tr>
+                <thead>
+                    <tr>
+                        <th>Task ID</th>
+                        <th>Task</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody id="Task_Box">
+                </tbody>
             </table>
-            <table id="Task_Box"></table>
         </div>
         <div class="Working_btns">
             <input type="text" placeholder="Task..." id="F1">
             <button type="button" id="_btn4">Add Task<i class="fa-regular fa-square-plus"></i></button>
             <input type="text" placeholder="Task ID..." id="F2">
             <button type="button" id="_btn5">Remove Task<i class="fa-solid fa-trash-can"></i></button>
-            <input type="text" placeholder="Status..." id="F3">
-            <button type="button" id="_btn6">Status<i class="fa-solid fa-chart-line"></i></button>
         </div>
     </div>
 
@@ -56,6 +57,7 @@
         const submit_btn4 = document.getElementById("_btn4")
         const Data_Of_Task = document.getElementById("Task_Box")
         const table = document.getElementById("Task_table")
+        const remove_btn = document.getElementById("_btn5")
 
         submit_btn4.addEventListener('click', async(e) => {
             e.preventDefault();
@@ -102,32 +104,89 @@
                     <td>${Task}</td>
                     <td>Pending</td>
                 </tr>`
-
-                async function Render_Task(result) {
-                    const Data_Of_Task = document.getElementById("Task_Box")
-
-                    if (result.length === 0) {
-                        Data_Of_Task.innerHTML += ` <tr>
-                    <td>No ID Available</td>
-                    <td>No Task Available</td>
-                    <td>No Status Available</td>
-                </tr>`
-                        return
-                    }
-
-                    Data_Of_Task.innerHTML = result.map((task,i) => {
-                        return ` <tr>
-                                <td>${task.ID}</td>
-                                <td>${task.Task}</td>
-                                <td>Pending</td>
-                                </tr>`
-                            }).join("");
-                }
-                Render_Task(result);
             } catch (error) {
                 console.error('Fetch error:', error);
             }
         });
+
+        window.addEventListener("DOMContentLoaded", fetchtasks);
+
+        async function fetchtasks() {
+            const email = localStorage.getItem("email");
+            const password = localStorage.getItem("password");
+
+            try {
+                const response = await fetch("http://localhost:8000/taskinfo", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({
+                        email,
+                        password
+                    })
+                });
+
+                const result = await response.json();
+                console.log(result);
+
+                const tasks = result;
+                console.log(result)
+
+                Data_Of_Task.innerHTML = tasks.map(task => `
+            <tr>
+                <td>${task.ID}</td>
+                <td>${task.Task}</td>
+                <td>Pending</td>
+            </tr>
+        `).join("");
+
+            } catch (err) {
+                console.error(err);
+            }
+        }
+
+        remove_btn.addEventListener('click', async(e) => {
+            e.preventDefault()
+
+            const userData = {
+                taskId: document.querySelector('#F2').value
+            };
+
+            const Task_ID = userData.taskId
+            const email = localStorage.getItem("email")
+            const password = localStorage.getItem("password")
+
+            if (!email || !password) {
+                return alert("Email not found");
+            }
+            if (!userData.taskId) {
+                return alert("Write Task first");
+            }
+
+            try {
+                const response = await fetch('http://localhost:8000/removetask', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        email,
+                        password,
+                        Task_ID
+                    })
+                });
+                const result = await response.json();
+
+                if (!response.ok)
+                    return alert("Invalid credentials!")
+                alert('Task Removed');
+                fetchtasks()
+
+            } catch (err) {
+                console.error(err);
+            }
+        })
     </script>
 
 </body>
